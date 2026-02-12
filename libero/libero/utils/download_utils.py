@@ -184,6 +184,13 @@ def libero_dataset_download(datasets="all", download_dir=None, check_overwrite=T
         "libero_100",
     ] if datasets == "all" else [datasets]
 
+    if use_huggingface and "libero_100" in datasets_to_download:
+        datasets_to_download.remove("libero_100")
+        if "libero_90" not in datasets_to_download:
+            datasets_to_download.append("libero_90")
+        if "libero_10" not in datasets_to_download:
+            datasets_to_download.append("libero_10")
+
     for dataset_name in datasets_to_download:
         print(f"Downloading {dataset_name}")
         
