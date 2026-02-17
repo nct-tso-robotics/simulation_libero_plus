@@ -29,9 +29,11 @@ class EpisodeRecorder:
         self,
         environment_id: str,
         language_instruction: str,
+        task_id: int,
         trajectory_columns: list[str],
         frame_skip: int = 3,
     ):
+        self.task_id = task_id
         self.safe_instruction = (
             language_instruction.replace(" ", "_").replace("/", "-")
         )
@@ -53,7 +55,7 @@ class EpisodeRecorder:
         """
         output_directory.mkdir(parents=True, exist_ok=True)
         filename = (
-            f"{self.environment_id}_unknown_"
+            f"{self.environment_id}_task{self.task_id}_unknown_"
             f"{self.safe_instruction}_{self.num_saves}.avi"
         )
         self.filepath = output_directory / filename
@@ -128,7 +130,7 @@ class EpisodeRecorder:
         output_directory.mkdir(parents=True, exist_ok=True)
         result = "success" if was_success else "fail"
         file_prefix = (
-            f"{self.environment_id}_{result}_"
+            f"{self.environment_id}_task{self.task_id}_{result}_"
             f"{self.safe_instruction}_{self.num_saves}"
         )
         new_video_path = output_directory / f"{file_prefix}.avi"

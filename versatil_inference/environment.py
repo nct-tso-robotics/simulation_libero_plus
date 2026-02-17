@@ -276,6 +276,7 @@ class Environment:
             self.recorders[global_index] = EpisodeRecorder(
                 environment_id=self.suite_name_per_task[global_index],
                 language_instruction=self.task_descriptions[global_index],
+                task_id=global_index,
                 trajectory_columns=self.trajectory_columns,
             )
         self.vectorized_environment.reset()
