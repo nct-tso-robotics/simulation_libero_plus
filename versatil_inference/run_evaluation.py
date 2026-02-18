@@ -58,6 +58,7 @@ class EvalConfig:
     seed: int = 7
     max_parallel_envs: int = 10
     render_gpu_device_id: int = -1
+    record_wrist_camera: bool = False
 
 
 def run_evaluation(config: EvalConfig) -> None:
@@ -89,6 +90,7 @@ def run_evaluation(config: EvalConfig) -> None:
         compression_type=config.compression_type,
         max_parallel_envs=config.max_parallel_envs,
         render_gpu_device_id=config.render_gpu_device_id,
+        record_wrist_camera=config.record_wrist_camera,
     )
     print(
         f"Task suite: {task_suite_name}, "

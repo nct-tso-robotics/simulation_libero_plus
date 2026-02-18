@@ -2,6 +2,7 @@
 
 import csv
 import datetime
+import json
 import logging
 import os
 import re
@@ -88,6 +89,7 @@ class Environment:
         output_folder: str,
         max_parallel_envs: int = 10,
         render_gpu_device_id: int = -1,
+        record_wrist_camera: bool = False,
     ):
         self.task_suite_name = task_suite_name
         self.seed = seed
@@ -97,6 +99,7 @@ class Environment:
         self.output_folder = output_folder
         self.max_parallel_envs = max_parallel_envs
         self.render_gpu_device_id = render_gpu_device_id
+        self.record_wrist_camera = record_wrist_camera
         self.current_status = LiberoStatus.CREATING_ENV.value
         self.client_name = DEFAULT_CLIENT_NAME
         self._rollout_date = datetime.datetime.now().strftime(
@@ -110,6 +113,8 @@ class Environment:
         self.max_timesteps_per_env: list[int] = []
         self.initial_states_per_task: list = []
         self.task_descriptions: list[str] = []
+        self.task_categories: list[str] = []
+        self.task_difficulties: list[str] = []
         self.active_environments: list[bool] = []
         self.steps_counts: list[int] = []
         self.number_of_resets: list[int] = []
@@ -162,9 +167,30 @@ class Environment:
         """
         self.client_name = client_name
 
+    def _load_task_classification(self) -> dict[str, dict]:
+        """Load task_classification.json and return {task_name: {category, difficulty_level}} lookup."""
+        classification_path = os.path.join(
+            os.path.dirname(os.path.abspath(benchmark.__file__)),
+            "task_classification.json",
+        )
+        if not os.path.exists(classification_path):
+            logging.warning(f"Task classification not found: {classification_path}")
+            return {}
+        with open(classification_path) as f:
+            data = json.load(f)
+        lookup = {}
+        for suite_tasks in data.values():
+            for entry in suite_tasks:
+                lookup[entry["name"]] = {
+                    "category": entry.get("category", "Unknown"),
+                    "difficulty_level": str(entry.get("difficulty_level", "Unknown")),
+                }
+        return lookup
+
     def _init_benchmark(self) -> None:
         """Load tasks from the benchmark, handling LIBERO_ALL."""
         benchmark_dict = benchmark.get_benchmark_dict()
+        self._task_classification = self._load_task_classification()
         if self.task_suite_name == TaskSuiteName.LIBERO_ALL.value:
             self._init_all_suites(benchmark_dict)
         else:
@@ -204,6 +230,9 @@ class Environment:
             self.initial_states_per_task.append(
                 task_suite.get_task_init_states(task_index)
             )
+            cls = self._task_classification.get(task.name, {})
+            self.task_categories.append(cls.get("category", "Unknown"))
+            self.task_difficulties.append(cls.get("difficulty_level", "Unknown"))
 
     def _init_all_suites(self, benchmark_dict: dict) -> None:
         """Load and concatenate tasks from all 4 standard suites."""
@@ -229,6 +258,9 @@ class Environment:
                 self.initial_states_per_task.append(
                     task_suite.get_task_init_states(task_index)
                 )
+                cls = self._task_classification.get(task.name, {})
+                self.task_categories.append(cls.get("category", "Unknown"))
+                self.task_difficulties.append(cls.get("difficulty_level", "Unknown"))
 
     def initialize(self) -> None:
         """Create the first batch of environments and perform initial setup.
@@ -278,6 +310,7 @@ class Environment:
                 language_instruction=self.task_descriptions[global_index],
                 task_id=global_index,
                 trajectory_columns=self.trajectory_columns,
+                record_wrist_camera=self.record_wrist_camera,
             )
         self.vectorized_environment.reset()
         initial_states = [
@@ -317,6 +350,13 @@ class Environment:
                     LiberoGymKey.AGENTVIEW_IMAGE.value
                 ]
                 frame = np.ascontiguousarray(frame[::-1, ::-1])
+                wrist_frame = None
+                if self.record_wrist_camera:
+                    wrist_raw = observations[local_index].get(
+                        LiberoGymKey.EYE_IN_HAND_IMAGE.value
+                    )
+                    if wrist_raw is not None:
+                        wrist_frame = np.ascontiguousarray(wrist_raw[::-1, ::-1])
                 self.recorders[global_index].add_observation(
                     frame=frame,
                     trajectory_row=self._build_trajectory_row(
@@ -324,6 +364,7 @@ class Environment:
                     ),
                     reward=0.0,
                     output_directory=self.rollout_directory,
+                    wrist_frame=wrist_frame,
                 )
         self.latest_observation = self._unbatch_observation(observations)
 
@@ -471,6 +512,13 @@ class Environment:
                     LiberoGymKey.AGENTVIEW_IMAGE.value
                 ]
                 frame = np.ascontiguousarray(frame[::-1, ::-1])
+                wrist_frame = None
+                if self.record_wrist_camera:
+                    wrist_raw = observations[local_index].get(
+                        LiberoGymKey.EYE_IN_HAND_IMAGE.value
+                    )
+                    if wrist_raw is not None:
+                        wrist_frame = np.ascontiguousarray(wrist_raw[::-1, ::-1])
                 self.recorders[global_index].add_observation(
                     frame=frame,
                     trajectory_row=self._build_trajectory_row(
@@ -478,6 +526,7 @@ class Environment:
                     ),
                     reward=0.0,
                     output_directory=rollout_dir,
+                    wrist_frame=wrist_frame,
                 )
                 if self.wait_steps_remaining[global_index] == 0:
                     self.recently_reset_indices.append(local_index)
@@ -487,6 +536,13 @@ class Environment:
                 LiberoGymKey.AGENTVIEW_IMAGE.value
             ]
             frame = np.ascontiguousarray(frame[::-1, ::-1])
+            wrist_frame = None
+            if self.record_wrist_camera:
+                wrist_raw = observations[local_index].get(
+                    LiberoGymKey.EYE_IN_HAND_IMAGE.value
+                )
+                if wrist_raw is not None:
+                    wrist_frame = np.ascontiguousarray(wrist_raw[::-1, ::-1])
             self.recorders[global_index].add_observation(
                 frame=frame,
                 trajectory_row=self._build_trajectory_row(
@@ -494,6 +550,7 @@ class Environment:
                 ),
                 reward=float(rewards[local_index]),
                 output_directory=rollout_dir,
+                wrist_frame=wrist_frame,
             )
             episode_success = bool(dones[local_index])
             episode_done = (
@@ -569,8 +626,26 @@ class Environment:
         self.wait_steps_remaining[global_index] = self.num_steps_wait
         self.recorders[global_index].reset()
 
+    def _aggregate_by_key(
+        self, environment_data: list, key_per_task: list[str],
+    ) -> dict[str, tuple[int, int, float]]:
+        """Aggregate success rates grouped by a per-task key."""
+        results = {}
+        for key in dict.fromkeys(key_per_task):
+            matching = [
+                environment_data[j]
+                for j in range(len(environment_data))
+                if key_per_task[j] == key
+            ]
+            if matching:
+                total_s = sum(s for _, s, _, _ in matching)
+                total_t = sum(t for _, _, t, _ in matching)
+                mean_r = sum(r for _, _, _, r in matching) / len(matching)
+                results[key] = (total_s, total_t, mean_r)
+        return results
+
     def _write_results_csv(self) -> None:
-        """Write per-task, per-suite, and overall results to CSV."""
+        """Write per-task, per-suite, per-category, per-difficulty, and overall results to CSV."""
         output_directory = self.rollout_directory
         output_directory.mkdir(parents=True, exist_ok=True)
         csv_path = output_directory / "results.csv"
@@ -585,24 +660,15 @@ class Environment:
         suite_results = {}
         unique_suites = list(dict.fromkeys(self.suite_name_per_task))
         if len(unique_suites) > 1:
-            for suite_name in unique_suites:
-                matching = [
-                    (description, successes, trials, success_rate)
-                    for j, (description, successes, trials, success_rate)
-                    in enumerate(environment_data)
-                    if self.suite_name_per_task[j] == suite_name
-                ]
-                if matching:
-                    total_successes = sum(s for _, s, _, _ in matching)
-                    total_trials = sum(t for _, _, t, _ in matching)
-                    mean_rate = (
-                        sum(r for _, _, _, r in matching) / len(matching)
-                    )
-                    suite_results[suite_name] = (
-                        total_successes,
-                        total_trials,
-                        mean_rate,
-                    )
+            suite_results = self._aggregate_by_key(
+                environment_data, self.suite_name_per_task
+            )
+        category_results = self._aggregate_by_key(
+            environment_data, self.task_categories
+        )
+        difficulty_results = self._aggregate_by_key(
+            environment_data, self.task_difficulties
+        )
         total_successes = sum(s for _, s, _, _ in environment_data)
         total_trials = sum(t for _, _, t, _ in environment_data)
         overall_rate = (
@@ -627,17 +693,23 @@ class Environment:
                 )
             if suite_results:
                 writer.writerow([])
-                for suite_name, (
-                    suite_successes,
-                    suite_trials,
-                    suite_rate,
-                ) in suite_results.items():
+                writer.writerow(["--- Per Suite ---"])
+                for suite_name, (s, t, r) in suite_results.items():
+                    writer.writerow([suite_name, f"{s}/{t}", f"{r:.4f}"])
+            if category_results:
+                writer.writerow([])
+                writer.writerow(["--- Per Category ---"])
+                for category, (s, t, r) in category_results.items():
+                    writer.writerow([category, f"{s}/{t}", f"{r:.4f}"])
+            if difficulty_results:
+                writer.writerow([])
+                writer.writerow(["--- Per Difficulty ---"])
+                for difficulty, (s, t, r) in sorted(
+                    difficulty_results.items(),
+                    key=lambda x: (x[0] == "Unknown", x[0]),
+                ):
                     writer.writerow(
-                        [
-                            suite_name,
-                            f"{suite_successes}/{suite_trials}",
-                            f"{suite_rate:.4f}",
-                        ]
+                        [f"difficulty_{difficulty}", f"{s}/{t}", f"{r:.4f}"]
                     )
             writer.writerow([])
             writer.writerow(

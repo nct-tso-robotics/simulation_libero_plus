@@ -52,6 +52,7 @@ class LiberoServer(SocketServer):
         output_folder: str = "",
         max_parallel_envs: int = 10,
         render_gpu_device_id: int = -1,
+        record_wrist_camera: bool = False,
     ):
         """Initialize the server and start environment creation in background.
 
@@ -85,6 +86,7 @@ class LiberoServer(SocketServer):
             output_folder=self.output_folder,
             max_parallel_envs=max_parallel_envs,
             render_gpu_device_id=render_gpu_device_id,
+            record_wrist_camera=record_wrist_camera,
         )
         self._register_routes()
         thread = threading.Thread(
