@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "libero"
+version = "0.1.0"
+description = "LIBERO-plus: In-Depth Robustness Analysis For Vision-Language-Action Models"
+license = { text = "MIT" }
+authors = [
+    { name = "Lorenzo Mazza", email = "lorenzo.mazza@nct-dresden.de" },
+]
+requires-python = ">=3.10"
+dependencies = [
+    "hydra-core>=1.2.0",
+    "numpy>=1.22.4",
+    "wandb",
+    "easydict",
+    "transformers",
+    "opencv-python",
+    "robomimic>=0.2.0",
+    "einops",
+    "thop",
+    "robosuite==1.4.0",
+    "bddl",
+    "future",
+    "matplotlib",
+    "cloudpickle",
+    "gym",
+    "usd-core>=25.5",
+    "draccus",
+    "wand",
+    "scikit-image",
+    "imitation-learning-toolkit",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "mypy",
+]
+
+[project.scripts]
+"lifelong.main" = "libero.lifelong.main:main"
+"lifelong.eval" = "libero.lifelong.evaluate:main"
+"libero.config_copy" = "scripts.config_copy:main"
+"libero.create_template" = "scripts.create_template:main"
+
+[tool.uv.sources]
+imitation-learning-toolkit = { git = "https://gitlab.com/nct_tso_public/imitation-learning-toolkit.git" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["libero", "scripts", "versatil_inference"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "libero/**/*.py",
+    "scripts/**/*.py",
+    "versatil_inference/**/*.py",
+    "*.py",
+]
