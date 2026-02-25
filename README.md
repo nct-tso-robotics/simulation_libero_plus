@@ -52,7 +52,7 @@ This repository uses [uv](https://docs.astral.sh/uv/) for dependency management.
 
 2. **Create a mamba environment with system dependencies and uv:**
    ```bash
-   mamba create -n libero_plus python=3.10 libexpat fontconfig imagemagick -c conda-forge -y
+   mamba create -n libero_plus python=3.10 libexpat fontconfig imagemagick cmake -c conda-forge -y
    mamba activate libero_plus
    mamba install uv -c conda-forge -y
    ```
