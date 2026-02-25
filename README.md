@@ -59,7 +59,7 @@ This repository uses [uv](https://docs.astral.sh/uv/) for dependency management.
 
 3. **Install dependencies using uv with the conda prefix:**
    ```bash
-   UV_PROJECT_ENVIRONMENT=$CONDA_PREFIX uv sync
+   CMAKE_POLICY_VERSION_MINIMUM=3.5 UV_PROJECT_ENVIRONMENT=$CONDA_PREFIX uv sync
    ```
 
 ### Assets
