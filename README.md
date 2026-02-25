@@ -106,12 +106,12 @@ On the simulation machine, run:
 
 ```bash
 python -m versatil_inference.run_evaluation \
-    --task_suite_name libero_plus_spatial \
+    --task_suite_name libero_spatial \
     --output_folder ./results
 ```
 
 **Configuration options:**
-- `--task_suite_name`: LIBERO-Plus benchmark suite (`libero_plus_spatial`, `libero_plus_object`, `libero_plus_goal`, `libero_plus_10`, `libero_90`, `libero_plus_all`)
+- `--task_suite_name`: LIBERO benchmark suite (`libero_spatial`, `libero_object`, `libero_goal`, `libero_10`, `libero_90`)
 - `--ip_address`: IP to bind the server (default: `0.0.0.0`)
 - `--port`: Port for ZMQ communication (default: `5556`)
 - `--num_trials_per_task`: Number of episodes per task (default: `1`). **NOTE:** LIBERO-Plus uses 1 trial per task because each perturbation variant is already a separate task (2400+ per suite)
