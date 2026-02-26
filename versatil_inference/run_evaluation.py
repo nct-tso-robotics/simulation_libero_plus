@@ -12,8 +12,9 @@ if not os.path.exists(_macros_file):
     with open(_macros_file, "w") as _f:
         _f.write("# Auto-generated to silence robosuite warnings\n")
 
-# Silence gym deprecation warnings
-warnings.filterwarnings("ignore", message=".*Gym has been unmaintained.*")
+# Silence gym deprecation warnings (env var propagates to subprocesses)
+os.environ["PYTHONWARNINGS"] = "ignore::DeprecationWarning"
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 # Redirect robosuite log to user-writable path (it hardcodes /tmp/robosuite.log)
 _OrigFileHandler = _logging.FileHandler
