@@ -3,16 +3,7 @@
 import logging as _logging
 import os
 import warnings
-
-# Silence robosuite "No private macro file found!" spam (propagates to subprocesses)
-_macros_dir = os.path.expanduser("~/.robosuite")
-_macros_file = os.path.join(_macros_dir, "macros_private.py")
-if not os.path.exists(_macros_file):
-    os.makedirs(_macros_dir, exist_ok=True)
-    with open(_macros_file, "w") as _f:
-        _f.write("# Auto-generated to silence robosuite warnings\n")
-
-# Silence gym deprecation warnings (env var propagates to subprocesses)
+# Silence noisy warnings (env vars propagate to subprocesses)
 os.environ["PYTHONWARNINGS"] = "ignore::DeprecationWarning"
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
