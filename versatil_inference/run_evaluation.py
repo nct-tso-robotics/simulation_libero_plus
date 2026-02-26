@@ -59,6 +59,9 @@ class EvalConfig:
     max_parallel_envs: int = 10
     render_gpu_device_id: int = -1
     record_wrist_camera: bool = False
+    start_task_index: int = 0
+    prior_successes: int = 0
+    prior_episodes: int = 0
 
 
 def run_evaluation(config: EvalConfig) -> None:
@@ -91,6 +94,9 @@ def run_evaluation(config: EvalConfig) -> None:
         max_parallel_envs=config.max_parallel_envs,
         render_gpu_device_id=config.render_gpu_device_id,
         record_wrist_camera=config.record_wrist_camera,
+        start_task_index=config.start_task_index,
+        prior_successes=config.prior_successes,
+        prior_episodes=config.prior_episodes,
     )
     print(
         f"Task suite: {task_suite_name}, "
@@ -140,16 +146,41 @@ def _log_results(
             "client_name": environment.client_name,
             "task_suite_name": task_suite_name,
         })
-    total_episodes = sum(environment.number_of_resets)
-    total_successes = sum(environment.environments_successes)
+    start = config.start_task_index
+    total_episodes = sum(environment.number_of_resets[start:])
+    total_successes = sum(environment.environments_successes[start:])
     overall_rate = (
         total_successes / total_episodes if total_episodes > 0 else 0.0
     )
+    combined_successes = total_successes + config.prior_successes
+    combined_episodes = total_episodes + config.prior_episodes
+    combined_rate = (
+        combined_successes / combined_episodes
+        if combined_episodes > 0
+        else 0.0
+    )
     with open(log_filepath, "w") as log_file:
         log_file.write(f"Task suite: {task_suite_name}\n")
-        log_file.write(f"Total: {total_successes}/{total_episodes}\n")
-        log_file.write(f"Overall success rate: {overall_rate:.4f}\n\n")
-        for index in range(len(environment.task_descriptions)):
+        if config.prior_episodes > 0:
+            log_file.write(
+                f"Resumed from task {config.start_task_index} "
+                f"(prior: {config.prior_successes}/{config.prior_episodes})\n"
+            )
+            log_file.write(
+                f"This run: {total_successes}/{total_episodes}\n"
+            )
+            log_file.write(
+                f"Combined: {combined_successes}/{combined_episodes}\n"
+            )
+            log_file.write(
+                f"Combined success rate: {combined_rate:.4f}\n\n"
+            )
+        else:
+            log_file.write(f"Total: {total_successes}/{total_episodes}\n")
+            log_file.write(
+                f"Overall success rate: {overall_rate:.4f}\n\n"
+            )
+        for index in range(start, len(environment.task_descriptions)):
             description = environment.task_descriptions[index]
             successes = environment.environments_successes[index]
             episodes = environment.number_of_resets[index]
@@ -164,18 +195,20 @@ def _log_results(
                         f"num_episodes/{description}": episodes,
                     }
                 )
-        unique_suites = list(dict.fromkeys(environment.suite_name_per_task))
+        unique_suites = list(dict.fromkeys(
+            environment.suite_name_per_task[start:]
+        ))
         if len(unique_suites) > 1:
             log_file.write("\n")
             for suite_name in unique_suites:
                 suite_successes = sum(
                     environment.environments_successes[i]
-                    for i in range(len(environment.suite_name_per_task))
+                    for i in range(start, len(environment.suite_name_per_task))
                     if environment.suite_name_per_task[i] == suite_name
                 )
                 suite_episodes = sum(
                     environment.number_of_resets[i]
-                    for i in range(len(environment.suite_name_per_task))
+                    for i in range(start, len(environment.suite_name_per_task))
                     if environment.suite_name_per_task[i] == suite_name
                 )
                 suite_rate = (
@@ -197,11 +230,21 @@ def _log_results(
     if config.use_wandb:
         wandb.log(
             {
-                "success_rate/total": overall_rate,
-                "num_episodes/total": total_episodes,
+                "success_rate/total": combined_rate,
+                "num_episodes/total": combined_episodes,
             }
         )
-    print(f"\nFinal success rate: {overall_rate * 100:.1f}%")
+    if config.prior_episodes > 0:
+        print(
+            f"\nThis run: {total_successes}/{total_episodes} "
+            f"({overall_rate * 100:.1f}%)"
+        )
+        print(
+            f"Combined: {combined_successes}/{combined_episodes} "
+            f"({combined_rate * 100:.1f}%)"
+        )
+    else:
+        print(f"\nFinal success rate: {overall_rate * 100:.1f}%")
 
 
 @draccus.wrap()

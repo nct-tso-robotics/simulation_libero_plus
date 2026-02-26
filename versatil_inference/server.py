@@ -53,6 +53,9 @@ class LiberoServer(SocketServer):
         max_parallel_envs: int = 10,
         render_gpu_device_id: int = -1,
         record_wrist_camera: bool = False,
+        start_task_index: int = 0,
+        prior_successes: int = 0,
+        prior_episodes: int = 0,
     ):
         """Initialize the server and start environment creation in background.
 
@@ -68,6 +71,9 @@ class LiberoServer(SocketServer):
             output_folder: Directory for rollout recordings.
             max_parallel_envs: Maximum environments running simultaneously.
             render_gpu_device_id: GPU device for offscreen rendering (-1 for default).
+            start_task_index: Global task index to resume from (skip earlier tasks).
+            prior_successes: Number of successes from previous run (for logging).
+            prior_episodes: Number of episodes from previous run (for logging).
         """
         super().__init__(ip_address=ip_address, port=port)
         self.resolution = resolution
@@ -87,6 +93,9 @@ class LiberoServer(SocketServer):
             max_parallel_envs=max_parallel_envs,
             render_gpu_device_id=render_gpu_device_id,
             record_wrist_camera=record_wrist_camera,
+            start_task_index=start_task_index,
+            prior_successes=prior_successes,
+            prior_episodes=prior_episodes,
         )
         self._register_routes()
         thread = threading.Thread(
