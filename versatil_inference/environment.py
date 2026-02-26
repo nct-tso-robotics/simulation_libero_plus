@@ -2,12 +2,10 @@
 
 import csv
 import datetime
-import gc
 import json
 import logging
 import os
 import re
-import time
 from pathlib import Path
 
 import numpy as np
@@ -74,7 +72,7 @@ def _make_env_function(environment_args: dict) -> callable:
 
 class Environment:
     """Manages vectorized Libero environments for benchmark evaluation.
-    
+
     Note:
         Tasks are processed in batches of max_parallel_envs. Only one batch's
         vec_env is alive at a time. When all tasks in the current batch finish,
@@ -353,19 +351,8 @@ class Environment:
         Returns:
             True if a new batch was created, False if all tasks are done.
         """
-        # Ensure subprocess workers fully terminate and release GPU/EGL
-        # resources before spawning the next batch.
-        workers = getattr(self.vectorized_environment, "workers", [])
         self.vectorized_environment.close()
-        for w in workers:
-            proc = getattr(w, "process", None)
-            if proc is not None:
-                proc.join(timeout=10)
-                if proc.is_alive():
-                    proc.kill()
-                    proc.join(timeout=5)
         self.vectorized_environment = None
-        gc.collect()
         next_start = self._batch_global_indices[-1] + 1
         if next_start >= self.num_envs:
             return False

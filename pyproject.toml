@@ -46,6 +46,9 @@ dev = [
 "libero.config_copy" = "scripts.config_copy:main"
 "libero.create_template" = "scripts.create_template:main"
 
+[tool.uv.override-dependencies]
+gym-notices = []
+
 [tool.uv.sources]
 imitation-learning-toolkit = { git = "https://gitlab.com/nct_tso_public/imitation-learning-toolkit.git" }
 
