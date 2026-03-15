@@ -30,7 +30,7 @@ import wandb
 from tso_robotics_sockets import ServerStatus, TransportKey
 
 from versatil_inference.server import LiberoServer
-from versatil_inference.socket_flags import TaskSuiteName
+from versatil_inference.constants import TaskSuiteName
 
 DATE_TIME = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 

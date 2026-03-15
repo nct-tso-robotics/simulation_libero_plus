@@ -18,7 +18,7 @@ from tso_robotics_sockets import InferenceResponseKey, ServerStatus
 from versatil_constants.libero import LiberoCamera, LiberoProprioKey
 from versatil_constants.shared import ObsKey
 
-from versatil_inference.socket_flags import (
+from versatil_inference.constants import (
     DEFAULT_CLIENT_NAME,
     DEFAULT_MAX_TIMESTEPS,
     LIBERO_ALL_SUITES,

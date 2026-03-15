@@ -25,7 +25,7 @@ from versatil_constants.libero import LiberoCamera, LiberoProprioKey
 from versatil_constants.shared import ObsKey
 
 from versatil_inference.environment import Environment
-from versatil_inference.socket_flags import DEFAULT_CLIENT_NAME, TaskSuiteName
+from versatil_inference.constants import DEFAULT_CLIENT_NAME, TaskSuiteName
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
