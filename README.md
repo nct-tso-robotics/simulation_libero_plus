@@ -44,20 +44,14 @@ This repository uses [uv](https://docs.astral.sh/uv/) for dependency management.
 
 ### Setup Steps
 
-1. **Configure git credentials** (required for private dependencies):
-   ```bash
-   git config --global credential.helper store
-   ```
-   Then authenticate once to GitLab (e.g., by cloning a private repo). This stores credentials so `uv` can fetch the `imitation-learning-toolkit` dependency.
-
-2. **Create a mamba environment with system dependencies and uv:**
+1. **Create a mamba environment with system dependencies and uv:**
    ```bash
    mamba create -n libero_plus python=3.10 libexpat fontconfig imagemagick cmake -c conda-forge -y
    mamba activate libero_plus
    mamba install uv -c conda-forge -y
    ```
 
-3. **Install dependencies using uv with the conda prefix:**
+2. **Install dependencies using uv with the conda prefix:**
    ```bash
    CMAKE_POLICY_VERSION_MINIMUM=3.5 UV_PROJECT_ENVIRONMENT=$CONDA_PREFIX uv sync
    ```
@@ -87,14 +81,6 @@ LIBERO-plus/
 
 If you have LIBERO installed, uninstall it first. Verify the config path at `~/.libero/config.yaml` points to this repo (see `libero/libero/__init__.py`).
 
-### Private Dependencies
-
-This project depends on [imitation-learning-toolkit](https://gitlab.com/nct_tso_public/imitation-learning-toolkit), a shared library for socket communication. The dependency is specified in `pyproject.toml` as a git source:
-
-```toml
-[tool.uv.sources]
-imitation-learning-toolkit = { git = "https://gitlab.com/nct_tso_public/imitation-learning-toolkit.git" }
-```
 
 ## Running Evaluation
 
