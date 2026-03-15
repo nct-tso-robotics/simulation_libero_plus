@@ -27,12 +27,10 @@ from typing import Optional
 import draccus
 import wandb
 
+from tso_robotics_sockets import ServerStatus, TransportKey
+
 from versatil_inference.server import LiberoServer
-from versatil_inference.socket_flags import (
-    LiberoResponseKey,
-    LiberoStatus,
-    TaskSuiteName,
-)
+from versatil_inference.socket_flags import TaskSuiteName
 
 DATE_TIME = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
@@ -110,8 +108,8 @@ def run_evaluation(config: EvalConfig) -> None:
         while True:
             response = server.handle_client_request()
             if (
-                response.get(LiberoResponseKey.STATUS.value)
-                == LiberoStatus.FINISHED.value
+                response.get(TransportKey.STATUS.value)
+                == ServerStatus.FINISHED.value
             ):
                 break
     except KeyboardInterrupt:

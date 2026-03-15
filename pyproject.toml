@@ -9,6 +9,8 @@ description = "LIBERO-plus: In-Depth Robustness Analysis For Vision-Language-Act
 license = { text = "MIT" }
 authors = [
     { name = "Lorenzo Mazza", email = "lorenzo.mazza@nct-dresden.de" },
+    { name = "Ariel Rodriguez", email = "ariel.rodriguezjimenez@nct-dresden.de" },
+
 ]
 requires-python = ">=3.10"
 dependencies = [
@@ -30,7 +32,8 @@ dependencies = [
     "draccus",
     "wand",
     "scikit-image",
-    "imitation-learning-toolkit",
+    "tso-robotics-sockets",
+    "versatil-constants",
 ]
 
 [project.optional-dependencies]
