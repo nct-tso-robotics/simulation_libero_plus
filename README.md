@@ -1,5 +1,7 @@
 # LIBERO-Plus with Socket Server Integration
 
+> Fork of [LIBERO-Plus](https://github.com/sylvestf/LIBERO-plus) (Fei et al., 2025), built on [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) (Liu et al., 2023).
+
 This repository integrates the **LIBERO-Plus** simulation framework with a ZMQ-based Socket Server that enables remote policy evaluation. The server can be used together with a Policy Client from the [VersatIL library](https://gitlab.com/nct_tso_public/versatil), allowing the policy learning library to remain independent of the simulation engine.
 
 ## Architecture Overview
