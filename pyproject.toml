@@ -1,0 +1,83 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "libero_plus"
+version = "0.1.0"
+description = "LIBERO-plus: In-Depth Robustness Analysis For Vision-Language-Action Models"
+license = { text = "MIT" }
+authors = [
+    { name = "Senyu Fei" },
+    { name = "Siyin Wang" },
+    { name = "Junhao Shi" },
+    { name = "Zihao Dai" },
+    { name = "Jikun Cai" },
+    { name = "Pengfang Qian" },
+    { name = "Li Ji" },
+    { name = "Xinzhe He" },
+    { name = "Shiduo Zhang" },
+    { name = "Zhaoye Fei" },
+    { name = "Jinlan Fu" },
+    { name = "Jingjing Gong" },
+    { name = "Xipeng Qiu" },
+    { name = "Bo Liu" },
+    { name = "Yifeng Zhu" },
+]
+maintainers = [
+    { name = "Lorenzo Mazza", email = "lorenzo.mazza@nct-dresden.de" },
+    { name = "Ariel Rodriguez", email = "ariel.rodriguezjimenez@nct-dresden.de" },
+]
+requires-python = ">=3.10"
+dependencies = [
+    "hydra-core==1.2.0",
+    "numpy==1.22.4",
+    "wandb",
+    "easydict==1.9",
+    "transformers==4.21.1",
+    "opencv-python==4.6.0.66",
+    "robomimic==0.2.0",
+    "einops==0.4.1",
+    "robosuite==1.4.0",
+    "bddl==1.0.1",
+    "future==0.18.2",
+    "matplotlib==3.5.3",
+    "cloudpickle==2.1.0",
+    "gym==0.25.2",
+    "usd-core>=25.5",
+    "draccus",
+    "wand",
+    "scikit-image",
+    "tso-robotics-sockets",
+    "versatil-constants",
+    "opencv-python-headless<4.11",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "mypy",
+]
+
+[project.scripts]
+"lifelong.main" = "libero.lifelong.main:main"
+"lifelong.eval" = "libero.lifelong.evaluate:main"
+"libero.config_copy" = "scripts.config_copy:main"
+"libero.create_template" = "scripts.create_template:main"
+
+[tool.uv.override-dependencies]
+gym-notices = []
+
+[tool.uv.sources]
+
+[tool.hatch.build.targets.wheel]
+packages = ["libero", "scripts", "versatil_inference"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "libero/**/*.py",
+    "scripts/**/*.py",
+    "versatil_inference/**/*.py",
+    "*.py",
+]

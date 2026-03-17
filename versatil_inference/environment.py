@@ -14,16 +14,17 @@ from libero.libero.envs import OffScreenRenderEnv
 from libero.libero.envs.venv import DummyVectorEnv, SubprocVectorEnv
 
 from versatil_inference.episode_recorder import EpisodeRecorder
-from versatil_inference.socket_flags import (
+from tso_robotics_sockets import InferenceResponseKey, ServerStatus
+from versatil_constants.libero import LiberoCamera, LiberoProprioKey
+from versatil_constants.shared import ObsKey
+
+from versatil_inference.constants import (
     DEFAULT_CLIENT_NAME,
     DEFAULT_MAX_TIMESTEPS,
     LIBERO_ALL_SUITES,
     SUITE_TO_BENCHMARK_KEY,
     TASK_SUITE_MAX_STEPS,
     LiberoGymKey,
-    LiberoObservationKey,
-    LiberoResponseKey,
-    LiberoStatus,
     LiberoTrajectoryColumn,
     TaskSuiteName,
 )
@@ -72,7 +73,7 @@ def _make_env_function(environment_args: dict) -> callable:
 
 class Environment:
     """Manages vectorized Libero environments for benchmark evaluation.
-    
+
     Note:
         Tasks are processed in batches of max_parallel_envs. Only one batch's
         vec_env is alive at a time. When all tasks in the current batch finish,
@@ -90,7 +91,13 @@ class Environment:
         max_parallel_envs: int = 10,
         render_gpu_device_id: int = -1,
         record_wrist_camera: bool = False,
+        start_task_index: int = 0,
+        prior_successes: int = 0,
+        prior_episodes: int = 0,
     ):
+        self.start_task_index = start_task_index
+        self.prior_successes = prior_successes
+        self.prior_episodes = prior_episodes
         self.task_suite_name = task_suite_name
         self.seed = seed
         self.resolution = resolution
@@ -100,7 +107,7 @@ class Environment:
         self.max_parallel_envs = max_parallel_envs
         self.render_gpu_device_id = render_gpu_device_id
         self.record_wrist_camera = record_wrist_camera
-        self.current_status = LiberoStatus.CREATING_ENV.value
+        self.current_status = ServerStatus.CREATING_ENV.value
         self.client_name = DEFAULT_CLIENT_NAME
         self._rollout_date = datetime.datetime.now().strftime(
             "%Y-%m-%d_%H-%M-%S"
@@ -266,12 +273,30 @@ class Environment:
         """Create the first batch of environments and perform initial setup.
 
         Intended to run in a background thread. Sets status to
-        WAITING_ACTION when complete.
+        WAITING_ACTION when complete. When start_task_index > 0, skips
+        earlier tasks and marks them as already completed.
         """
-        batch_size = min(self.max_parallel_envs, self.num_envs)
-        self._batch_global_indices = list(range(batch_size))
+        if self.start_task_index >= self.num_envs:
+            logging.warning(
+                f"start_task_index ({self.start_task_index}) >= num_envs "
+                f"({self.num_envs}), nothing to evaluate."
+            )
+            self.current_status = ServerStatus.FINISHED.value
+            return
+        for i in range(self.start_task_index):
+            self.number_of_resets[i] = self.num_trials_per_task
+        end = min(
+            self.start_task_index + self.max_parallel_envs, self.num_envs
+        )
+        self._batch_global_indices = list(
+            range(self.start_task_index, end)
+        )
+        logging.info(
+            f"Resuming from task {self.start_task_index} "
+            f"(prior: {self.prior_successes}/{self.prior_episodes})"
+        )
         self._create_batch_vec_env()
-        self.current_status = LiberoStatus.WAITING_ACTION.value
+        self.current_status = ServerStatus.WAITING_ACTION.value
 
     def _create_batch_vec_env(self) -> None:
         """Create a SubprocVectorEnv for the current batch of tasks."""
@@ -395,33 +420,33 @@ class Environment:
             per_env = {}
             agentview = env_obs.get(LiberoGymKey.AGENTVIEW_IMAGE.value)
             if agentview is not None:
-                per_env[LiberoObservationKey.AGENTVIEW.value] = (
+                per_env[LiberoCamera.AGENTVIEW.value] = (
                     np.ascontiguousarray(agentview[::-1, ::-1])
                 )
             eye_in_hand = env_obs.get(
                 LiberoGymKey.EYE_IN_HAND_IMAGE.value
             )
             if eye_in_hand is not None:
-                per_env[LiberoObservationKey.EYE_IN_HAND.value] = (
+                per_env[LiberoCamera.EYE_IN_HAND.value] = (
                     np.ascontiguousarray(eye_in_hand[::-1, ::-1])
                 )
             ee_pos = env_obs.get(LiberoGymKey.EE_POS.value)
             if ee_pos is not None:
-                per_env[LiberoObservationKey.EE_POS_ACTION.value] = ee_pos
+                per_env[LiberoProprioKey.EE_POS_ACTION.value] = ee_pos
             ee_quat = env_obs.get(LiberoGymKey.EE_QUAT.value)
             if ee_quat is not None:
-                per_env[LiberoObservationKey.EE_ORI_ACTION.value] = (
+                per_env[LiberoProprioKey.EE_ORI_ACTION.value] = (
                     quat_to_axis_angle(ee_quat)
                 )
             gripper = env_obs.get(LiberoGymKey.GRIPPER_QPOS.value)
             if gripper is not None:
-                per_env[LiberoObservationKey.GRIPPER_STATE_ACTION.value] = (
+                per_env[LiberoProprioKey.GRIPPER_STATE_ACTION.value] = (
                     gripper
                 )
-            per_env[LiberoObservationKey.LANGUAGE_INSTRUCTION.value] = (
+            per_env[ObsKey.LANGUAGE.value] = (
                 self.task_descriptions[global_index]
             )
-            per_env[LiberoResponseKey.TIMESTEP.value] = (
+            per_env[InferenceResponseKey.TIMESTEP.value] = (
                 self.steps_counts[global_index]
             )
             result[local_index] = per_env
@@ -469,7 +494,7 @@ class Environment:
         Args:
             actions: Mapping from batch-local index to action list.
         """
-        if self.current_status == LiberoStatus.FINISHED.value:
+        if self.current_status == ServerStatus.FINISHED.value:
             return
         batch_size = len(self._batch_global_indices)
         # Inactive envs accumulate NO_OP steps after finishing all trials.
@@ -593,14 +618,14 @@ class Environment:
             for global_index in self._batch_global_indices
         )
         if batch_active:
-            self.current_status = LiberoStatus.WAITING_ACTION.value
+            self.current_status = ServerStatus.WAITING_ACTION.value
         else:
             has_more = self._advance_to_next_batch()
             if has_more:
-                self.current_status = LiberoStatus.WAITING_ACTION.value
+                self.current_status = ServerStatus.WAITING_ACTION.value
             else:
                 self._write_results_csv()
-                self.current_status = LiberoStatus.FINISHED.value
+                self.current_status = ServerStatus.FINISHED.value
 
     def _reset_single_environment(
         self,
@@ -650,24 +675,28 @@ class Environment:
         output_directory.mkdir(parents=True, exist_ok=True)
         csv_path = output_directory / "results.csv"
         environment_data = []
-        for i in range(self.num_envs):
+        start = self.start_task_index
+        for i in range(start, self.num_envs):
             successes = self.environments_successes[i]
             trials = self.number_of_resets[i]
             success_rate = successes / trials if trials > 0 else 0.0
             environment_data.append(
                 (self.task_descriptions[i], successes, trials, success_rate)
             )
+        suite_keys = self.suite_name_per_task[start:]
+        category_keys = self.task_categories[start:]
+        difficulty_keys = self.task_difficulties[start:]
         suite_results = {}
-        unique_suites = list(dict.fromkeys(self.suite_name_per_task))
+        unique_suites = list(dict.fromkeys(suite_keys))
         if len(unique_suites) > 1:
             suite_results = self._aggregate_by_key(
-                environment_data, self.suite_name_per_task
+                environment_data, suite_keys
             )
         category_results = self._aggregate_by_key(
-            environment_data, self.task_categories
+            environment_data, category_keys
         )
         difficulty_results = self._aggregate_by_key(
-            environment_data, self.task_difficulties
+            environment_data, difficulty_keys
         )
         total_successes = sum(s for _, s, _, _ in environment_data)
         total_trials = sum(t for _, _, t, _ in environment_data)
@@ -676,6 +705,8 @@ class Environment:
             if environment_data
             else 0.0
         )
+        combined_successes = total_successes + self.prior_successes
+        combined_episodes = total_trials + self.prior_episodes
         with open(csv_path, "w", newline="") as file:
             writer = csv.writer(file)
             writer.writerow(
@@ -714,11 +745,24 @@ class Environment:
             writer.writerow([])
             writer.writerow(
                 [
-                    "overall",
+                    "overall (this run)",
                     f"{total_successes}/{total_trials}",
                     f"{overall_rate:.4f}",
                 ]
             )
+            if self.prior_episodes > 0:
+                combined_rate = (
+                    combined_successes / combined_episodes
+                    if combined_episodes > 0
+                    else 0.0
+                )
+                writer.writerow(
+                    [
+                        "overall (combined with prior)",
+                        f"{combined_successes}/{combined_episodes}",
+                        f"{combined_rate:.4f}",
+                    ]
+                )
         logging.info(f"Results saved to {csv_path}")
 
     def close(self) -> None:
