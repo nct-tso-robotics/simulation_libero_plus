@@ -66,8 +66,8 @@ dev = [
 "libero.config_copy" = "scripts.config_copy:main"
 "libero.create_template" = "scripts.create_template:main"
 
-[tool.uv.override-dependencies]
-gym-notices = []
+[tool.uv]
+override-dependencies = ["gym-notices"]
 
 [tool.uv.sources]
 
