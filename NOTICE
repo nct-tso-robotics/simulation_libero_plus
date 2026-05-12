@@ -1,0 +1,13 @@
+LIBERO-Plus simulation server
+
+This repository contains a VersatIL socket-server integration for LIBERO-Plus.
+
+Upstream components:
+- LIBERO-Plus: https://github.com/sylvestf/LIBERO-plus
+- LIBERO: https://github.com/Lifelong-Robot-Learning/LIBERO
+- Assets and datasets from LIBERO-Plus / LIBERO retain their original upstream
+  terms and citation requirements.
+
+The repository-level MIT license applies to wrapper/adaptation code
+contributed here unless a file-level or vendored upstream license states
+otherwise.

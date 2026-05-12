@@ -4,6 +4,14 @@
 
 This repository integrates the **LIBERO-Plus** simulation framework with a ZMQ-based Socket Server that enables remote policy evaluation. The server can be used together with a Policy Client from the [VersatIL library](https://gitlab.com/nct_tso_public/versatil), allowing the policy learning library to remain independent of the simulation engine.
 
+## License and Credits
+
+This repository is distributed under the MIT license. It is a VersatIL
+socket-server integration fork of
+[LIBERO-Plus](https://github.com/sylvestf/LIBERO-plus), built on
+[LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO). Assets and
+datasets retain their upstream terms and citation requirements.
+
 ## Architecture Overview
 
 ```
