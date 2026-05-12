@@ -2,7 +2,7 @@
 
 > Fork of [LIBERO-Plus](https://github.com/sylvestf/LIBERO-plus) (Fei et al., 2025), built on [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) (Liu et al., 2023).
 
-This repository integrates the **LIBERO-Plus** simulation framework with a ZMQ-based Socket Server that enables remote policy evaluation. The server can be used together with a Policy Client from the [VersatIL library](https://gitlab.com/nct_tso_public/versatil), allowing the policy learning library to remain independent of the simulation engine.
+This repository integrates the **LIBERO-Plus** simulation framework with a ZMQ-based Socket Server that enables remote policy evaluation. The server can be used together with a Policy Client from the VersatIL library, allowing the policy learning library to remain independent of the simulation engine.
 
 ## License and Credits
 
@@ -49,8 +49,7 @@ This repository uses [uv](https://docs.astral.sh/uv/) for dependency management.
 ### Prerequisites
 
 - Python 3.10+
-- Conda/Mamba (for environment management)
-- Git credentials for private GitLab repositories (see below)
+- Mamba (for environment management)
 
 ### Setup Steps
 
@@ -61,9 +60,10 @@ This repository uses [uv](https://docs.astral.sh/uv/) for dependency management.
    mamba install uv -c conda-forge -y
    ```
 
-2. **Install dependencies using uv with the conda prefix:**
+2. **Install dependencies using uv inside the mamba environment:**
    ```bash
-   CMAKE_POLICY_VERSION_MINIMUM=3.5 UV_PROJECT_ENVIRONMENT=$CONDA_PREFIX uv sync
+   CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+     UV_PROJECT_ENVIRONMENT=$MAMBA_ROOT_PREFIX/envs/libero_plus uv sync
    ```
 
 ### Assets
@@ -133,7 +133,7 @@ python -m versatil.endpoints.test \
 
 The client connects to the server, receives observations, runs inference, and sends actions back. Results (per-task success rates, rollout videos, trajectory CSVs) are saved on the server side.
 
-For the full VersatIL client documentation, see: https://gitlab.com/nct_tso_public/versatil
+For the full VersatIL client documentation, see the VersatIL project.
 
 ---
 
