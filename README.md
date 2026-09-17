@@ -66,31 +66,63 @@ This repository uses [uv](https://docs.astral.sh/uv/) for dependency management.
      UV_PROJECT_ENVIRONMENT=$MAMBA_ROOT_PREFIX/envs/libero_plus uv sync
    ```
 
-### Assets
+### Download and configure evaluation data
 
-Download assets from [LIBERO-Plus on HuggingFace](https://huggingface.co/datasets/Sylvest/LIBERO-plus/tree/main) and unzip `assets.zip` to `libero/libero/`:
+Evaluation requires the LIBERO-plus assets, BDDL task definitions and initial
+states on the simulation machine. Store them outside the source checkout:
 
-```text
-LIBERO-plus/
-└── libero/
-    └── libero/
-        └── assets/
-            ├── articulated_objects/
-            ├── new_objects/
-            ├── scenes/
-            ├── stable_hope_objects/
-            ├── stable_scanned_objects/
-            ├── textures/
-            ├── turbosquid_objects/
-            ├── serving_region.xml
-            ├── wall_frames.stl
-            └── wall.xml
+```bash
+export ROBOTICS_ASSETS_DIR="/path/to/robotics_assets"
+mkdir -p "$ROBOTICS_ASSETS_DIR/libero_plus"
 ```
 
-### Configuration
+Download task definitions and initial states from this upstream snapshot:
 
-If you have LIBERO installed, uninstall it first. Verify the config path at `~/.libero/config.yaml` points to this repo (see `libero/libero/__init__.py`).
+```bash
+curl -fL https://github.com/sylvestf/LIBERO-plus/archive/4976dc30028e805ff8094b55501d532c48fec182.tar.gz \
+  -o /tmp/libero-plus-task-data.tar.gz
+tar -xzf /tmp/libero-plus-task-data.tar.gz \
+  -C "$ROBOTICS_ASSETS_DIR/libero_plus" --strip-components=3 --wildcards \
+  '*/libero/libero/bddl_files' '*/libero/libero/init_files'
+```
 
+Download the expanded object and texture collection from
+[LIBERO-plus on Hugging Face](https://huggingface.co/datasets/Sylvest/LIBERO-plus/tree/main):
+
+```bash
+curl -fL https://huggingface.co/datasets/Sylvest/LIBERO-plus/resolve/main/assets.zip \
+  -o /tmp/libero-plus-assets.zip
+unzip /tmp/libero-plus-assets.zip -d /tmp/libero-plus-assets
+mv /tmp/libero-plus-assets/inspire/hdd/project/embodied-multimodality/public/syfei/libero_new/release/dataset/LIBERO-plus-0/assets \
+  "$ROBOTICS_ASSETS_DIR/libero_plus/"
+```
+
+The evaluation directory now contains:
+
+```text
+robotics_assets/libero_plus/
+├── assets/
+│   ├── new_objects/
+│   ├── scenes/
+│   └── ...
+├── bddl_files/
+└── init_files/
+```
+
+Create the path configuration from the active LIBERO-plus environment:
+
+```bash
+python -c 'from libero.libero import set_libero_default_path; set_libero_default_path()'
+python -m versatil_inference.check_assets --task_suite_name libero_plus_10
+```
+
+The setup command writes `~/.libero/config_libero_plus.yaml`. For an existing data
+layout, pass its root to `set_libero_default_path(custom_location="/path/to/data")`,
+or edit `assets`, `bddl_files` and `init_states` in that YAML. Relative entries
+resolve beside the configuration file. Set `LIBERO_CONFIG_PATH` to use another configuration directory.
+
+Rollout startup checks the selected suite's evaluation files before starting
+WandB or the server.
 
 ## Running Evaluation
 
@@ -137,9 +169,21 @@ For the full client documentation (all overrides, temporal aggregation, compress
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
 # Original LIBERO-Plus README
 
-*The following is the original README from the LIBERO-Plus benchmark for reference.*
+*Use the evaluation data setup above for this fork’s asset paths. The following is the original README from the LIBERO-Plus benchmark for reference.*
 
 ---
 
