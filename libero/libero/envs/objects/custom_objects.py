@@ -5,10 +5,8 @@ import copy
 from robosuite.models.objects import MujocoXMLObject
 from robosuite.utils.mjcf_utils import array_to_string
  
-import pathlib
+from libero.libero import get_libero_path
  
-# 使用pathlib计算项目根目录的绝对路径
-absolute_path = pathlib.Path(__file__).parent.parent.parent.absolute()
  
 from libero.libero.envs.base_object import register_object
  
@@ -109,7 +107,7 @@ class AlarmClock_1(CustomObjects):
                  obj_name="alarm_clock__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/alarm_clock/cvknrh/usd/MJCF/cvknrh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/alarm_clock/cvknrh/usd/MJCF/cvknrh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -130,7 +128,7 @@ class AlarmClock_2(CustomObjects):
                  obj_name="alarm_clock__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/alarm_clock/trwyaq/usd/MJCF/trwyaq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/alarm_clock/trwyaq/usd/MJCF/trwyaq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -151,7 +149,7 @@ class AlarmClock_3(CustomObjects):
                  obj_name="alarm_clock__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/alarm_clock/vqwovi/usd/MJCF/vqwovi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/alarm_clock/vqwovi/usd/MJCF/vqwovi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -172,7 +170,7 @@ class AllenWrench(CustomObjects):
                  obj_name="allen_wrench",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/allen_wrench/neqlcn/usd/MJCF/neqlcn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/allen_wrench/neqlcn/usd/MJCF/neqlcn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -193,7 +191,7 @@ class Apple_1(CustomObjects):
                  obj_name="apple__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/agveuv/usd/MJCF/agveuv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/agveuv/usd/MJCF/agveuv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -214,7 +212,7 @@ class Apple_2(CustomObjects):
                  obj_name="apple__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/bwteqh/usd/MJCF/bwteqh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/bwteqh/usd/MJCF/bwteqh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -235,7 +233,7 @@ class Apple_3(CustomObjects):
                  obj_name="apple__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/dfgurb/usd/MJCF/dfgurb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/dfgurb/usd/MJCF/dfgurb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -256,7 +254,7 @@ class Apple_4(CustomObjects):
                  obj_name="apple__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/hwrflj/usd/MJCF/hwrflj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/hwrflj/usd/MJCF/hwrflj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -277,7 +275,7 @@ class Apple_5(CustomObjects):
                  obj_name="apple__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/netbsb/usd/MJCF/netbsb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/netbsb/usd/MJCF/netbsb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -298,7 +296,7 @@ class Apple_6(CustomObjects):
                  obj_name="apple__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/obixxh/usd/MJCF/obixxh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/obixxh/usd/MJCF/obixxh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -319,7 +317,7 @@ class Apple_7(CustomObjects):
                  obj_name="apple__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/omzprq/usd/MJCF/omzprq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/omzprq/usd/MJCF/omzprq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -340,7 +338,7 @@ class Apple_8(CustomObjects):
                  obj_name="apple__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/qrqzvs/usd/MJCF/qrqzvs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/qrqzvs/usd/MJCF/qrqzvs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -361,7 +359,7 @@ class Apple_9(CustomObjects):
                  obj_name="apple__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/rizrsp/usd/MJCF/rizrsp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/rizrsp/usd/MJCF/rizrsp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -382,7 +380,7 @@ class Apple_10(CustomObjects):
                  obj_name="apple__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/ymhxqk/usd/MJCF/ymhxqk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/ymhxqk/usd/MJCF/ymhxqk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -403,7 +401,7 @@ class Apple_11(CustomObjects):
                  obj_name="apple__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/yyuiva/usd/MJCF/yyuiva.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/yyuiva/usd/MJCF/yyuiva.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -424,7 +422,7 @@ class Apple_12(CustomObjects):
                  obj_name="apple__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/zlxfxt/usd/MJCF/zlxfxt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/zlxfxt/usd/MJCF/zlxfxt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -445,7 +443,7 @@ class Apple_13(CustomObjects):
                  obj_name="apple__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple/zutnsf/usd/MJCF/zutnsf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple/zutnsf/usd/MJCF/zutnsf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -466,7 +464,7 @@ class ApplePie_1(CustomObjects):
                  obj_name="apple_pie__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple_pie/ejrgdj/usd/MJCF/ejrgdj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple_pie/ejrgdj/usd/MJCF/ejrgdj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -487,7 +485,7 @@ class ApplePie_2(CustomObjects):
                  obj_name="apple_pie__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apple_pie/rpdhbr/usd/MJCF/rpdhbr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apple_pie/rpdhbr/usd/MJCF/rpdhbr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -508,7 +506,7 @@ class Apricot(CustomObjects):
                  obj_name="apricot",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/apricot/qmwmwm/usd/MJCF/qmwmwm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/apricot/qmwmwm/usd/MJCF/qmwmwm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -529,7 +527,7 @@ class Artichoke(CustomObjects):
                  obj_name="artichoke",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/artichoke/tfclmg/usd/MJCF/tfclmg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/artichoke/tfclmg/usd/MJCF/tfclmg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -550,7 +548,7 @@ class Ashtray_1(CustomObjects):
                  obj_name="ashtray__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/ashtray/dhkkfo/usd/MJCF/dhkkfo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/ashtray/dhkkfo/usd/MJCF/dhkkfo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -571,7 +569,7 @@ class Ashtray_2(CustomObjects):
                  obj_name="ashtray__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/ashtray/nfuxzd/usd/MJCF/nfuxzd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/ashtray/nfuxzd/usd/MJCF/nfuxzd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -592,7 +590,7 @@ class Asparagus_1(CustomObjects):
                  obj_name="asparagus__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/asparagus/eodozo/usd/MJCF/eodozo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/asparagus/eodozo/usd/MJCF/eodozo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -613,7 +611,7 @@ class Asparagus_2(CustomObjects):
                  obj_name="asparagus__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/asparagus/npggjn/usd/MJCF/npggjn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/asparagus/npggjn/usd/MJCF/npggjn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -634,7 +632,7 @@ class Asparagus_3(CustomObjects):
                  obj_name="asparagus__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/asparagus/xguktb/usd/MJCF/xguktb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/asparagus/xguktb/usd/MJCF/xguktb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -655,7 +653,7 @@ class Avocado(CustomObjects):
                  obj_name="avocado",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/avocado/arswzs/usd/MJCF/arswzs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/avocado/arswzs/usd/MJCF/arswzs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -676,7 +674,7 @@ class BagOfBreadcrumbs(CustomObjects):
                  obj_name="bag_of_breadcrumbs",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_breadcrumbs/nvhvxe/usd/MJCF/nvhvxe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_breadcrumbs/nvhvxe/usd/MJCF/nvhvxe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -697,7 +695,7 @@ class BagOfChips_1(CustomObjects):
                  obj_name="bag_of_chips__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_chips/bryahw/usd/MJCF/bryahw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_chips/bryahw/usd/MJCF/bryahw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -718,7 +716,7 @@ class BagOfChips_2(CustomObjects):
                  obj_name="bag_of_chips__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_chips/dwkdko/usd/MJCF/dwkdko.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_chips/dwkdko/usd/MJCF/dwkdko.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -739,7 +737,7 @@ class BagOfChips_3(CustomObjects):
                  obj_name="bag_of_chips__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_chips/ennnjj/usd/MJCF/ennnjj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_chips/ennnjj/usd/MJCF/ennnjj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -760,7 +758,7 @@ class BagOfChips_4(CustomObjects):
                  obj_name="bag_of_chips__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_chips/jphwer/usd/MJCF/jphwer.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_chips/jphwer/usd/MJCF/jphwer.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -781,7 +779,7 @@ class BagOfChips_5(CustomObjects):
                  obj_name="bag_of_chips__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_chips/qstxpj/usd/MJCF/qstxpj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_chips/qstxpj/usd/MJCF/qstxpj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -802,7 +800,7 @@ class BagOfChips_6(CustomObjects):
                  obj_name="bag_of_chips__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_chips/uevvib/usd/MJCF/uevvib.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_chips/uevvib/usd/MJCF/uevvib.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -823,7 +821,7 @@ class BagOfChips_7(CustomObjects):
                  obj_name="bag_of_chips__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_chips/wnuoym/usd/MJCF/wnuoym.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_chips/wnuoym/usd/MJCF/wnuoym.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -844,7 +842,7 @@ class BagOfCookies_1(CustomObjects):
                  obj_name="bag_of_cookies__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_cookies/bbyvsc/usd/MJCF/bbyvsc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_cookies/bbyvsc/usd/MJCF/bbyvsc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -865,7 +863,7 @@ class BagOfCookies_2(CustomObjects):
                  obj_name="bag_of_cookies__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_cookies/ikivgk/usd/MJCF/ikivgk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_cookies/ikivgk/usd/MJCF/ikivgk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -886,7 +884,7 @@ class BagOfCookies_3(CustomObjects):
                  obj_name="bag_of_cookies__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_cookies/ksjtde/usd/MJCF/ksjtde.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_cookies/ksjtde/usd/MJCF/ksjtde.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -907,7 +905,7 @@ class BagOfCookies_4(CustomObjects):
                  obj_name="bag_of_cookies__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_cookies/vafomx/usd/MJCF/vafomx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_cookies/vafomx/usd/MJCF/vafomx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -928,7 +926,7 @@ class BagOfFlour_1(CustomObjects):
                  obj_name="bag_of_flour__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_flour/fntqmd/usd/MJCF/fntqmd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_flour/fntqmd/usd/MJCF/fntqmd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -949,7 +947,7 @@ class BagOfFlour_2(CustomObjects):
                  obj_name="bag_of_flour__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_flour/rlejxx/usd/MJCF/rlejxx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_flour/rlejxx/usd/MJCF/rlejxx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -970,7 +968,7 @@ class BagOfJerky(CustomObjects):
                  obj_name="bag_of_jerky",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_jerky/wblype/usd/MJCF/wblype.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_jerky/wblype/usd/MJCF/wblype.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -991,7 +989,7 @@ class BagOfPopcorn_1(CustomObjects):
                  obj_name="bag_of_popcorn__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_popcorn/dmubtt/usd/MJCF/dmubtt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_popcorn/dmubtt/usd/MJCF/dmubtt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1012,7 +1010,7 @@ class BagOfPopcorn_2(CustomObjects):
                  obj_name="bag_of_popcorn__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_popcorn/ebygfp/usd/MJCF/ebygfp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_popcorn/ebygfp/usd/MJCF/ebygfp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1033,7 +1031,7 @@ class BagOfRice_1(CustomObjects):
                  obj_name="bag_of_rice__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_rice/eddcjz/usd/MJCF/eddcjz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_rice/eddcjz/usd/MJCF/eddcjz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1054,7 +1052,7 @@ class BagOfRice_2(CustomObjects):
                  obj_name="bag_of_rice__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_rice/feerye/usd/MJCF/feerye.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_rice/feerye/usd/MJCF/feerye.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1075,7 +1073,7 @@ class BagOfRice_3(CustomObjects):
                  obj_name="bag_of_rice__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_rice/jzjqjb/usd/MJCF/jzjqjb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_rice/jzjqjb/usd/MJCF/jzjqjb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1096,7 +1094,7 @@ class BagOfRice_4(CustomObjects):
                  obj_name="bag_of_rice__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_rice/xcokwx/usd/MJCF/xcokwx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_rice/xcokwx/usd/MJCF/xcokwx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1117,7 +1115,7 @@ class BagOfShiitake(CustomObjects):
                  obj_name="bag_of_shiitake",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_shiitake/jazecy/usd/MJCF/jazecy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_shiitake/jazecy/usd/MJCF/jazecy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1138,7 +1136,7 @@ class BagOfSnacks(CustomObjects):
                  obj_name="bag_of_snacks",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_snacks/pkwgid/usd/MJCF/pkwgid.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_snacks/pkwgid/usd/MJCF/pkwgid.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1159,7 +1157,7 @@ class BagOfStarch(CustomObjects):
                  obj_name="bag_of_starch",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_starch/npegpl/usd/MJCF/npegpl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_starch/npegpl/usd/MJCF/npegpl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1180,7 +1178,7 @@ class BagOfTea(CustomObjects):
                  obj_name="bag_of_tea",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_tea/jjweyi/usd/MJCF/jjweyi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_tea/jjweyi/usd/MJCF/jjweyi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1201,7 +1199,7 @@ class BagOfYeast(CustomObjects):
                  obj_name="bag_of_yeast",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bag_of_yeast/ibvtik/usd/MJCF/ibvtik.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bag_of_yeast/ibvtik/usd/MJCF/ibvtik.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1222,7 +1220,7 @@ class Bagel(CustomObjects):
                  obj_name="bagel",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bagel/zlxkry/usd/MJCF/zlxkry.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bagel/zlxkry/usd/MJCF/zlxkry.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1243,7 +1241,7 @@ class Baguette_1(CustomObjects):
                  obj_name="baguette__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/baguette/pjzkeh/usd/MJCF/pjzkeh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/baguette/pjzkeh/usd/MJCF/pjzkeh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1264,7 +1262,7 @@ class Baguette_2(CustomObjects):
                  obj_name="baguette__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/baguette/xhqnuc/usd/MJCF/xhqnuc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/baguette/xhqnuc/usd/MJCF/xhqnuc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1285,7 +1283,7 @@ class Baguette_3(CustomObjects):
                  obj_name="baguette__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/baguette/xydhpd/usd/MJCF/xydhpd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/baguette/xydhpd/usd/MJCF/xydhpd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1306,7 +1304,7 @@ class Baguette_4(CustomObjects):
                  obj_name="baguette__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/baguette/ypbyek/usd/MJCF/ypbyek.xml"
+                get_libero_path(query_key="assets"), f"new_objects/baguette/ypbyek/usd/MJCF/ypbyek.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1327,7 +1325,7 @@ class BakingPowderJar(CustomObjects):
                  obj_name="baking_powder_jar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/baking_powder_jar/lgopij/usd/MJCF/lgopij.xml"
+                get_libero_path(query_key="assets"), f"new_objects/baking_powder_jar/lgopij/usd/MJCF/lgopij.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1348,7 +1346,7 @@ class Banana_1(CustomObjects):
                  obj_name="banana__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/banana/verqwv/usd/MJCF/verqwv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/banana/verqwv/usd/MJCF/verqwv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1369,7 +1367,7 @@ class Banana_2(CustomObjects):
                  obj_name="banana__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/banana/vvyyyv/usd/MJCF/vvyyyv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/banana/vvyyyv/usd/MJCF/vvyyyv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1390,7 +1388,7 @@ class Banana_3(CustomObjects):
                  obj_name="banana__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/banana/wmglhc/usd/MJCF/wmglhc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/banana/wmglhc/usd/MJCF/wmglhc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1411,7 +1409,7 @@ class Banana_4(CustomObjects):
                  obj_name="banana__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/banana/znakxm/usd/MJCF/znakxm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/banana/znakxm/usd/MJCF/znakxm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1432,7 +1430,7 @@ class BananaBread(CustomObjects):
                  obj_name="banana_bread",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/banana_bread/outrja/usd/MJCF/outrja.xml"
+                get_libero_path(query_key="assets"), f"new_objects/banana_bread/outrja/usd/MJCF/outrja.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1453,7 +1451,7 @@ class Bandage(CustomObjects):
                  obj_name="bandage",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bandage/riftxh/usd/MJCF/riftxh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bandage/riftxh/usd/MJCF/riftxh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1474,7 +1472,7 @@ class BarSoap_1(CustomObjects):
                  obj_name="bar_soap__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bar_soap/feqemg/usd/MJCF/feqemg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bar_soap/feqemg/usd/MJCF/feqemg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1495,7 +1493,7 @@ class BarSoap_2(CustomObjects):
                  obj_name="bar_soap__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bar_soap/lyigsj/usd/MJCF/lyigsj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bar_soap/lyigsj/usd/MJCF/lyigsj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1516,7 +1514,7 @@ class BarSoap_3(CustomObjects):
                  obj_name="bar_soap__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bar_soap/ofargb/usd/MJCF/ofargb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bar_soap/ofargb/usd/MJCF/ofargb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1537,7 +1535,7 @@ class BarSoap_4(CustomObjects):
                  obj_name="bar_soap__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bar_soap/ozifwa/usd/MJCF/ozifwa.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bar_soap/ozifwa/usd/MJCF/ozifwa.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1558,7 +1556,7 @@ class BarSoap_5(CustomObjects):
                  obj_name="bar_soap__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bar_soap/utgixp/usd/MJCF/utgixp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bar_soap/utgixp/usd/MJCF/utgixp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1579,7 +1577,7 @@ class BasilJar(CustomObjects):
                  obj_name="basil_jar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/basil_jar/swytaw/usd/MJCF/swytaw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/basil_jar/swytaw/usd/MJCF/swytaw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1600,7 +1598,7 @@ class Battery(CustomObjects):
                  obj_name="battery",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/battery/dcjyzg/usd/MJCF/dcjyzg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/battery/dcjyzg/usd/MJCF/dcjyzg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1621,7 +1619,7 @@ class Beaker_1(CustomObjects):
                  obj_name="beaker__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/dtjmai/usd/MJCF/dtjmai.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/dtjmai/usd/MJCF/dtjmai.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1642,7 +1640,7 @@ class Beaker_2(CustomObjects):
                  obj_name="beaker__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/effbnc/usd/MJCF/effbnc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/effbnc/usd/MJCF/effbnc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1663,7 +1661,7 @@ class Beaker_3(CustomObjects):
                  obj_name="beaker__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/exzsal/usd/MJCF/exzsal.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/exzsal/usd/MJCF/exzsal.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1684,7 +1682,7 @@ class Beaker_4(CustomObjects):
                  obj_name="beaker__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/fxrsyi/usd/MJCF/fxrsyi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/fxrsyi/usd/MJCF/fxrsyi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1705,7 +1703,7 @@ class Beaker_5(CustomObjects):
                  obj_name="beaker__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/fyrkzs/usd/MJCF/fyrkzs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/fyrkzs/usd/MJCF/fyrkzs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1726,7 +1724,7 @@ class Beaker_6(CustomObjects):
                  obj_name="beaker__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/jdijek/usd/MJCF/jdijek.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/jdijek/usd/MJCF/jdijek.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1747,7 +1745,7 @@ class Beaker_7(CustomObjects):
                  obj_name="beaker__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/rhohgs/usd/MJCF/rhohgs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/rhohgs/usd/MJCF/rhohgs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1768,7 +1766,7 @@ class Beaker_8(CustomObjects):
                  obj_name="beaker__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/sfvswx/usd/MJCF/sfvswx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/sfvswx/usd/MJCF/sfvswx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1789,7 +1787,7 @@ class Beaker_9(CustomObjects):
                  obj_name="beaker__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/sstojv/usd/MJCF/sstojv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/sstojv/usd/MJCF/sstojv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1810,7 +1808,7 @@ class Beaker_10(CustomObjects):
                  obj_name="beaker__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/uobdoq/usd/MJCF/uobdoq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/uobdoq/usd/MJCF/uobdoq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1831,7 +1829,7 @@ class Beaker_11(CustomObjects):
                  obj_name="beaker__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/uzgibd/usd/MJCF/uzgibd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/uzgibd/usd/MJCF/uzgibd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1852,7 +1850,7 @@ class Beaker_12(CustomObjects):
                  obj_name="beaker__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beaker/zycgen/usd/MJCF/zycgen.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beaker/zycgen/usd/MJCF/zycgen.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1873,7 +1871,7 @@ class BeanCurd(CustomObjects):
                  obj_name="bean_curd",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bean_curd/hekigc/usd/MJCF/hekigc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bean_curd/hekigc/usd/MJCF/hekigc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1894,7 +1892,7 @@ class BeefBrothCarton(CustomObjects):
                  obj_name="beef_broth_carton",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beef_broth_carton/ecqxgd/usd/MJCF/ecqxgd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beef_broth_carton/ecqxgd/usd/MJCF/ecqxgd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1915,7 +1913,7 @@ class BeefsteakTomato_1(CustomObjects):
                  obj_name="beefsteak_tomato__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beefsteak_tomato/altlfz/usd/MJCF/altlfz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beefsteak_tomato/altlfz/usd/MJCF/altlfz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1936,7 +1934,7 @@ class BeefsteakTomato_2(CustomObjects):
                  obj_name="beefsteak_tomato__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beefsteak_tomato/eevvzv/usd/MJCF/eevvzv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beefsteak_tomato/eevvzv/usd/MJCF/eevvzv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1957,7 +1955,7 @@ class BeefsteakTomato_3(CustomObjects):
                  obj_name="beefsteak_tomato__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beefsteak_tomato/ogpans/usd/MJCF/ogpans.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beefsteak_tomato/ogpans/usd/MJCF/ogpans.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1978,7 +1976,7 @@ class BeefsteakTomato_4(CustomObjects):
                  obj_name="beefsteak_tomato__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beefsteak_tomato/pnrdxh/usd/MJCF/pnrdxh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beefsteak_tomato/pnrdxh/usd/MJCF/pnrdxh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -1999,7 +1997,7 @@ class BeeswaxCandle_1(CustomObjects):
                  obj_name="beeswax_candle__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beeswax_candle/aiuhyv/usd/MJCF/aiuhyv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beeswax_candle/aiuhyv/usd/MJCF/aiuhyv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2020,7 +2018,7 @@ class BeeswaxCandle_2(CustomObjects):
                  obj_name="beeswax_candle__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beeswax_candle/kxange/usd/MJCF/kxange.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beeswax_candle/kxange/usd/MJCF/kxange.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2041,7 +2039,7 @@ class BeeswaxCandle_3(CustomObjects):
                  obj_name="beeswax_candle__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beeswax_candle/nhdnje/usd/MJCF/nhdnje.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beeswax_candle/nhdnje/usd/MJCF/nhdnje.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2062,7 +2060,7 @@ class BeeswaxCandle_4(CustomObjects):
                  obj_name="beeswax_candle__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beeswax_candle/nxewyk/usd/MJCF/nxewyk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beeswax_candle/nxewyk/usd/MJCF/nxewyk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2083,7 +2081,7 @@ class BeeswaxCandle_5(CustomObjects):
                  obj_name="beeswax_candle__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beeswax_candle/oimgmh/usd/MJCF/oimgmh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beeswax_candle/oimgmh/usd/MJCF/oimgmh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2104,7 +2102,7 @@ class BeeswaxCandle_6(CustomObjects):
                  obj_name="beeswax_candle__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beeswax_candle/ouzkdj/usd/MJCF/ouzkdj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beeswax_candle/ouzkdj/usd/MJCF/ouzkdj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2125,7 +2123,7 @@ class BeeswaxCandle_7(CustomObjects):
                  obj_name="beeswax_candle__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beeswax_candle/pfewit/usd/MJCF/pfewit.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beeswax_candle/pfewit/usd/MJCF/pfewit.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2146,7 +2144,7 @@ class BeeswaxCandle_8(CustomObjects):
                  obj_name="beeswax_candle__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beeswax_candle/rptogj/usd/MJCF/rptogj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beeswax_candle/rptogj/usd/MJCF/rptogj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2167,7 +2165,7 @@ class Beet(CustomObjects):
                  obj_name="beet",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/beet/wantjv/usd/MJCF/wantjv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/beet/wantjv/usd/MJCF/wantjv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2188,7 +2186,7 @@ class Bell(CustomObjects):
                  obj_name="bell",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bell/oshurh/usd/MJCF/oshurh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bell/oshurh/usd/MJCF/oshurh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2209,7 +2207,7 @@ class BellPepper_1(CustomObjects):
                  obj_name="bell_pepper__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bell_pepper/ggurxn/usd/MJCF/ggurxn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bell_pepper/ggurxn/usd/MJCF/ggurxn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2230,7 +2228,7 @@ class BellPepper_2(CustomObjects):
                  obj_name="bell_pepper__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bell_pepper/ihctxa/usd/MJCF/ihctxa.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bell_pepper/ihctxa/usd/MJCF/ihctxa.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2251,7 +2249,7 @@ class BellPepper_3(CustomObjects):
                  obj_name="bell_pepper__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bell_pepper/ukkycp/usd/MJCF/ukkycp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bell_pepper/ukkycp/usd/MJCF/ukkycp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2272,7 +2270,7 @@ class BellPepper_4(CustomObjects):
                  obj_name="bell_pepper__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bell_pepper/uqcenz/usd/MJCF/uqcenz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bell_pepper/uqcenz/usd/MJCF/uqcenz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2293,7 +2291,7 @@ class BellPepper_5(CustomObjects):
                  obj_name="bell_pepper__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bell_pepper/wszvwc/usd/MJCF/wszvwc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bell_pepper/wszvwc/usd/MJCF/wszvwc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2314,7 +2312,7 @@ class BirdFeedBag(CustomObjects):
                  obj_name="bird_feed_bag",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bird_feed_bag/dpxnlc/usd/MJCF/dpxnlc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bird_feed_bag/dpxnlc/usd/MJCF/dpxnlc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2335,7 +2333,7 @@ class Biscuit(CustomObjects):
                  obj_name="biscuit",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/biscuit/ukcwqw/usd/MJCF/ukcwqw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/biscuit/ukcwqw/usd/MJCF/ukcwqw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2356,7 +2354,7 @@ class BlackboardEraser(CustomObjects):
                  obj_name="blackboard_eraser",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/blackboard_eraser/oynrtw/usd/MJCF/oynrtw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/blackboard_eraser/oynrtw/usd/MJCF/oynrtw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2377,7 +2375,7 @@ class BobbyPin(CustomObjects):
                  obj_name="bobby_pin",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bobby_pin/zphpcz/usd/MJCF/zphpcz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bobby_pin/zphpcz/usd/MJCF/zphpcz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2398,7 +2396,7 @@ class BokChoy_1(CustomObjects):
                  obj_name="bok_choy__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bok_choy/bbvcji/usd/MJCF/bbvcji.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bok_choy/bbvcji/usd/MJCF/bbvcji.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2419,7 +2417,7 @@ class BokChoy_2(CustomObjects):
                  obj_name="bok_choy__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bok_choy/jpkewd/usd/MJCF/jpkewd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bok_choy/jpkewd/usd/MJCF/jpkewd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2440,7 +2438,7 @@ class Bookend_1(CustomObjects):
                  obj_name="bookend__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/detqsw/usd/MJCF/detqsw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/detqsw/usd/MJCF/detqsw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2461,7 +2459,7 @@ class Bookend_2(CustomObjects):
                  obj_name="bookend__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/eyddem/usd/MJCF/eyddem.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/eyddem/usd/MJCF/eyddem.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2482,7 +2480,7 @@ class Bookend_3(CustomObjects):
                  obj_name="bookend__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/hlpgle/usd/MJCF/hlpgle.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/hlpgle/usd/MJCF/hlpgle.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2503,7 +2501,7 @@ class Bookend_4(CustomObjects):
                  obj_name="bookend__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/huxmnl/usd/MJCF/huxmnl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/huxmnl/usd/MJCF/huxmnl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2524,7 +2522,7 @@ class Bookend_5(CustomObjects):
                  obj_name="bookend__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/jmodol/usd/MJCF/jmodol.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/jmodol/usd/MJCF/jmodol.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2545,7 +2543,7 @@ class Bookend_6(CustomObjects):
                  obj_name="bookend__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/oxfecv/usd/MJCF/oxfecv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/oxfecv/usd/MJCF/oxfecv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2566,7 +2564,7 @@ class Bookend_7(CustomObjects):
                  obj_name="bookend__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/rwvcah/usd/MJCF/rwvcah.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/rwvcah/usd/MJCF/rwvcah.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2587,7 +2585,7 @@ class Bookend_8(CustomObjects):
                  obj_name="bookend__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/sgiryo/usd/MJCF/sgiryo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/sgiryo/usd/MJCF/sgiryo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2608,7 +2606,7 @@ class Bookend_9(CustomObjects):
                  obj_name="bookend__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/xqyxrq/usd/MJCF/xqyxrq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/xqyxrq/usd/MJCF/xqyxrq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2629,7 +2627,7 @@ class Bookend_10(CustomObjects):
                  obj_name="bookend__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bookend/ygynyq/usd/MJCF/ygynyq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bookend/ygynyq/usd/MJCF/ygynyq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2650,7 +2648,7 @@ class BottleOfAlcohol(CustomObjects):
                  obj_name="bottle_of_alcohol",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_alcohol/qvhrjh/usd/MJCF/qvhrjh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_alcohol/qvhrjh/usd/MJCF/qvhrjh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2671,7 +2669,7 @@ class BottleOfAlfredoSauce(CustomObjects):
                  obj_name="bottle_of_alfredo_sauce",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_alfredo_sauce/xwzqjr/usd/MJCF/xwzqjr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_alfredo_sauce/xwzqjr/usd/MJCF/xwzqjr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2692,7 +2690,7 @@ class BottleOfAlmondOil(CustomObjects):
                  obj_name="bottle_of_almond_oil",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_almond_oil/nlokfa/usd/MJCF/nlokfa.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_almond_oil/nlokfa/usd/MJCF/nlokfa.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2713,7 +2711,7 @@ class BottleOfAntihistamines(CustomObjects):
                  obj_name="bottle_of_antihistamines",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_antihistamines/agavwx/usd/MJCF/agavwx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_antihistamines/agavwx/usd/MJCF/agavwx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2734,7 +2732,7 @@ class BottleOfAppleCider(CustomObjects):
                  obj_name="bottle_of_apple_cider",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_apple_cider/frekrp/usd/MJCF/frekrp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_apple_cider/frekrp/usd/MJCF/frekrp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2755,7 +2753,7 @@ class BottleOfAppleJuice(CustomObjects):
                  obj_name="bottle_of_apple_juice",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_apple_juice/xvrbdy/usd/MJCF/xvrbdy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_apple_juice/xvrbdy/usd/MJCF/xvrbdy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2776,7 +2774,7 @@ class BottleOfAspirin(CustomObjects):
                  obj_name="bottle_of_aspirin",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_aspirin/psvktc/usd/MJCF/psvktc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_aspirin/psvktc/usd/MJCF/psvktc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2797,7 +2795,7 @@ class BottleOfBabyOil(CustomObjects):
                  obj_name="bottle_of_baby_oil",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_baby_oil/xpdlrr/usd/MJCF/xpdlrr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_baby_oil/xpdlrr/usd/MJCF/xpdlrr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2818,7 +2816,7 @@ class BottleOfBarbecueSauce_1(CustomObjects):
                  obj_name="bottle_of_barbecue_sauce__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_barbecue_sauce/ikbsox/usd/MJCF/ikbsox.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_barbecue_sauce/ikbsox/usd/MJCF/ikbsox.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2839,7 +2837,7 @@ class BottleOfBarbecueSauce_2(CustomObjects):
                  obj_name="bottle_of_barbecue_sauce__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_barbecue_sauce/nkqvex/usd/MJCF/nkqvex.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_barbecue_sauce/nkqvex/usd/MJCF/nkqvex.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2860,7 +2858,7 @@ class BottleOfBarbecueSauce_3(CustomObjects):
                  obj_name="bottle_of_barbecue_sauce__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_barbecue_sauce/rzevkb/usd/MJCF/rzevkb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_barbecue_sauce/rzevkb/usd/MJCF/rzevkb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2881,7 +2879,7 @@ class BottleOfBeer_1(CustomObjects):
                  obj_name="bottle_of_beer__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/bwaboq/usd/MJCF/bwaboq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/bwaboq/usd/MJCF/bwaboq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2902,7 +2900,7 @@ class BottleOfBeer_2(CustomObjects):
                  obj_name="bottle_of_beer__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/crfcwo/usd/MJCF/crfcwo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/crfcwo/usd/MJCF/crfcwo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2923,7 +2921,7 @@ class BottleOfBeer_3(CustomObjects):
                  obj_name="bottle_of_beer__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/dcwvkg/usd/MJCF/dcwvkg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/dcwvkg/usd/MJCF/dcwvkg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2944,7 +2942,7 @@ class BottleOfBeer_4(CustomObjects):
                  obj_name="bottle_of_beer__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/dqfsgv/usd/MJCF/dqfsgv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/dqfsgv/usd/MJCF/dqfsgv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2965,7 +2963,7 @@ class BottleOfBeer_5(CustomObjects):
                  obj_name="bottle_of_beer__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/eicnxj/usd/MJCF/eicnxj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/eicnxj/usd/MJCF/eicnxj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -2986,7 +2984,7 @@ class BottleOfBeer_6(CustomObjects):
                  obj_name="bottle_of_beer__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/fcnrqt/usd/MJCF/fcnrqt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/fcnrqt/usd/MJCF/fcnrqt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3007,7 +3005,7 @@ class BottleOfBeer_7(CustomObjects):
                  obj_name="bottle_of_beer__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/fgzjnb/usd/MJCF/fgzjnb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/fgzjnb/usd/MJCF/fgzjnb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3028,7 +3026,7 @@ class BottleOfBeer_8(CustomObjects):
                  obj_name="bottle_of_beer__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/gxxbhh/usd/MJCF/gxxbhh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/gxxbhh/usd/MJCF/gxxbhh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3049,7 +3047,7 @@ class BottleOfBeer_9(CustomObjects):
                  obj_name="bottle_of_beer__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/hauvsg/usd/MJCF/hauvsg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/hauvsg/usd/MJCF/hauvsg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3070,7 +3068,7 @@ class BottleOfBeer_10(CustomObjects):
                  obj_name="bottle_of_beer__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/ikgezm/usd/MJCF/ikgezm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/ikgezm/usd/MJCF/ikgezm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3091,7 +3089,7 @@ class BottleOfBeer_11(CustomObjects):
                  obj_name="bottle_of_beer__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/jssuog/usd/MJCF/jssuog.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/jssuog/usd/MJCF/jssuog.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3112,7 +3110,7 @@ class BottleOfBeer_12(CustomObjects):
                  obj_name="bottle_of_beer__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/jtgyoo/usd/MJCF/jtgyoo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/jtgyoo/usd/MJCF/jtgyoo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3133,7 +3131,7 @@ class BottleOfBeer_13(CustomObjects):
                  obj_name="bottle_of_beer__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/jxhtdl/usd/MJCF/jxhtdl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/jxhtdl/usd/MJCF/jxhtdl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3154,7 +3152,7 @@ class BottleOfBeer_14(CustomObjects):
                  obj_name="bottle_of_beer__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/kqskmv/usd/MJCF/kqskmv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/kqskmv/usd/MJCF/kqskmv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3175,7 +3173,7 @@ class BottleOfBeer_15(CustomObjects):
                  obj_name="bottle_of_beer__15",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/meqliv/usd/MJCF/meqliv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/meqliv/usd/MJCF/meqliv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3196,7 +3194,7 @@ class BottleOfBeer_16(CustomObjects):
                  obj_name="bottle_of_beer__16",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/mhzpkh/usd/MJCF/mhzpkh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/mhzpkh/usd/MJCF/mhzpkh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3217,7 +3215,7 @@ class BottleOfBeer_17(CustomObjects):
                  obj_name="bottle_of_beer__17",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/miiijl/usd/MJCF/miiijl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/miiijl/usd/MJCF/miiijl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3238,7 +3236,7 @@ class BottleOfBeer_18(CustomObjects):
                  obj_name="bottle_of_beer__18",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/mljzrl/usd/MJCF/mljzrl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/mljzrl/usd/MJCF/mljzrl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3259,7 +3257,7 @@ class BottleOfBeer_19(CustomObjects):
                  obj_name="bottle_of_beer__19",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/nfzzqc/usd/MJCF/nfzzqc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/nfzzqc/usd/MJCF/nfzzqc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3280,7 +3278,7 @@ class BottleOfBeer_20(CustomObjects):
                  obj_name="bottle_of_beer__20",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/noxtlc/usd/MJCF/noxtlc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/noxtlc/usd/MJCF/noxtlc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3301,7 +3299,7 @@ class BottleOfBeer_21(CustomObjects):
                  obj_name="bottle_of_beer__21",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/phdimo/usd/MJCF/phdimo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/phdimo/usd/MJCF/phdimo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3322,7 +3320,7 @@ class BottleOfBeer_22(CustomObjects):
                  obj_name="bottle_of_beer__22",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/qepxvl/usd/MJCF/qepxvl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/qepxvl/usd/MJCF/qepxvl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3343,7 +3341,7 @@ class BottleOfBeer_23(CustomObjects):
                  obj_name="bottle_of_beer__23",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/rbpakt/usd/MJCF/rbpakt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/rbpakt/usd/MJCF/rbpakt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3364,7 +3362,7 @@ class BottleOfBeer_24(CustomObjects):
                  obj_name="bottle_of_beer__24",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/rdnopv/usd/MJCF/rdnopv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/rdnopv/usd/MJCF/rdnopv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3385,7 +3383,7 @@ class BottleOfBeer_25(CustomObjects):
                  obj_name="bottle_of_beer__25",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/rjwdae/usd/MJCF/rjwdae.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/rjwdae/usd/MJCF/rjwdae.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3406,7 +3404,7 @@ class BottleOfBeer_26(CustomObjects):
                  obj_name="bottle_of_beer__26",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/saslsh/usd/MJCF/saslsh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/saslsh/usd/MJCF/saslsh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3427,7 +3425,7 @@ class BottleOfBeer_27(CustomObjects):
                  obj_name="bottle_of_beer__27",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/ukbhdj/usd/MJCF/ukbhdj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/ukbhdj/usd/MJCF/ukbhdj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3448,7 +3446,7 @@ class BottleOfBeer_28(CustomObjects):
                  obj_name="bottle_of_beer__28",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/vhscym/usd/MJCF/vhscym.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/vhscym/usd/MJCF/vhscym.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3469,7 +3467,7 @@ class BottleOfBeer_29(CustomObjects):
                  obj_name="bottle_of_beer__29",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/xpqnfz/usd/MJCF/xpqnfz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/xpqnfz/usd/MJCF/xpqnfz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3490,7 +3488,7 @@ class BottleOfBeer_30(CustomObjects):
                  obj_name="bottle_of_beer__30",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/zbsxro/usd/MJCF/zbsxro.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/zbsxro/usd/MJCF/zbsxro.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3511,7 +3509,7 @@ class BottleOfBeer_31(CustomObjects):
                  obj_name="bottle_of_beer__31",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_beer/zlmwyn/usd/MJCF/zlmwyn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_beer/zlmwyn/usd/MJCF/zlmwyn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3532,7 +3530,7 @@ class BottleOfBlackPepper_1(CustomObjects):
                  obj_name="bottle_of_black_pepper__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_black_pepper/ejtiig/usd/MJCF/ejtiig.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_black_pepper/ejtiig/usd/MJCF/ejtiig.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3553,7 +3551,7 @@ class BottleOfBlackPepper_2(CustomObjects):
                  obj_name="bottle_of_black_pepper__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_black_pepper/honise/usd/MJCF/honise.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_black_pepper/honise/usd/MJCF/honise.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3574,7 +3572,7 @@ class BottleOfBlackPepper_3(CustomObjects):
                  obj_name="bottle_of_black_pepper__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_black_pepper/ydzzrv/usd/MJCF/ydzzrv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_black_pepper/ydzzrv/usd/MJCF/ydzzrv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3595,7 +3593,7 @@ class BottleOfBlackPepper_4(CustomObjects):
                  obj_name="bottle_of_black_pepper__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_black_pepper/zybfok/usd/MJCF/zybfok.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_black_pepper/zybfok/usd/MJCF/zybfok.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3616,7 +3614,7 @@ class BottleOfBleachAgent(CustomObjects):
                  obj_name="bottle_of_bleach_agent",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_bleach_agent/lfjumk/usd/MJCF/lfjumk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_bleach_agent/lfjumk/usd/MJCF/lfjumk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3637,7 +3635,7 @@ class BottleOfBugRepellent(CustomObjects):
                  obj_name="bottle_of_bug_repellent",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_bug_repellent/qqztry/usd/MJCF/qqztry.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_bug_repellent/qqztry/usd/MJCF/qqztry.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3658,7 +3656,7 @@ class BottleOfCarrotJuice(CustomObjects):
                  obj_name="bottle_of_carrot_juice",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_carrot_juice/jkuhio/usd/MJCF/jkuhio.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_carrot_juice/jkuhio/usd/MJCF/jkuhio.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3679,7 +3677,7 @@ class BottleOfCatsup_1(CustomObjects):
                  obj_name="bottle_of_catsup__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_catsup/ahoiqe/usd/MJCF/ahoiqe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_catsup/ahoiqe/usd/MJCF/ahoiqe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3700,7 +3698,7 @@ class BottleOfCatsup_2(CustomObjects):
                  obj_name="bottle_of_catsup__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_catsup/bcqfxb/usd/MJCF/bcqfxb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_catsup/bcqfxb/usd/MJCF/bcqfxb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3721,7 +3719,7 @@ class BottleOfCatsup_3(CustomObjects):
                  obj_name="bottle_of_catsup__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_catsup/dmyfdf/usd/MJCF/dmyfdf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_catsup/dmyfdf/usd/MJCF/dmyfdf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3742,7 +3740,7 @@ class BottleOfCatsup_4(CustomObjects):
                  obj_name="bottle_of_catsup__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_catsup/hvxkso/usd/MJCF/hvxkso.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_catsup/hvxkso/usd/MJCF/hvxkso.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3763,7 +3761,7 @@ class BottleOfCatsup_5(CustomObjects):
                  obj_name="bottle_of_catsup__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_catsup/ialodu/usd/MJCF/ialodu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_catsup/ialodu/usd/MJCF/ialodu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3784,7 +3782,7 @@ class BottleOfChiliPepper(CustomObjects):
                  obj_name="bottle_of_chili_pepper",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_chili_pepper/hjalqq/usd/MJCF/hjalqq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_chili_pepper/hjalqq/usd/MJCF/hjalqq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3805,7 +3803,7 @@ class BottleOfChocolateSauce(CustomObjects):
                  obj_name="bottle_of_chocolate_sauce",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_chocolate_sauce/tsyldw/usd/MJCF/tsyldw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_chocolate_sauce/tsyldw/usd/MJCF/tsyldw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3826,7 +3824,7 @@ class BottleOfCleaner_1(CustomObjects):
                  obj_name="bottle_of_cleaner__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_cleaner/svzbeq/usd/MJCF/svzbeq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_cleaner/svzbeq/usd/MJCF/svzbeq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3847,7 +3845,7 @@ class BottleOfCleaner_2(CustomObjects):
                  obj_name="bottle_of_cleaner__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_cleaner/ykzonz/usd/MJCF/ykzonz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_cleaner/ykzonz/usd/MJCF/ykzonz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3868,7 +3866,7 @@ class BottleOfCocoa(CustomObjects):
                  obj_name="bottle_of_cocoa",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_cocoa/ganhpw/usd/MJCF/ganhpw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_cocoa/ganhpw/usd/MJCF/ganhpw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3889,7 +3887,7 @@ class BottleOfCoconutMilk(CustomObjects):
                  obj_name="bottle_of_coconut_milk",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_coconut_milk/idenxg/usd/MJCF/idenxg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_coconut_milk/idenxg/usd/MJCF/idenxg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3910,7 +3908,7 @@ class BottleOfCoconutOil(CustomObjects):
                  obj_name="bottle_of_coconut_oil",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_coconut_oil/rrwzkq/usd/MJCF/rrwzkq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_coconut_oil/rrwzkq/usd/MJCF/rrwzkq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3931,7 +3929,7 @@ class BottleOfCoconutWater(CustomObjects):
                  obj_name="bottle_of_coconut_water",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_coconut_water/lsixio/usd/MJCF/lsixio.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_coconut_water/lsixio/usd/MJCF/lsixio.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3952,7 +3950,7 @@ class BottleOfCoffee(CustomObjects):
                  obj_name="bottle_of_coffee",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_coffee/zywanc/usd/MJCF/zywanc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_coffee/zywanc/usd/MJCF/zywanc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3973,7 +3971,7 @@ class BottleOfCoke(CustomObjects):
                  obj_name="bottle_of_coke",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_coke/bmtvvb/usd/MJCF/bmtvvb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_coke/bmtvvb/usd/MJCF/bmtvvb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -3994,7 +3992,7 @@ class BottleOfColdCream(CustomObjects):
                  obj_name="bottle_of_cold_cream",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_cold_cream/lyzvuk/usd/MJCF/lyzvuk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_cold_cream/lyzvuk/usd/MJCF/lyzvuk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4015,7 +4013,7 @@ class BottleOfCologne(CustomObjects):
                  obj_name="bottle_of_cologne",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_cologne/lyipur/usd/MJCF/lyipur.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_cologne/lyipur/usd/MJCF/lyipur.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4036,7 +4034,7 @@ class BottleOfConditioner(CustomObjects):
                  obj_name="bottle_of_conditioner",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_conditioner/teafxb/usd/MJCF/teafxb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_conditioner/teafxb/usd/MJCF/teafxb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4057,7 +4055,7 @@ class BottleOfCookingOil(CustomObjects):
                  obj_name="bottle_of_cooking_oil",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_cooking_oil/ywrkyg/usd/MJCF/ywrkyg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_cooking_oil/ywrkyg/usd/MJCF/ywrkyg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4078,7 +4076,7 @@ class BottleOfCranberryJuice(CustomObjects):
                  obj_name="bottle_of_cranberry_juice",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_cranberry_juice/heoxnw/usd/MJCF/heoxnw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_cranberry_juice/heoxnw/usd/MJCF/heoxnw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4099,7 +4097,7 @@ class BottleOfDetergent_1(CustomObjects):
                  obj_name="bottle_of_detergent__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_detergent/gkpmii/usd/MJCF/gkpmii.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_detergent/gkpmii/usd/MJCF/gkpmii.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4120,7 +4118,7 @@ class BottleOfDetergent_2(CustomObjects):
                  obj_name="bottle_of_detergent__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_detergent/qjkmhq/usd/MJCF/qjkmhq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_detergent/qjkmhq/usd/MJCF/qjkmhq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4141,7 +4139,7 @@ class BottleOfDishSoap(CustomObjects):
                  obj_name="bottle_of_dish_soap",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_dish_soap/bnmixt/usd/MJCF/bnmixt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_dish_soap/bnmixt/usd/MJCF/bnmixt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4162,7 +4160,7 @@ class BottleOfDisinfectant_1(CustomObjects):
                  obj_name="bottle_of_disinfectant__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_disinfectant/faedff/usd/MJCF/faedff.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_disinfectant/faedff/usd/MJCF/faedff.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4183,7 +4181,7 @@ class BottleOfDisinfectant_2(CustomObjects):
                  obj_name="bottle_of_disinfectant__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_disinfectant/ucqzck/usd/MJCF/ucqzck.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_disinfectant/ucqzck/usd/MJCF/ucqzck.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4204,7 +4202,7 @@ class BottleOfEssentialOil_1(CustomObjects):
                  obj_name="bottle_of_essential_oil__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_essential_oil/eyyhld/usd/MJCF/eyyhld.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_essential_oil/eyyhld/usd/MJCF/eyyhld.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4225,7 +4223,7 @@ class BottleOfEssentialOil_2(CustomObjects):
                  obj_name="bottle_of_essential_oil__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_essential_oil/wansva/usd/MJCF/wansva.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_essential_oil/wansva/usd/MJCF/wansva.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4246,7 +4244,7 @@ class BottleOfEssentialOil_3(CustomObjects):
                  obj_name="bottle_of_essential_oil__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_essential_oil/xhoipk/usd/MJCF/xhoipk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_essential_oil/xhoipk/usd/MJCF/xhoipk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4267,7 +4265,7 @@ class BottleOfEssentialOil_4(CustomObjects):
                  obj_name="bottle_of_essential_oil__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_essential_oil/xvqshn/usd/MJCF/xvqshn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_essential_oil/xvqshn/usd/MJCF/xvqshn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4288,7 +4286,7 @@ class BottleOfEssentialOil_5(CustomObjects):
                  obj_name="bottle_of_essential_oil__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_essential_oil/yjxvpg/usd/MJCF/yjxvpg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_essential_oil/yjxvpg/usd/MJCF/yjxvpg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4309,7 +4307,7 @@ class BottleOfFabricSoftener(CustomObjects):
                  obj_name="bottle_of_fabric_softener",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_fabric_softener/rmrnev/usd/MJCF/rmrnev.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_fabric_softener/rmrnev/usd/MJCF/rmrnev.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4330,7 +4328,7 @@ class BottleOfFaceCream(CustomObjects):
                  obj_name="bottle_of_face_cream",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_face_cream/dztaed/usd/MJCF/dztaed.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_face_cream/dztaed/usd/MJCF/dztaed.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4351,7 +4349,7 @@ class BottleOfFennel(CustomObjects):
                  obj_name="bottle_of_fennel",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_fennel/ihlkfu/usd/MJCF/ihlkfu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_fennel/ihlkfu/usd/MJCF/ihlkfu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4372,7 +4370,7 @@ class BottleOfFrosting(CustomObjects):
                  obj_name="bottle_of_frosting",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_frosting/eqdsmn/usd/MJCF/eqdsmn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_frosting/eqdsmn/usd/MJCF/eqdsmn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4393,7 +4391,7 @@ class BottleOfFruitPunch_1(CustomObjects):
                  obj_name="bottle_of_fruit_punch__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_fruit_punch/azcigi/usd/MJCF/azcigi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_fruit_punch/azcigi/usd/MJCF/azcigi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4414,7 +4412,7 @@ class BottleOfFruitPunch_2(CustomObjects):
                  obj_name="bottle_of_fruit_punch__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_fruit_punch/ykfnwi/usd/MJCF/ykfnwi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_fruit_punch/ykfnwi/usd/MJCF/ykfnwi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4435,7 +4433,7 @@ class BottleOfGarlicSauce(CustomObjects):
                  obj_name="bottle_of_garlic_sauce",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_garlic_sauce/ucnmax/usd/MJCF/ucnmax.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_garlic_sauce/ucnmax/usd/MJCF/ucnmax.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4456,7 +4454,7 @@ class BottleOfGin(CustomObjects):
                  obj_name="bottle_of_gin",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_gin/qzgcdx/usd/MJCF/qzgcdx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_gin/qzgcdx/usd/MJCF/qzgcdx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4477,7 +4475,7 @@ class BottleOfGinger(CustomObjects):
                  obj_name="bottle_of_ginger",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_ginger/drqhzo/usd/MJCF/drqhzo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_ginger/drqhzo/usd/MJCF/drqhzo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4498,7 +4496,7 @@ class BottleOfGingerBeer(CustomObjects):
                  obj_name="bottle_of_ginger_beer",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_ginger_beer/zkocwb/usd/MJCF/zkocwb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_ginger_beer/zkocwb/usd/MJCF/zkocwb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4519,7 +4517,7 @@ class BottleOfGlassCleaner(CustomObjects):
                  obj_name="bottle_of_glass_cleaner",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_glass_cleaner/yukmlw/usd/MJCF/yukmlw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_glass_cleaner/yukmlw/usd/MJCF/yukmlw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4540,7 +4538,7 @@ class BottleOfGlue(CustomObjects):
                  obj_name="bottle_of_glue",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_glue/evtytd/usd/MJCF/evtytd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_glue/evtytd/usd/MJCF/evtytd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4561,7 +4559,7 @@ class BottleOfGroundCloves(CustomObjects):
                  obj_name="bottle_of_ground_cloves",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_ground_cloves/vzamzb/usd/MJCF/vzamzb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_ground_cloves/vzamzb/usd/MJCF/vzamzb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4582,7 +4580,7 @@ class BottleOfGroundMace(CustomObjects):
                  obj_name="bottle_of_ground_mace",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_ground_mace/lgpxro/usd/MJCF/lgpxro.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_ground_mace/lgpxro/usd/MJCF/lgpxro.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4603,7 +4601,7 @@ class BottleOfGroundNutmeg(CustomObjects):
                  obj_name="bottle_of_ground_nutmeg",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_ground_nutmeg/qebruq/usd/MJCF/qebruq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_ground_nutmeg/qebruq/usd/MJCF/qebruq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4624,7 +4622,7 @@ class BottleOfHotSauce(CustomObjects):
                  obj_name="bottle_of_hot_sauce",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_hot_sauce/zqhkzh/usd/MJCF/zqhkzh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_hot_sauce/zqhkzh/usd/MJCF/zqhkzh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4645,7 +4643,7 @@ class BottleOfLavenderOil(CustomObjects):
                  obj_name="bottle_of_lavender_oil",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_lavender_oil/csalbx/usd/MJCF/csalbx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_lavender_oil/csalbx/usd/MJCF/csalbx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4666,7 +4664,7 @@ class BottleOfLemonJuice(CustomObjects):
                  obj_name="bottle_of_lemon_juice",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_lemon_juice/vsjter/usd/MJCF/vsjter.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_lemon_juice/vsjter/usd/MJCF/vsjter.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4687,7 +4685,7 @@ class BottleOfLemonSauce(CustomObjects):
                  obj_name="bottle_of_lemon_sauce",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_lemon_sauce/iyijeb/usd/MJCF/iyijeb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_lemon_sauce/iyijeb/usd/MJCF/iyijeb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4708,7 +4706,7 @@ class BottleOfLemonade(CustomObjects):
                  obj_name="bottle_of_lemonade",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_lemonade/hqobwj/usd/MJCF/hqobwj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_lemonade/hqobwj/usd/MJCF/hqobwj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4729,7 +4727,7 @@ class BottleOfLimeJuice(CustomObjects):
                  obj_name="bottle_of_lime_juice",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_lime_juice/ouuhaa/usd/MJCF/ouuhaa.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_lime_juice/ouuhaa/usd/MJCF/ouuhaa.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4750,7 +4748,7 @@ class BottleOfLiquidSoap(CustomObjects):
                  obj_name="bottle_of_liquid_soap",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_liquid_soap/bhquvg/usd/MJCF/bhquvg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_liquid_soap/bhquvg/usd/MJCF/bhquvg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4771,7 +4769,7 @@ class BottleOfLotion(CustomObjects):
                  obj_name="bottle_of_lotion",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_lotion/tkryrh/usd/MJCF/tkryrh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_lotion/tkryrh/usd/MJCF/tkryrh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4792,7 +4790,7 @@ class BottleOfLubricant(CustomObjects):
                  obj_name="bottle_of_lubricant",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_lubricant/bjfgim/usd/MJCF/bjfgim.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_lubricant/bjfgim/usd/MJCF/bjfgim.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4813,7 +4811,7 @@ class BottleOfMapleSyrup(CustomObjects):
                  obj_name="bottle_of_maple_syrup",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_maple_syrup/qfgewi/usd/MJCF/qfgewi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_maple_syrup/qfgewi/usd/MJCF/qfgewi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4834,7 +4832,7 @@ class BottleOfMayonnaise(CustomObjects):
                  obj_name="bottle_of_mayonnaise",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_mayonnaise/cirpak/usd/MJCF/cirpak.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_mayonnaise/cirpak/usd/MJCF/cirpak.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4855,7 +4853,7 @@ class BottleOfMedicine_1(CustomObjects):
                  obj_name="bottle_of_medicine__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_medicine/egondf/usd/MJCF/egondf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_medicine/egondf/usd/MJCF/egondf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4876,7 +4874,7 @@ class BottleOfMedicine_2(CustomObjects):
                  obj_name="bottle_of_medicine__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_medicine/fmfwng/usd/MJCF/fmfwng.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_medicine/fmfwng/usd/MJCF/fmfwng.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4897,7 +4895,7 @@ class BottleOfMedicine_3(CustomObjects):
                  obj_name="bottle_of_medicine__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_medicine/hvocpc/usd/MJCF/hvocpc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_medicine/hvocpc/usd/MJCF/hvocpc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4918,7 +4916,7 @@ class BottleOfMedicine_4(CustomObjects):
                  obj_name="bottle_of_medicine__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_medicine/kasbsy/usd/MJCF/kasbsy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_medicine/kasbsy/usd/MJCF/kasbsy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4939,7 +4937,7 @@ class BottleOfMedicine_5(CustomObjects):
                  obj_name="bottle_of_medicine__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_medicine/kqkwoq/usd/MJCF/kqkwoq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_medicine/kqkwoq/usd/MJCF/kqkwoq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4960,7 +4958,7 @@ class BottleOfMedicine_6(CustomObjects):
                  obj_name="bottle_of_medicine__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_medicine/qqsukh/usd/MJCF/qqsukh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_medicine/qqsukh/usd/MJCF/qqsukh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -4981,7 +4979,7 @@ class BottleOfMedicine_7(CustomObjects):
                  obj_name="bottle_of_medicine__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_medicine/syfpak/usd/MJCF/syfpak.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_medicine/syfpak/usd/MJCF/syfpak.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5002,7 +5000,7 @@ class BottleOfMedicine_8(CustomObjects):
                  obj_name="bottle_of_medicine__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_medicine/zfbnjh/usd/MJCF/zfbnjh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_medicine/zfbnjh/usd/MJCF/zfbnjh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5023,7 +5021,7 @@ class BottleOfMilk_1(CustomObjects):
                  obj_name="bottle_of_milk__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_milk/czblzn/usd/MJCF/czblzn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_milk/czblzn/usd/MJCF/czblzn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5044,7 +5042,7 @@ class BottleOfMilk_2(CustomObjects):
                  obj_name="bottle_of_milk__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_milk/ddvsgl/usd/MJCF/ddvsgl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_milk/ddvsgl/usd/MJCF/ddvsgl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5065,7 +5063,7 @@ class BottleOfMilk_3(CustomObjects):
                  obj_name="bottle_of_milk__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_milk/debqen/usd/MJCF/debqen.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_milk/debqen/usd/MJCF/debqen.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5086,7 +5084,7 @@ class BottleOfMilk_4(CustomObjects):
                  obj_name="bottle_of_milk__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_milk/gchrwu/usd/MJCF/gchrwu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_milk/gchrwu/usd/MJCF/gchrwu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5107,7 +5105,7 @@ class BottleOfMilk_5(CustomObjects):
                  obj_name="bottle_of_milk__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_milk/mrejrs/usd/MJCF/mrejrs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_milk/mrejrs/usd/MJCF/mrejrs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5128,7 +5126,7 @@ class BottleOfMilk_6(CustomObjects):
                  obj_name="bottle_of_milk__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_milk/qsnnbp/usd/MJCF/qsnnbp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_milk/qsnnbp/usd/MJCF/qsnnbp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5149,7 +5147,7 @@ class BottleOfMilk_7(CustomObjects):
                  obj_name="bottle_of_milk__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_milk/utfsmp/usd/MJCF/utfsmp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_milk/utfsmp/usd/MJCF/utfsmp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5170,7 +5168,7 @@ class BottleOfMilk_8(CustomObjects):
                  obj_name="bottle_of_milk__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_milk/uuvmfm/usd/MJCF/uuvmfm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_milk/uuvmfm/usd/MJCF/uuvmfm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5191,7 +5189,7 @@ class BottleOfMilkshake(CustomObjects):
                  obj_name="bottle_of_milkshake",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_milkshake/naxqya/usd/MJCF/naxqya.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_milkshake/naxqya/usd/MJCF/naxqya.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5212,7 +5210,7 @@ class BottleOfMolasses(CustomObjects):
                  obj_name="bottle_of_molasses",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_molasses/jvsjop/usd/MJCF/jvsjop.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_molasses/jvsjop/usd/MJCF/jvsjop.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5233,7 +5231,7 @@ class BottleOfMushroomSauce(CustomObjects):
                  obj_name="bottle_of_mushroom_sauce",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_mushroom_sauce/xamfxi/usd/MJCF/xamfxi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_mushroom_sauce/xamfxi/usd/MJCF/xamfxi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5254,7 +5252,7 @@ class BottleOfMustard_1(CustomObjects):
                  obj_name="bottle_of_mustard__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_mustard/qbbqat/usd/MJCF/qbbqat.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_mustard/qbbqat/usd/MJCF/qbbqat.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5275,7 +5273,7 @@ class BottleOfMustard_2(CustomObjects):
                  obj_name="bottle_of_mustard__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_mustard/sjasxe/usd/MJCF/sjasxe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_mustard/sjasxe/usd/MJCF/sjasxe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5296,7 +5294,7 @@ class BottleOfMustardSeeds(CustomObjects):
                  obj_name="bottle_of_mustard_seeds",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_mustard_seeds/grryaf/usd/MJCF/grryaf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_mustard_seeds/grryaf/usd/MJCF/grryaf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5317,7 +5315,7 @@ class BottleOfOil_1(CustomObjects):
                  obj_name="bottle_of_oil__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_oil/kzvkyp/usd/MJCF/kzvkyp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_oil/kzvkyp/usd/MJCF/kzvkyp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5338,7 +5336,7 @@ class BottleOfOil_2(CustomObjects):
                  obj_name="bottle_of_oil__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_oil/ueanhf/usd/MJCF/ueanhf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_oil/ueanhf/usd/MJCF/ueanhf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5359,7 +5357,7 @@ class BottleOfOliveOil_1(CustomObjects):
                  obj_name="bottle_of_olive_oil__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_olive_oil/ajswsh/usd/MJCF/ajswsh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_olive_oil/ajswsh/usd/MJCF/ajswsh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5380,7 +5378,7 @@ class BottleOfOliveOil_2(CustomObjects):
                  obj_name="bottle_of_olive_oil__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_olive_oil/cqycjk/usd/MJCF/cqycjk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_olive_oil/cqycjk/usd/MJCF/cqycjk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5401,7 +5399,7 @@ class BottleOfOliveOil_3(CustomObjects):
                  obj_name="bottle_of_olive_oil__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_olive_oil/jocrsz/usd/MJCF/jocrsz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_olive_oil/jocrsz/usd/MJCF/jocrsz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5422,7 +5420,7 @@ class BottleOfOliveOil_4(CustomObjects):
                  obj_name="bottle_of_olive_oil__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_olive_oil/ksxqkk/usd/MJCF/ksxqkk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_olive_oil/ksxqkk/usd/MJCF/ksxqkk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5443,7 +5441,7 @@ class BottleOfOliveOil_5(CustomObjects):
                  obj_name="bottle_of_olive_oil__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_olive_oil/luikop/usd/MJCF/luikop.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_olive_oil/luikop/usd/MJCF/luikop.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5464,7 +5462,7 @@ class BottleOfOliveOil_6(CustomObjects):
                  obj_name="bottle_of_olive_oil__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_olive_oil/lvsfgc/usd/MJCF/lvsfgc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_olive_oil/lvsfgc/usd/MJCF/lvsfgc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5485,7 +5483,7 @@ class BottleOfOliveOil_7(CustomObjects):
                  obj_name="bottle_of_olive_oil__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_olive_oil/wztvie/usd/MJCF/wztvie.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_olive_oil/wztvie/usd/MJCF/wztvie.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5506,7 +5504,7 @@ class BottleOfOnionPowder(CustomObjects):
                  obj_name="bottle_of_onion_powder",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_onion_powder/xruqod/usd/MJCF/xruqod.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_onion_powder/xruqod/usd/MJCF/xruqod.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5527,7 +5525,7 @@ class BottleOfOrangeJuice_1(CustomObjects):
                  obj_name="bottle_of_orange_juice__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_orange_juice/edltwh/usd/MJCF/edltwh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_orange_juice/edltwh/usd/MJCF/edltwh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5548,7 +5546,7 @@ class BottleOfOrangeJuice_2(CustomObjects):
                  obj_name="bottle_of_orange_juice__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_orange_juice/jcvqmb/usd/MJCF/jcvqmb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_orange_juice/jcvqmb/usd/MJCF/jcvqmb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5569,7 +5567,7 @@ class BottleOfOrangeJuice_3(CustomObjects):
                  obj_name="bottle_of_orange_juice__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_orange_juice/rtqqor/usd/MJCF/rtqqor.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_orange_juice/rtqqor/usd/MJCF/rtqqor.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5590,7 +5588,7 @@ class BottleOfPaint(CustomObjects):
                  obj_name="bottle_of_paint",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_paint/volzrj/usd/MJCF/volzrj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_paint/volzrj/usd/MJCF/volzrj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5611,7 +5609,7 @@ class BottleOfPapayaJuice_1(CustomObjects):
                  obj_name="bottle_of_papaya_juice__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_papaya_juice/nmfmxy/usd/MJCF/nmfmxy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_papaya_juice/nmfmxy/usd/MJCF/nmfmxy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5632,7 +5630,7 @@ class BottleOfPapayaJuice_2(CustomObjects):
                  obj_name="bottle_of_papaya_juice__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_papaya_juice/tcauim/usd/MJCF/tcauim.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_papaya_juice/tcauim/usd/MJCF/tcauim.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5653,7 +5651,7 @@ class BottleOfPaprika(CustomObjects):
                  obj_name="bottle_of_paprika",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_paprika/nrdgrp/usd/MJCF/nrdgrp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_paprika/nrdgrp/usd/MJCF/nrdgrp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5674,7 +5672,7 @@ class BottleOfPeanutButter(CustomObjects):
                  obj_name="bottle_of_peanut_butter",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_peanut_butter/edcvwr/usd/MJCF/edcvwr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_peanut_butter/edcvwr/usd/MJCF/edcvwr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5695,7 +5693,7 @@ class BottleOfPerfume(CustomObjects):
                  obj_name="bottle_of_perfume",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_perfume/ipurzb/usd/MJCF/ipurzb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_perfume/ipurzb/usd/MJCF/ipurzb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5716,7 +5714,7 @@ class BottleOfPesto(CustomObjects):
                  obj_name="bottle_of_pesto",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pesto/hyeetr/usd/MJCF/hyeetr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pesto/hyeetr/usd/MJCF/hyeetr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5737,7 +5735,7 @@ class BottleOfPizzaSauce(CustomObjects):
                  obj_name="bottle_of_pizza_sauce",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pizza_sauce/clttao/usd/MJCF/clttao.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pizza_sauce/clttao/usd/MJCF/clttao.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5758,7 +5756,7 @@ class BottleOfPop_1(CustomObjects):
                  obj_name="bottle_of_pop__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/bqretx/usd/MJCF/bqretx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/bqretx/usd/MJCF/bqretx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5779,7 +5777,7 @@ class BottleOfPop_2(CustomObjects):
                  obj_name="bottle_of_pop__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/cmqubs/usd/MJCF/cmqubs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/cmqubs/usd/MJCF/cmqubs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5800,7 +5798,7 @@ class BottleOfPop_3(CustomObjects):
                  obj_name="bottle_of_pop__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/dlqmit/usd/MJCF/dlqmit.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/dlqmit/usd/MJCF/dlqmit.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5821,7 +5819,7 @@ class BottleOfPop_4(CustomObjects):
                  obj_name="bottle_of_pop__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/drqbiy/usd/MJCF/drqbiy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/drqbiy/usd/MJCF/drqbiy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5842,7 +5840,7 @@ class BottleOfPop_5(CustomObjects):
                  obj_name="bottle_of_pop__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/exapzb/usd/MJCF/exapzb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/exapzb/usd/MJCF/exapzb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5863,7 +5861,7 @@ class BottleOfPop_6(CustomObjects):
                  obj_name="bottle_of_pop__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/eyazzi/usd/MJCF/eyazzi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/eyazzi/usd/MJCF/eyazzi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5884,7 +5882,7 @@ class BottleOfPop_7(CustomObjects):
                  obj_name="bottle_of_pop__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/ghxeqz/usd/MJCF/ghxeqz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/ghxeqz/usd/MJCF/ghxeqz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5905,7 +5903,7 @@ class BottleOfPop_8(CustomObjects):
                  obj_name="bottle_of_pop__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/gkwdyt/usd/MJCF/gkwdyt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/gkwdyt/usd/MJCF/gkwdyt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5926,7 +5924,7 @@ class BottleOfPop_9(CustomObjects):
                  obj_name="bottle_of_pop__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/haoywb/usd/MJCF/haoywb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/haoywb/usd/MJCF/haoywb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5947,7 +5945,7 @@ class BottleOfPop_10(CustomObjects):
                  obj_name="bottle_of_pop__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/hjrwqb/usd/MJCF/hjrwqb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/hjrwqb/usd/MJCF/hjrwqb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5968,7 +5966,7 @@ class BottleOfPop_11(CustomObjects):
                  obj_name="bottle_of_pop__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/iynssk/usd/MJCF/iynssk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/iynssk/usd/MJCF/iynssk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -5989,7 +5987,7 @@ class BottleOfPop_12(CustomObjects):
                  obj_name="bottle_of_pop__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/jnoksl/usd/MJCF/jnoksl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/jnoksl/usd/MJCF/jnoksl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6010,7 +6008,7 @@ class BottleOfPop_13(CustomObjects):
                  obj_name="bottle_of_pop__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/kviogj/usd/MJCF/kviogj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/kviogj/usd/MJCF/kviogj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6031,7 +6029,7 @@ class BottleOfPop_14(CustomObjects):
                  obj_name="bottle_of_pop__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/mdznsn/usd/MJCF/mdznsn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/mdznsn/usd/MJCF/mdznsn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6052,7 +6050,7 @@ class BottleOfPop_15(CustomObjects):
                  obj_name="bottle_of_pop__15",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/mhzttm/usd/MJCF/mhzttm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/mhzttm/usd/MJCF/mhzttm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6073,7 +6071,7 @@ class BottleOfPop_16(CustomObjects):
                  obj_name="bottle_of_pop__16",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/msmlud/usd/MJCF/msmlud.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/msmlud/usd/MJCF/msmlud.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6094,7 +6092,7 @@ class BottleOfPop_17(CustomObjects):
                  obj_name="bottle_of_pop__17",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/nepfjl/usd/MJCF/nepfjl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/nepfjl/usd/MJCF/nepfjl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6115,7 +6113,7 @@ class BottleOfPop_18(CustomObjects):
                  obj_name="bottle_of_pop__18",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/nyupqh/usd/MJCF/nyupqh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/nyupqh/usd/MJCF/nyupqh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6136,7 +6134,7 @@ class BottleOfPop_19(CustomObjects):
                  obj_name="bottle_of_pop__19",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/oeipjl/usd/MJCF/oeipjl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/oeipjl/usd/MJCF/oeipjl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6157,7 +6155,7 @@ class BottleOfPop_20(CustomObjects):
                  obj_name="bottle_of_pop__20",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/oghrnk/usd/MJCF/oghrnk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/oghrnk/usd/MJCF/oghrnk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6178,7 +6176,7 @@ class BottleOfPop_21(CustomObjects):
                  obj_name="bottle_of_pop__21",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/pfjzkn/usd/MJCF/pfjzkn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/pfjzkn/usd/MJCF/pfjzkn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6199,7 +6197,7 @@ class BottleOfPop_22(CustomObjects):
                  obj_name="bottle_of_pop__22",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/pvabxf/usd/MJCF/pvabxf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/pvabxf/usd/MJCF/pvabxf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6220,7 +6218,7 @@ class BottleOfPop_23(CustomObjects):
                  obj_name="bottle_of_pop__23",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/pyrics/usd/MJCF/pyrics.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/pyrics/usd/MJCF/pyrics.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6241,7 +6239,7 @@ class BottleOfPop_24(CustomObjects):
                  obj_name="bottle_of_pop__24",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/rhclfg/usd/MJCF/rhclfg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/rhclfg/usd/MJCF/rhclfg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6262,7 +6260,7 @@ class BottleOfPop_25(CustomObjects):
                  obj_name="bottle_of_pop__25",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/ribekf/usd/MJCF/ribekf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/ribekf/usd/MJCF/ribekf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6283,7 +6281,7 @@ class BottleOfPop_26(CustomObjects):
                  obj_name="bottle_of_pop__26",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/sevoto/usd/MJCF/sevoto.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/sevoto/usd/MJCF/sevoto.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6304,7 +6302,7 @@ class BottleOfPop_27(CustomObjects):
                  obj_name="bottle_of_pop__27",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/tfvmik/usd/MJCF/tfvmik.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/tfvmik/usd/MJCF/tfvmik.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6325,7 +6323,7 @@ class BottleOfPop_28(CustomObjects):
                  obj_name="bottle_of_pop__28",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/twtsry/usd/MJCF/twtsry.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/twtsry/usd/MJCF/twtsry.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6346,7 +6344,7 @@ class BottleOfPop_29(CustomObjects):
                  obj_name="bottle_of_pop__29",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/ubazru/usd/MJCF/ubazru.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/ubazru/usd/MJCF/ubazru.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6367,7 +6365,7 @@ class BottleOfPop_30(CustomObjects):
                  obj_name="bottle_of_pop__30",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/uwdeok/usd/MJCF/uwdeok.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/uwdeok/usd/MJCF/uwdeok.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6388,7 +6386,7 @@ class BottleOfPop_31(CustomObjects):
                  obj_name="bottle_of_pop__31",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/uwmchl/usd/MJCF/uwmchl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/uwmchl/usd/MJCF/uwmchl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6409,7 +6407,7 @@ class BottleOfPop_32(CustomObjects):
                  obj_name="bottle_of_pop__32",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/vfjhav/usd/MJCF/vfjhav.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/vfjhav/usd/MJCF/vfjhav.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6430,7 +6428,7 @@ class BottleOfPop_33(CustomObjects):
                  obj_name="bottle_of_pop__33",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/wmqhul/usd/MJCF/wmqhul.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/wmqhul/usd/MJCF/wmqhul.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6451,7 +6449,7 @@ class BottleOfPop_34(CustomObjects):
                  obj_name="bottle_of_pop__34",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/wrgmdt/usd/MJCF/wrgmdt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/wrgmdt/usd/MJCF/wrgmdt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6472,7 +6470,7 @@ class BottleOfPop_35(CustomObjects):
                  obj_name="bottle_of_pop__35",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/wuuoes/usd/MJCF/wuuoes.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/wuuoes/usd/MJCF/wuuoes.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6493,7 +6491,7 @@ class BottleOfPop_36(CustomObjects):
                  obj_name="bottle_of_pop__36",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/xoldze/usd/MJCF/xoldze.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/xoldze/usd/MJCF/xoldze.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6514,7 +6512,7 @@ class BottleOfPop_37(CustomObjects):
                  obj_name="bottle_of_pop__37",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/xvxcvv/usd/MJCF/xvxcvv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/xvxcvv/usd/MJCF/xvxcvv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6535,7 +6533,7 @@ class BottleOfPop_38(CustomObjects):
                  obj_name="bottle_of_pop__38",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/zjbqvb/usd/MJCF/zjbqvb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/zjbqvb/usd/MJCF/zjbqvb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6556,7 +6554,7 @@ class BottleOfPop_39(CustomObjects):
                  obj_name="bottle_of_pop__39",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/zsisxf/usd/MJCF/zsisxf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/zsisxf/usd/MJCF/zsisxf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6577,7 +6575,7 @@ class BottleOfPop_40(CustomObjects):
                  obj_name="bottle_of_pop__40",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pop/zxambx/usd/MJCF/zxambx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pop/zxambx/usd/MJCF/zxambx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6598,7 +6596,7 @@ class BottleOfPoppySeeds(CustomObjects):
                  obj_name="bottle_of_poppy_seeds",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_poppy_seeds/xdtrgi/usd/MJCF/xdtrgi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_poppy_seeds/xdtrgi/usd/MJCF/xdtrgi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6619,7 +6617,7 @@ class BottleOfPowder(CustomObjects):
                  obj_name="bottle_of_powder",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_powder/vfabau/usd/MJCF/vfabau.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_powder/vfabau/usd/MJCF/vfabau.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6640,7 +6638,7 @@ class BottleOfProteinPowder_1(CustomObjects):
                  obj_name="bottle_of_protein_powder__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_protein_powder/rbvrrp/usd/MJCF/rbvrrp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_protein_powder/rbvrrp/usd/MJCF/rbvrrp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6661,7 +6659,7 @@ class BottleOfProteinPowder_2(CustomObjects):
                  obj_name="bottle_of_protein_powder__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_protein_powder/ysgesq/usd/MJCF/ysgesq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_protein_powder/ysgesq/usd/MJCF/ysgesq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6682,7 +6680,7 @@ class BottleOfPumpkinPieSpice(CustomObjects):
                  obj_name="bottle_of_pumpkin_pie_spice",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_pumpkin_pie_spice/oindrv/usd/MJCF/oindrv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_pumpkin_pie_spice/oindrv/usd/MJCF/oindrv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6703,7 +6701,7 @@ class BottleOfSage(CustomObjects):
                  obj_name="bottle_of_sage",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sage/bterim/usd/MJCF/bterim.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sage/bterim/usd/MJCF/bterim.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6724,7 +6722,7 @@ class BottleOfSake_1(CustomObjects):
                  obj_name="bottle_of_sake__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sake/hbpenm/usd/MJCF/hbpenm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sake/hbpenm/usd/MJCF/hbpenm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6745,7 +6743,7 @@ class BottleOfSake_2(CustomObjects):
                  obj_name="bottle_of_sake__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sake/luadgb/usd/MJCF/luadgb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sake/luadgb/usd/MJCF/luadgb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6766,7 +6764,7 @@ class BottleOfSake_3(CustomObjects):
                  obj_name="bottle_of_sake__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sake/mvvomd/usd/MJCF/mvvomd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sake/mvvomd/usd/MJCF/mvvomd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6787,7 +6785,7 @@ class BottleOfSake_4(CustomObjects):
                  obj_name="bottle_of_sake__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sake/pwtebq/usd/MJCF/pwtebq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sake/pwtebq/usd/MJCF/pwtebq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6808,7 +6806,7 @@ class BottleOfSake_5(CustomObjects):
                  obj_name="bottle_of_sake__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sake/rctijo/usd/MJCF/rctijo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sake/rctijo/usd/MJCF/rctijo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6829,7 +6827,7 @@ class BottleOfSake_6(CustomObjects):
                  obj_name="bottle_of_sake__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sake/swlykk/usd/MJCF/swlykk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sake/swlykk/usd/MJCF/swlykk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6850,7 +6848,7 @@ class BottleOfSake_7(CustomObjects):
                  obj_name="bottle_of_sake__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sake/utwglw/usd/MJCF/utwglw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sake/utwglw/usd/MJCF/utwglw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6871,7 +6869,7 @@ class BottleOfSake_8(CustomObjects):
                  obj_name="bottle_of_sake__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sake/vfxfuj/usd/MJCF/vfxfuj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sake/vfxfuj/usd/MJCF/vfxfuj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6892,7 +6890,7 @@ class BottleOfSake_9(CustomObjects):
                  obj_name="bottle_of_sake__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sake/zrkfim/usd/MJCF/zrkfim.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sake/zrkfim/usd/MJCF/zrkfim.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6913,7 +6911,7 @@ class BottleOfSalsa_1(CustomObjects):
                  obj_name="bottle_of_salsa__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_salsa/dvxotd/usd/MJCF/dvxotd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_salsa/dvxotd/usd/MJCF/dvxotd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6934,7 +6932,7 @@ class BottleOfSalsa_2(CustomObjects):
                  obj_name="bottle_of_salsa__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_salsa/mavope/usd/MJCF/mavope.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_salsa/mavope/usd/MJCF/mavope.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6955,7 +6953,7 @@ class BottleOfSalsa_3(CustomObjects):
                  obj_name="bottle_of_salsa__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_salsa/nafwlf/usd/MJCF/nafwlf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_salsa/nafwlf/usd/MJCF/nafwlf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6976,7 +6974,7 @@ class BottleOfSeasoning(CustomObjects):
                  obj_name="bottle_of_seasoning",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_seasoning/vqwqqv/usd/MJCF/vqwqqv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_seasoning/vqwqqv/usd/MJCF/vqwqqv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -6997,7 +6995,7 @@ class BottleOfSesameOil(CustomObjects):
                  obj_name="bottle_of_sesame_oil",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sesame_oil/jipawg/usd/MJCF/jipawg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sesame_oil/jipawg/usd/MJCF/jipawg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7018,7 +7016,7 @@ class BottleOfSesameSeeds(CustomObjects):
                  obj_name="bottle_of_sesame_seeds",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sesame_seeds/lzndie/usd/MJCF/lzndie.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sesame_seeds/lzndie/usd/MJCF/lzndie.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7039,7 +7037,7 @@ class BottleOfShampoo_1(CustomObjects):
                  obj_name="bottle_of_shampoo__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_shampoo/dvrzmy/usd/MJCF/dvrzmy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_shampoo/dvrzmy/usd/MJCF/dvrzmy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7060,7 +7058,7 @@ class BottleOfShampoo_2(CustomObjects):
                  obj_name="bottle_of_shampoo__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_shampoo/hlkpwd/usd/MJCF/hlkpwd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_shampoo/hlkpwd/usd/MJCF/hlkpwd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7081,7 +7079,7 @@ class BottleOfShampoo_3(CustomObjects):
                  obj_name="bottle_of_shampoo__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_shampoo/lvvkhx/usd/MJCF/lvvkhx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_shampoo/lvvkhx/usd/MJCF/lvvkhx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7102,7 +7100,7 @@ class BottleOfShampoo_4(CustomObjects):
                  obj_name="bottle_of_shampoo__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_shampoo/stjjjm/usd/MJCF/stjjjm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_shampoo/stjjjm/usd/MJCF/stjjjm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7123,7 +7121,7 @@ class BottleOfSkinCream(CustomObjects):
                  obj_name="bottle_of_skin_cream",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_skin_cream/ynwxtx/usd/MJCF/ynwxtx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_skin_cream/ynwxtx/usd/MJCF/ynwxtx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7144,7 +7142,7 @@ class BottleOfSoda(CustomObjects):
                  obj_name="bottle_of_soda",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_soda/eqyqlx/usd/MJCF/eqyqlx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_soda/eqyqlx/usd/MJCF/eqyqlx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7165,7 +7163,7 @@ class BottleOfSolvent(CustomObjects):
                  obj_name="bottle_of_solvent",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_solvent/gsafbo/usd/MJCF/gsafbo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_solvent/gsafbo/usd/MJCF/gsafbo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7186,7 +7184,7 @@ class BottleOfSoup_1(CustomObjects):
                  obj_name="bottle_of_soup__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_soup/maycxf/usd/MJCF/maycxf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_soup/maycxf/usd/MJCF/maycxf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7207,7 +7205,7 @@ class BottleOfSoup_2(CustomObjects):
                  obj_name="bottle_of_soup__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_soup/xctslq/usd/MJCF/xctslq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_soup/xctslq/usd/MJCF/xctslq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7228,7 +7226,7 @@ class BottleOfSourCream(CustomObjects):
                  obj_name="bottle_of_sour_cream",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sour_cream/pmawft/usd/MJCF/pmawft.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sour_cream/pmawft/usd/MJCF/pmawft.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7249,7 +7247,7 @@ class BottleOfSoyMilk_1(CustomObjects):
                  obj_name="bottle_of_soy_milk__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_soy_milk/lyxwhd/usd/MJCF/lyxwhd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_soy_milk/lyxwhd/usd/MJCF/lyxwhd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7270,7 +7268,7 @@ class BottleOfSoyMilk_2(CustomObjects):
                  obj_name="bottle_of_soy_milk__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_soy_milk/mcjlhs/usd/MJCF/mcjlhs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_soy_milk/mcjlhs/usd/MJCF/mcjlhs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7291,7 +7289,7 @@ class BottleOfSoySauce(CustomObjects):
                  obj_name="bottle_of_soy_sauce",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_soy_sauce/afxisg/usd/MJCF/afxisg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_soy_sauce/afxisg/usd/MJCF/afxisg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7312,7 +7310,7 @@ class BottleOfSriracha(CustomObjects):
                  obj_name="bottle_of_sriracha",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sriracha/gnklax/usd/MJCF/gnklax.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sriracha/gnklax/usd/MJCF/gnklax.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7333,7 +7331,7 @@ class BottleOfStrawberryJuice(CustomObjects):
                  obj_name="bottle_of_strawberry_juice",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_strawberry_juice/mlnuza/usd/MJCF/mlnuza.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_strawberry_juice/mlnuza/usd/MJCF/mlnuza.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7354,7 +7352,7 @@ class BottleOfSunscreen(CustomObjects):
                  obj_name="bottle_of_sunscreen",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_sunscreen/prlrwi/usd/MJCF/prlrwi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_sunscreen/prlrwi/usd/MJCF/prlrwi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7375,7 +7373,7 @@ class BottleOfSupplements_1(CustomObjects):
                  obj_name="bottle_of_supplements__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_supplements/kgreql/usd/MJCF/kgreql.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_supplements/kgreql/usd/MJCF/kgreql.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7396,7 +7394,7 @@ class BottleOfSupplements_2(CustomObjects):
                  obj_name="bottle_of_supplements__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_supplements/oqakev/usd/MJCF/oqakev.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_supplements/oqakev/usd/MJCF/oqakev.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7417,7 +7415,7 @@ class BottleOfTea_1(CustomObjects):
                  obj_name="bottle_of_tea__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_tea/iladfg/usd/MJCF/iladfg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_tea/iladfg/usd/MJCF/iladfg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7438,7 +7436,7 @@ class BottleOfTea_2(CustomObjects):
                  obj_name="bottle_of_tea__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_tea/yatmrs/usd/MJCF/yatmrs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_tea/yatmrs/usd/MJCF/yatmrs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7459,7 +7457,7 @@ class BottleOfTeaLeaves(CustomObjects):
                  obj_name="bottle_of_tea_leaves",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_tea_leaves/pfbtus/usd/MJCF/pfbtus.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_tea_leaves/pfbtus/usd/MJCF/pfbtus.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7480,7 +7478,7 @@ class BottleOfTomatoJuice(CustomObjects):
                  obj_name="bottle_of_tomato_juice",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_tomato_juice/csumos/usd/MJCF/csumos.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_tomato_juice/csumos/usd/MJCF/csumos.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7501,7 +7499,7 @@ class BottleOfTomatoPaste_1(CustomObjects):
                  obj_name="bottle_of_tomato_paste__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_tomato_paste/kkqtjv/usd/MJCF/kkqtjv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_tomato_paste/kkqtjv/usd/MJCF/kkqtjv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7522,7 +7520,7 @@ class BottleOfTomatoPaste_2(CustomObjects):
                  obj_name="bottle_of_tomato_paste__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_tomato_paste/pnshkj/usd/MJCF/pnshkj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_tomato_paste/pnshkj/usd/MJCF/pnshkj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7543,7 +7541,7 @@ class BottleOfTomatoPaste_3(CustomObjects):
                  obj_name="bottle_of_tomato_paste__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_tomato_paste/toeelk/usd/MJCF/toeelk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_tomato_paste/toeelk/usd/MJCF/toeelk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7564,7 +7562,7 @@ class BottleOfTonic_1(CustomObjects):
                  obj_name="bottle_of_tonic__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_tonic/hpddkk/usd/MJCF/hpddkk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_tonic/hpddkk/usd/MJCF/hpddkk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7585,7 +7583,7 @@ class BottleOfTonic_2(CustomObjects):
                  obj_name="bottle_of_tonic__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_tonic/zblovn/usd/MJCF/zblovn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_tonic/zblovn/usd/MJCF/zblovn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7606,7 +7604,7 @@ class BottleOfVinegar(CustomObjects):
                  obj_name="bottle_of_vinegar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_vinegar/snzyfk/usd/MJCF/snzyfk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_vinegar/snzyfk/usd/MJCF/snzyfk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7627,7 +7625,7 @@ class BottleOfWater_1(CustomObjects):
                  obj_name="bottle_of_water__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/atvnqy/usd/MJCF/atvnqy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/atvnqy/usd/MJCF/atvnqy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7648,7 +7646,7 @@ class BottleOfWater_2(CustomObjects):
                  obj_name="bottle_of_water__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/cytqio/usd/MJCF/cytqio.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/cytqio/usd/MJCF/cytqio.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7669,7 +7667,7 @@ class BottleOfWater_3(CustomObjects):
                  obj_name="bottle_of_water__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/cyzaue/usd/MJCF/cyzaue.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/cyzaue/usd/MJCF/cyzaue.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7690,7 +7688,7 @@ class BottleOfWater_4(CustomObjects):
                  obj_name="bottle_of_water__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/eeaimz/usd/MJCF/eeaimz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/eeaimz/usd/MJCF/eeaimz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7711,7 +7709,7 @@ class BottleOfWater_5(CustomObjects):
                  obj_name="bottle_of_water__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/emquat/usd/MJCF/emquat.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/emquat/usd/MJCF/emquat.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7732,7 +7730,7 @@ class BottleOfWater_6(CustomObjects):
                  obj_name="bottle_of_water__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/hrzznl/usd/MJCF/hrzznl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/hrzznl/usd/MJCF/hrzznl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7753,7 +7751,7 @@ class BottleOfWater_7(CustomObjects):
                  obj_name="bottle_of_water__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/jmwngr/usd/MJCF/jmwngr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/jmwngr/usd/MJCF/jmwngr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7774,7 +7772,7 @@ class BottleOfWater_8(CustomObjects):
                  obj_name="bottle_of_water__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/lkpaas/usd/MJCF/lkpaas.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/lkpaas/usd/MJCF/lkpaas.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7795,7 +7793,7 @@ class BottleOfWater_9(CustomObjects):
                  obj_name="bottle_of_water__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/lojipo/usd/MJCF/lojipo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/lojipo/usd/MJCF/lojipo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7816,7 +7814,7 @@ class BottleOfWater_10(CustomObjects):
                  obj_name="bottle_of_water__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/migvlt/usd/MJCF/migvlt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/migvlt/usd/MJCF/migvlt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7837,7 +7835,7 @@ class BottleOfWater_11(CustomObjects):
                  obj_name="bottle_of_water__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/qaceen/usd/MJCF/qaceen.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/qaceen/usd/MJCF/qaceen.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7858,7 +7856,7 @@ class BottleOfWater_12(CustomObjects):
                  obj_name="bottle_of_water__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/rmtdxh/usd/MJCF/rmtdxh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/rmtdxh/usd/MJCF/rmtdxh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7879,7 +7877,7 @@ class BottleOfWater_13(CustomObjects):
                  obj_name="bottle_of_water__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/rrkhva/usd/MJCF/rrkhva.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/rrkhva/usd/MJCF/rrkhva.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7900,7 +7898,7 @@ class BottleOfWater_14(CustomObjects):
                  obj_name="bottle_of_water__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/suytyi/usd/MJCF/suytyi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/suytyi/usd/MJCF/suytyi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7921,7 +7919,7 @@ class BottleOfWater_15(CustomObjects):
                  obj_name="bottle_of_water__15",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bottle_of_water/sxffiv/usd/MJCF/sxffiv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bottle_of_water/sxffiv/usd/MJCF/sxffiv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7942,7 +7940,7 @@ class BouillonCube(CustomObjects):
                  obj_name="bouillon_cube",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bouillon_cube/ctzwzz/usd/MJCF/ctzwzz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bouillon_cube/ctzwzz/usd/MJCF/ctzwzz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7963,7 +7961,7 @@ class Bowl_1(CustomObjects):
                  obj_name="bowl__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/adciys/usd/MJCF/adciys.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/adciys/usd/MJCF/adciys.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -7984,7 +7982,7 @@ class Bowl_2(CustomObjects):
                  obj_name="bowl__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/ajzltc/usd/MJCF/ajzltc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/ajzltc/usd/MJCF/ajzltc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8005,7 +8003,7 @@ class Bowl_3(CustomObjects):
                  obj_name="bowl__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/aspeds/usd/MJCF/aspeds.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/aspeds/usd/MJCF/aspeds.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8026,7 +8024,7 @@ class Bowl_4(CustomObjects):
                  obj_name="bowl__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/belcml/usd/MJCF/belcml.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/belcml/usd/MJCF/belcml.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8047,7 +8045,7 @@ class Bowl_5(CustomObjects):
                  obj_name="bowl__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/bexgtn/usd/MJCF/bexgtn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/bexgtn/usd/MJCF/bexgtn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8068,7 +8066,7 @@ class Bowl_6(CustomObjects):
                  obj_name="bowl__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/byzaxy/usd/MJCF/byzaxy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/byzaxy/usd/MJCF/byzaxy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8089,7 +8087,7 @@ class Bowl_7(CustomObjects):
                  obj_name="bowl__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/ckxwea/usd/MJCF/ckxwea.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/ckxwea/usd/MJCF/ckxwea.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8110,7 +8108,7 @@ class Bowl_8(CustomObjects):
                  obj_name="bowl__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/cypjlv/usd/MJCF/cypjlv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/cypjlv/usd/MJCF/cypjlv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8131,7 +8129,7 @@ class Bowl_9(CustomObjects):
                  obj_name="bowl__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/dalyim/usd/MJCF/dalyim.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/dalyim/usd/MJCF/dalyim.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8152,7 +8150,7 @@ class Bowl_10(CustomObjects):
                  obj_name="bowl__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/eawgwj/usd/MJCF/eawgwj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/eawgwj/usd/MJCF/eawgwj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8173,7 +8171,7 @@ class Bowl_11(CustomObjects):
                  obj_name="bowl__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/eipwho/usd/MJCF/eipwho.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/eipwho/usd/MJCF/eipwho.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8194,7 +8192,7 @@ class Bowl_12(CustomObjects):
                  obj_name="bowl__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/fedafr/usd/MJCF/fedafr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/fedafr/usd/MJCF/fedafr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8215,7 +8213,7 @@ class Bowl_13(CustomObjects):
                  obj_name="bowl__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/feuaak/usd/MJCF/feuaak.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/feuaak/usd/MJCF/feuaak.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8236,7 +8234,7 @@ class Bowl_14(CustomObjects):
                  obj_name="bowl__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/fiarri/usd/MJCF/fiarri.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/fiarri/usd/MJCF/fiarri.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8257,7 +8255,7 @@ class Bowl_15(CustomObjects):
                  obj_name="bowl__15",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/fwdfeg/usd/MJCF/fwdfeg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/fwdfeg/usd/MJCF/fwdfeg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8278,7 +8276,7 @@ class Bowl_16(CustomObjects):
                  obj_name="bowl__16",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/haewxp/usd/MJCF/haewxp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/haewxp/usd/MJCF/haewxp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8299,7 +8297,7 @@ class Bowl_17(CustomObjects):
                  obj_name="bowl__17",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/hitnkv/usd/MJCF/hitnkv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/hitnkv/usd/MJCF/hitnkv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8320,7 +8318,7 @@ class Bowl_18(CustomObjects):
                  obj_name="bowl__18",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/hpqjug/usd/MJCF/hpqjug.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/hpqjug/usd/MJCF/hpqjug.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8341,7 +8339,7 @@ class Bowl_19(CustomObjects):
                  obj_name="bowl__19",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/hynhgz/usd/MJCF/hynhgz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/hynhgz/usd/MJCF/hynhgz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8362,7 +8360,7 @@ class Bowl_20(CustomObjects):
                  obj_name="bowl__20",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/jblalf/usd/MJCF/jblalf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/jblalf/usd/MJCF/jblalf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8383,7 +8381,7 @@ class Bowl_21(CustomObjects):
                  obj_name="bowl__21",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/jfvjep/usd/MJCF/jfvjep.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/jfvjep/usd/MJCF/jfvjep.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8404,7 +8402,7 @@ class Bowl_22(CustomObjects):
                  obj_name="bowl__22",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/jhtxxh/usd/MJCF/jhtxxh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/jhtxxh/usd/MJCF/jhtxxh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8425,7 +8423,7 @@ class Bowl_23(CustomObjects):
                  obj_name="bowl__23",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/jpvcjv/usd/MJCF/jpvcjv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/jpvcjv/usd/MJCF/jpvcjv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8446,7 +8444,7 @@ class Bowl_24(CustomObjects):
                  obj_name="bowl__24",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/kasebx/usd/MJCF/kasebx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/kasebx/usd/MJCF/kasebx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8467,7 +8465,7 @@ class Bowl_25(CustomObjects):
                  obj_name="bowl__25",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/kdkrov/usd/MJCF/kdkrov.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/kdkrov/usd/MJCF/kdkrov.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8488,7 +8486,7 @@ class Bowl_26(CustomObjects):
                  obj_name="bowl__26",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/kthvrl/usd/MJCF/kthvrl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/kthvrl/usd/MJCF/kthvrl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8509,7 +8507,7 @@ class Bowl_27(CustomObjects):
                  obj_name="bowl__27",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/lgaxzt/usd/MJCF/lgaxzt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/lgaxzt/usd/MJCF/lgaxzt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8530,7 +8528,7 @@ class Bowl_28(CustomObjects):
                  obj_name="bowl__28",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/mspdar/usd/MJCF/mspdar.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/mspdar/usd/MJCF/mspdar.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8551,7 +8549,7 @@ class Bowl_29(CustomObjects):
                  obj_name="bowl__29",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/nkkhbn/usd/MJCF/nkkhbn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/nkkhbn/usd/MJCF/nkkhbn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8572,7 +8570,7 @@ class Bowl_30(CustomObjects):
                  obj_name="bowl__30",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/nmhxfz/usd/MJCF/nmhxfz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/nmhxfz/usd/MJCF/nmhxfz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8593,7 +8591,7 @@ class Bowl_31(CustomObjects):
                  obj_name="bowl__31",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/npuuir/usd/MJCF/npuuir.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/npuuir/usd/MJCF/npuuir.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8614,7 +8612,7 @@ class Bowl_32(CustomObjects):
                  obj_name="bowl__32",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/oyidja/usd/MJCF/oyidja.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/oyidja/usd/MJCF/oyidja.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8635,7 +8633,7 @@ class Bowl_33(CustomObjects):
                  obj_name="bowl__33",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/pihjqa/usd/MJCF/pihjqa.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/pihjqa/usd/MJCF/pihjqa.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8656,7 +8654,7 @@ class Bowl_34(CustomObjects):
                  obj_name="bowl__34",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/pyilfa/usd/MJCF/pyilfa.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/pyilfa/usd/MJCF/pyilfa.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8677,7 +8675,7 @@ class Bowl_35(CustomObjects):
                  obj_name="bowl__35",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/qzodht/usd/MJCF/qzodht.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/qzodht/usd/MJCF/qzodht.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8698,7 +8696,7 @@ class Bowl_36(CustomObjects):
                  obj_name="bowl__36",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/rbnyxi/usd/MJCF/rbnyxi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/rbnyxi/usd/MJCF/rbnyxi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8719,7 +8717,7 @@ class Bowl_37(CustomObjects):
                  obj_name="bowl__37",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/rlwpcd/usd/MJCF/rlwpcd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/rlwpcd/usd/MJCF/rlwpcd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8740,7 +8738,7 @@ class Bowl_38(CustomObjects):
                  obj_name="bowl__38",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/sqqahm/usd/MJCF/sqqahm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/sqqahm/usd/MJCF/sqqahm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8761,7 +8759,7 @@ class Bowl_39(CustomObjects):
                  obj_name="bowl__39",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/szgdpc/usd/MJCF/szgdpc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/szgdpc/usd/MJCF/szgdpc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8782,7 +8780,7 @@ class Bowl_40(CustomObjects):
                  obj_name="bowl__40",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/tvtive/usd/MJCF/tvtive.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/tvtive/usd/MJCF/tvtive.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8803,7 +8801,7 @@ class Bowl_41(CustomObjects):
                  obj_name="bowl__41",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/tyczoo/usd/MJCF/tyczoo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/tyczoo/usd/MJCF/tyczoo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8824,7 +8822,7 @@ class Bowl_42(CustomObjects):
                  obj_name="bowl__42",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/vccsrl/usd/MJCF/vccsrl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/vccsrl/usd/MJCF/vccsrl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8845,7 +8843,7 @@ class Bowl_43(CustomObjects):
                  obj_name="bowl__43",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/wryghu/usd/MJCF/wryghu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/wryghu/usd/MJCF/wryghu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8866,7 +8864,7 @@ class Bowl_44(CustomObjects):
                  obj_name="bowl__44",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/wtepsx/usd/MJCF/wtepsx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/wtepsx/usd/MJCF/wtepsx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8887,7 +8885,7 @@ class Bowl_45(CustomObjects):
                  obj_name="bowl__45",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/xplzbo/usd/MJCF/xplzbo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/xplzbo/usd/MJCF/xplzbo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8908,7 +8906,7 @@ class Bowl_46(CustomObjects):
                  obj_name="bowl__46",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/xpnlup/usd/MJCF/xpnlup.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/xpnlup/usd/MJCF/xpnlup.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8929,7 +8927,7 @@ class Bowl_47(CustomObjects):
                  obj_name="bowl__47",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bowl/ycbbwl/usd/MJCF/ycbbwl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bowl/ycbbwl/usd/MJCF/ycbbwl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8950,7 +8948,7 @@ class BoxOfAlmondMilk(CustomObjects):
                  obj_name="box_of_almond_milk",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_almond_milk/oiiqwq/usd/MJCF/oiiqwq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_almond_milk/oiiqwq/usd/MJCF/oiiqwq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8971,7 +8969,7 @@ class BoxOfAluminiumFoil(CustomObjects):
                  obj_name="box_of_aluminium_foil",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_aluminium_foil/lhwgty/usd/MJCF/lhwgty.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_aluminium_foil/lhwgty/usd/MJCF/lhwgty.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -8992,7 +8990,7 @@ class BoxOfAppleJuice_1(CustomObjects):
                  obj_name="box_of_apple_juice__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_apple_juice/pttzdw/usd/MJCF/pttzdw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_apple_juice/pttzdw/usd/MJCF/pttzdw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9013,7 +9011,7 @@ class BoxOfAppleJuice_2(CustomObjects):
                  obj_name="box_of_apple_juice__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_apple_juice/zjzgjy/usd/MJCF/zjzgjy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_apple_juice/zjzgjy/usd/MJCF/zjzgjy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9034,7 +9032,7 @@ class BoxOfBakingMix_1(CustomObjects):
                  obj_name="box_of_baking_mix__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_mix/fmewsz/usd/MJCF/fmewsz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_mix/fmewsz/usd/MJCF/fmewsz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9055,7 +9053,7 @@ class BoxOfBakingMix_2(CustomObjects):
                  obj_name="box_of_baking_mix__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_mix/fnbgwd/usd/MJCF/fnbgwd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_mix/fnbgwd/usd/MJCF/fnbgwd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9076,7 +9074,7 @@ class BoxOfBakingMix_3(CustomObjects):
                  obj_name="box_of_baking_mix__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_mix/lgusnr/usd/MJCF/lgusnr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_mix/lgusnr/usd/MJCF/lgusnr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9097,7 +9095,7 @@ class BoxOfBakingMix_4(CustomObjects):
                  obj_name="box_of_baking_mix__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_mix/ltccey/usd/MJCF/ltccey.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_mix/ltccey/usd/MJCF/ltccey.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9118,7 +9116,7 @@ class BoxOfBakingMix_5(CustomObjects):
                  obj_name="box_of_baking_mix__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_mix/luwlfd/usd/MJCF/luwlfd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_mix/luwlfd/usd/MJCF/luwlfd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9139,7 +9137,7 @@ class BoxOfBakingMix_6(CustomObjects):
                  obj_name="box_of_baking_mix__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_mix/qkvqkm/usd/MJCF/qkvqkm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_mix/qkvqkm/usd/MJCF/qkvqkm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9160,7 +9158,7 @@ class BoxOfBakingMix_7(CustomObjects):
                  obj_name="box_of_baking_mix__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_mix/uhvkxj/usd/MJCF/uhvkxj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_mix/uhvkxj/usd/MJCF/uhvkxj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9181,7 +9179,7 @@ class BoxOfBakingMix_8(CustomObjects):
                  obj_name="box_of_baking_mix__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_mix/xcxrek/usd/MJCF/xcxrek.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_mix/xcxrek/usd/MJCF/xcxrek.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9202,7 +9200,7 @@ class BoxOfBakingPowder_1(CustomObjects):
                  obj_name="box_of_baking_powder__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_powder/vzgrlv/usd/MJCF/vzgrlv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_powder/vzgrlv/usd/MJCF/vzgrlv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9223,7 +9221,7 @@ class BoxOfBakingPowder_2(CustomObjects):
                  obj_name="box_of_baking_powder__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_powder/zevydc/usd/MJCF/zevydc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_powder/zevydc/usd/MJCF/zevydc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9244,7 +9242,7 @@ class BoxOfBakingSoda(CustomObjects):
                  obj_name="box_of_baking_soda",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_baking_soda/pskrgy/usd/MJCF/pskrgy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_baking_soda/pskrgy/usd/MJCF/pskrgy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9265,7 +9263,7 @@ class BoxOfBarley(CustomObjects):
                  obj_name="box_of_barley",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_barley/lxpwnw/usd/MJCF/lxpwnw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_barley/lxpwnw/usd/MJCF/lxpwnw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9286,7 +9284,7 @@ class BoxOfBrownSugar(CustomObjects):
                  obj_name="box_of_brown_sugar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_brown_sugar/kqyevo/usd/MJCF/kqyevo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_brown_sugar/kqyevo/usd/MJCF/kqyevo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9307,7 +9305,7 @@ class BoxOfButter_1(CustomObjects):
                  obj_name="box_of_butter__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_butter/mfjuil/usd/MJCF/mfjuil.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_butter/mfjuil/usd/MJCF/mfjuil.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9328,7 +9326,7 @@ class BoxOfButter_2(CustomObjects):
                  obj_name="box_of_butter__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_butter/oixapu/usd/MJCF/oixapu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_butter/oixapu/usd/MJCF/oixapu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9349,7 +9347,7 @@ class BoxOfCandy_1(CustomObjects):
                  obj_name="box_of_candy__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_candy/gvreky/usd/MJCF/gvreky.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_candy/gvreky/usd/MJCF/gvreky.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9370,7 +9368,7 @@ class BoxOfCandy_2(CustomObjects):
                  obj_name="box_of_candy__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_candy/jodwfv/usd/MJCF/jodwfv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_candy/jodwfv/usd/MJCF/jodwfv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9391,7 +9389,7 @@ class BoxOfCaneSugar_1(CustomObjects):
                  obj_name="box_of_cane_sugar__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cane_sugar/cqlofx/usd/MJCF/cqlofx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cane_sugar/cqlofx/usd/MJCF/cqlofx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9412,7 +9410,7 @@ class BoxOfCaneSugar_2(CustomObjects):
                  obj_name="box_of_cane_sugar__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cane_sugar/gpbobo/usd/MJCF/gpbobo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cane_sugar/gpbobo/usd/MJCF/gpbobo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9433,7 +9431,7 @@ class BoxOfCaneSugar_3(CustomObjects):
                  obj_name="box_of_cane_sugar__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cane_sugar/pozpqi/usd/MJCF/pozpqi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cane_sugar/pozpqi/usd/MJCF/pozpqi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9454,7 +9452,7 @@ class BoxOfCaneSugar_4(CustomObjects):
                  obj_name="box_of_cane_sugar__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cane_sugar/qvjiti/usd/MJCF/qvjiti.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cane_sugar/qvjiti/usd/MJCF/qvjiti.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9475,7 +9473,7 @@ class BoxOfCaneSugar_5(CustomObjects):
                  obj_name="box_of_cane_sugar__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cane_sugar/rvsivw/usd/MJCF/rvsivw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cane_sugar/rvsivw/usd/MJCF/rvsivw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9496,7 +9494,7 @@ class BoxOfCereal_1(CustomObjects):
                  obj_name="box_of_cereal__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/dkhgxn/usd/MJCF/dkhgxn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/dkhgxn/usd/MJCF/dkhgxn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9517,7 +9515,7 @@ class BoxOfCereal_2(CustomObjects):
                  obj_name="box_of_cereal__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/hcwbzw/usd/MJCF/hcwbzw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/hcwbzw/usd/MJCF/hcwbzw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9538,7 +9536,7 @@ class BoxOfCereal_3(CustomObjects):
                  obj_name="box_of_cereal__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/hosfhj/usd/MJCF/hosfhj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/hosfhj/usd/MJCF/hosfhj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9559,7 +9557,7 @@ class BoxOfCereal_4(CustomObjects):
                  obj_name="box_of_cereal__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/ihedod/usd/MJCF/ihedod.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/ihedod/usd/MJCF/ihedod.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9580,7 +9578,7 @@ class BoxOfCereal_5(CustomObjects):
                  obj_name="box_of_cereal__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/iucshm/usd/MJCF/iucshm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/iucshm/usd/MJCF/iucshm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9601,7 +9599,7 @@ class BoxOfCereal_6(CustomObjects):
                  obj_name="box_of_cereal__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/pfwgkm/usd/MJCF/pfwgkm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/pfwgkm/usd/MJCF/pfwgkm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9622,7 +9620,7 @@ class BoxOfCereal_7(CustomObjects):
                  obj_name="box_of_cereal__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/qirvmd/usd/MJCF/qirvmd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/qirvmd/usd/MJCF/qirvmd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9643,7 +9641,7 @@ class BoxOfCereal_8(CustomObjects):
                  obj_name="box_of_cereal__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/sgirte/usd/MJCF/sgirte.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/sgirte/usd/MJCF/sgirte.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9664,7 +9662,7 @@ class BoxOfCereal_9(CustomObjects):
                  obj_name="box_of_cereal__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/surzft/usd/MJCF/surzft.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/surzft/usd/MJCF/surzft.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9685,7 +9683,7 @@ class BoxOfCereal_10(CustomObjects):
                  obj_name="box_of_cereal__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/tiykku/usd/MJCF/tiykku.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/tiykku/usd/MJCF/tiykku.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9706,7 +9704,7 @@ class BoxOfCereal_11(CustomObjects):
                  obj_name="box_of_cereal__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/wdkcbu/usd/MJCF/wdkcbu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/wdkcbu/usd/MJCF/wdkcbu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9727,7 +9725,7 @@ class BoxOfCereal_12(CustomObjects):
                  obj_name="box_of_cereal__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/wrlalk/usd/MJCF/wrlalk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/wrlalk/usd/MJCF/wrlalk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9748,7 +9746,7 @@ class BoxOfCereal_13(CustomObjects):
                  obj_name="box_of_cereal__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/ykuyqb/usd/MJCF/ykuyqb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/ykuyqb/usd/MJCF/ykuyqb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9769,7 +9767,7 @@ class BoxOfCereal_14(CustomObjects):
                  obj_name="box_of_cereal__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cereal/yorray/usd/MJCF/yorray.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cereal/yorray/usd/MJCF/yorray.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9790,7 +9788,7 @@ class BoxOfChocolates(CustomObjects):
                  obj_name="box_of_chocolates",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_chocolates/bdvkbh/usd/MJCF/bdvkbh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_chocolates/bdvkbh/usd/MJCF/bdvkbh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9811,7 +9809,7 @@ class BoxOfCoconutMilk(CustomObjects):
                  obj_name="box_of_coconut_milk",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_coconut_milk/dagbyl/usd/MJCF/dagbyl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_coconut_milk/dagbyl/usd/MJCF/dagbyl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9832,7 +9830,7 @@ class BoxOfCoffee_1(CustomObjects):
                  obj_name="box_of_coffee__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_coffee/cjtadw/usd/MJCF/cjtadw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_coffee/cjtadw/usd/MJCF/cjtadw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9853,7 +9851,7 @@ class BoxOfCoffee_2(CustomObjects):
                  obj_name="box_of_coffee__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_coffee/mreyla/usd/MJCF/mreyla.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_coffee/mreyla/usd/MJCF/mreyla.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9874,7 +9872,7 @@ class BoxOfCookies_1(CustomObjects):
                  obj_name="box_of_cookies__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/apjokz/usd/MJCF/apjokz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/apjokz/usd/MJCF/apjokz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9895,7 +9893,7 @@ class BoxOfCookies_2(CustomObjects):
                  obj_name="box_of_cookies__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/dlhqft/usd/MJCF/dlhqft.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/dlhqft/usd/MJCF/dlhqft.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9916,7 +9914,7 @@ class BoxOfCookies_3(CustomObjects):
                  obj_name="box_of_cookies__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/fsdjun/usd/MJCF/fsdjun.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/fsdjun/usd/MJCF/fsdjun.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9937,7 +9935,7 @@ class BoxOfCookies_4(CustomObjects):
                  obj_name="box_of_cookies__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/fzlaol/usd/MJCF/fzlaol.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/fzlaol/usd/MJCF/fzlaol.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9958,7 +9956,7 @@ class BoxOfCookies_5(CustomObjects):
                  obj_name="box_of_cookies__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/hdgsxz/usd/MJCF/hdgsxz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/hdgsxz/usd/MJCF/hdgsxz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -9979,7 +9977,7 @@ class BoxOfCookies_6(CustomObjects):
                  obj_name="box_of_cookies__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/jtalxs/usd/MJCF/jtalxs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/jtalxs/usd/MJCF/jtalxs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10000,7 +9998,7 @@ class BoxOfCookies_7(CustomObjects):
                  obj_name="box_of_cookies__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/levwda/usd/MJCF/levwda.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/levwda/usd/MJCF/levwda.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10021,7 +10019,7 @@ class BoxOfCookies_8(CustomObjects):
                  obj_name="box_of_cookies__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/lwhbid/usd/MJCF/lwhbid.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/lwhbid/usd/MJCF/lwhbid.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10042,7 +10040,7 @@ class BoxOfCookies_9(CustomObjects):
                  obj_name="box_of_cookies__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/nirfva/usd/MJCF/nirfva.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/nirfva/usd/MJCF/nirfva.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10063,7 +10061,7 @@ class BoxOfCookies_10(CustomObjects):
                  obj_name="box_of_cookies__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/nnfisz/usd/MJCF/nnfisz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/nnfisz/usd/MJCF/nnfisz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10084,7 +10082,7 @@ class BoxOfCookies_11(CustomObjects):
                  obj_name="box_of_cookies__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/ohhshb/usd/MJCF/ohhshb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/ohhshb/usd/MJCF/ohhshb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10105,7 +10103,7 @@ class BoxOfCookies_12(CustomObjects):
                  obj_name="box_of_cookies__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/qkzrdd/usd/MJCF/qkzrdd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/qkzrdd/usd/MJCF/qkzrdd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10126,7 +10124,7 @@ class BoxOfCookies_13(CustomObjects):
                  obj_name="box_of_cookies__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/sjcnoq/usd/MJCF/sjcnoq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/sjcnoq/usd/MJCF/sjcnoq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10147,7 +10145,7 @@ class BoxOfCookies_14(CustomObjects):
                  obj_name="box_of_cookies__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cookies/swilxz/usd/MJCF/swilxz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cookies/swilxz/usd/MJCF/swilxz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10168,7 +10166,7 @@ class BoxOfCornFlakes(CustomObjects):
                  obj_name="box_of_corn_flakes",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_corn_flakes/zbwzkq/usd/MJCF/zbwzkq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_corn_flakes/zbwzkq/usd/MJCF/zbwzkq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10189,7 +10187,7 @@ class BoxOfCrackers(CustomObjects):
                  obj_name="box_of_crackers",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_crackers/cmdigf/usd/MJCF/cmdigf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_crackers/cmdigf/usd/MJCF/cmdigf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10210,7 +10208,7 @@ class BoxOfCream(CustomObjects):
                  obj_name="box_of_cream",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_cream/njrpai/usd/MJCF/njrpai.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_cream/njrpai/usd/MJCF/njrpai.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10231,7 +10229,7 @@ class BoxOfFlour(CustomObjects):
                  obj_name="box_of_flour",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_flour/ylezpk/usd/MJCF/ylezpk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_flour/ylezpk/usd/MJCF/ylezpk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10252,7 +10250,7 @@ class BoxOfFruit_1(CustomObjects):
                  obj_name="box_of_fruit__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_fruit/jsgbcz/usd/MJCF/jsgbcz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_fruit/jsgbcz/usd/MJCF/jsgbcz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10273,7 +10271,7 @@ class BoxOfFruit_2(CustomObjects):
                  obj_name="box_of_fruit__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_fruit/jzfgwc/usd/MJCF/jzfgwc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_fruit/jzfgwc/usd/MJCF/jzfgwc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10294,7 +10292,7 @@ class BoxOfGranolaBars_1(CustomObjects):
                  obj_name="box_of_granola_bars__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_granola_bars/awombj/usd/MJCF/awombj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_granola_bars/awombj/usd/MJCF/awombj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10315,7 +10313,7 @@ class BoxOfGranolaBars_2(CustomObjects):
                  obj_name="box_of_granola_bars__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_granola_bars/bqeeki/usd/MJCF/bqeeki.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_granola_bars/bqeeki/usd/MJCF/bqeeki.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10336,7 +10334,7 @@ class BoxOfGranolaBars_3(CustomObjects):
                  obj_name="box_of_granola_bars__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_granola_bars/tqwhvz/usd/MJCF/tqwhvz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_granola_bars/tqwhvz/usd/MJCF/tqwhvz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10357,7 +10355,7 @@ class BoxOfLemons(CustomObjects):
                  obj_name="box_of_lemons",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_lemons/suhxjl/usd/MJCF/suhxjl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_lemons/suhxjl/usd/MJCF/suhxjl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10378,7 +10376,7 @@ class BoxOfMilk(CustomObjects):
                  obj_name="box_of_milk",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_milk/ahmgjv/usd/MJCF/ahmgjv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_milk/ahmgjv/usd/MJCF/ahmgjv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10399,7 +10397,7 @@ class BoxOfOatmeal_1(CustomObjects):
                  obj_name="box_of_oatmeal__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_oatmeal/jtqeef/usd/MJCF/jtqeef.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_oatmeal/jtqeef/usd/MJCF/jtqeef.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10420,7 +10418,7 @@ class BoxOfOatmeal_2(CustomObjects):
                  obj_name="box_of_oatmeal__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_oatmeal/rabeel/usd/MJCF/rabeel.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_oatmeal/rabeel/usd/MJCF/rabeel.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10441,7 +10439,7 @@ class BoxOfOatmeal_3(CustomObjects):
                  obj_name="box_of_oatmeal__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_oatmeal/zkggxm/usd/MJCF/zkggxm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_oatmeal/zkggxm/usd/MJCF/zkggxm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10462,7 +10460,7 @@ class BoxOfRaspberries(CustomObjects):
                  obj_name="box_of_raspberries",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_raspberries/rxvopf/usd/MJCF/rxvopf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_raspberries/rxvopf/usd/MJCF/rxvopf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10483,7 +10481,7 @@ class BoxOfRice_1(CustomObjects):
                  obj_name="box_of_rice__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_rice/fvulow/usd/MJCF/fvulow.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_rice/fvulow/usd/MJCF/fvulow.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10504,7 +10502,7 @@ class BoxOfRice_2(CustomObjects):
                  obj_name="box_of_rice__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_rice/pstqvm/usd/MJCF/pstqvm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_rice/pstqvm/usd/MJCF/pstqvm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10525,7 +10523,7 @@ class BoxOfRice_3(CustomObjects):
                  obj_name="box_of_rice__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_rice/yyheuw/usd/MJCF/yyheuw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_rice/yyheuw/usd/MJCF/yyheuw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10546,7 +10544,7 @@ class BoxOfSake_1(CustomObjects):
                  obj_name="box_of_sake__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sake/abpqcs/usd/MJCF/abpqcs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sake/abpqcs/usd/MJCF/abpqcs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10567,7 +10565,7 @@ class BoxOfSake_2(CustomObjects):
                  obj_name="box_of_sake__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sake/azjfky/usd/MJCF/azjfky.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sake/azjfky/usd/MJCF/azjfky.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10588,7 +10586,7 @@ class BoxOfSake_3(CustomObjects):
                  obj_name="box_of_sake__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sake/hxrhoc/usd/MJCF/hxrhoc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sake/hxrhoc/usd/MJCF/hxrhoc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10609,7 +10607,7 @@ class BoxOfSake_4(CustomObjects):
                  obj_name="box_of_sake__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sake/iohsjz/usd/MJCF/iohsjz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sake/iohsjz/usd/MJCF/iohsjz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10630,7 +10628,7 @@ class BoxOfSake_5(CustomObjects):
                  obj_name="box_of_sake__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sake/ojvfmv/usd/MJCF/ojvfmv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sake/ojvfmv/usd/MJCF/ojvfmv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10651,7 +10649,7 @@ class BoxOfSake_6(CustomObjects):
                  obj_name="box_of_sake__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sake/qfrurx/usd/MJCF/qfrurx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sake/qfrurx/usd/MJCF/qfrurx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10672,7 +10670,7 @@ class BoxOfSake_7(CustomObjects):
                  obj_name="box_of_sake__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sake/rczpdw/usd/MJCF/rczpdw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sake/rczpdw/usd/MJCF/rczpdw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10693,7 +10691,7 @@ class BoxOfSake_8(CustomObjects):
                  obj_name="box_of_sake__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sake/tuzwhy/usd/MJCF/tuzwhy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sake/tuzwhy/usd/MJCF/tuzwhy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10714,7 +10712,7 @@ class BoxOfSanitaryNapkins_1(CustomObjects):
                  obj_name="box_of_sanitary_napkins__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sanitary_napkins/acaivd/usd/MJCF/acaivd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sanitary_napkins/acaivd/usd/MJCF/acaivd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10735,7 +10733,7 @@ class BoxOfSanitaryNapkins_2(CustomObjects):
                  obj_name="box_of_sanitary_napkins__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sanitary_napkins/arqcyu/usd/MJCF/arqcyu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sanitary_napkins/arqcyu/usd/MJCF/arqcyu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10756,7 +10754,7 @@ class BoxOfSanitaryNapkins_3(CustomObjects):
                  obj_name="box_of_sanitary_napkins__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sanitary_napkins/cmnpuv/usd/MJCF/cmnpuv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sanitary_napkins/cmnpuv/usd/MJCF/cmnpuv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10777,7 +10775,7 @@ class BoxOfSanitaryNapkins_4(CustomObjects):
                  obj_name="box_of_sanitary_napkins__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sanitary_napkins/humkqw/usd/MJCF/humkqw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sanitary_napkins/humkqw/usd/MJCF/humkqw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10798,7 +10796,7 @@ class BoxOfSanitaryNapkins_5(CustomObjects):
                  obj_name="box_of_sanitary_napkins__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sanitary_napkins/mxdefq/usd/MJCF/mxdefq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sanitary_napkins/mxdefq/usd/MJCF/mxdefq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10819,7 +10817,7 @@ class BoxOfSanitaryNapkins_6(CustomObjects):
                  obj_name="box_of_sanitary_napkins__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sanitary_napkins/skltgp/usd/MJCF/skltgp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sanitary_napkins/skltgp/usd/MJCF/skltgp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10840,7 +10838,7 @@ class BoxOfSanitaryNapkins_7(CustomObjects):
                  obj_name="box_of_sanitary_napkins__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_sanitary_napkins/tkrzkb/usd/MJCF/tkrzkb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_sanitary_napkins/tkrzkb/usd/MJCF/tkrzkb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10861,7 +10859,7 @@ class BoxOfShampoo_1(CustomObjects):
                  obj_name="box_of_shampoo__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_shampoo/bclpiq/usd/MJCF/bclpiq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_shampoo/bclpiq/usd/MJCF/bclpiq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10882,7 +10880,7 @@ class BoxOfShampoo_2(CustomObjects):
                  obj_name="box_of_shampoo__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_shampoo/jccyom/usd/MJCF/jccyom.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_shampoo/jccyom/usd/MJCF/jccyom.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10903,7 +10901,7 @@ class BoxOfShampoo_3(CustomObjects):
                  obj_name="box_of_shampoo__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_shampoo/nijidu/usd/MJCF/nijidu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_shampoo/nijidu/usd/MJCF/nijidu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10924,7 +10922,7 @@ class BoxOfShampoo_4(CustomObjects):
                  obj_name="box_of_shampoo__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_shampoo/tzghev/usd/MJCF/tzghev.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_shampoo/tzghev/usd/MJCF/tzghev.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10945,7 +10943,7 @@ class BoxOfTakeout(CustomObjects):
                  obj_name="box_of_takeout",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_takeout/bvcopi/usd/MJCF/bvcopi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_takeout/bvcopi/usd/MJCF/bvcopi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10966,7 +10964,7 @@ class BoxOfTissues_1(CustomObjects):
                  obj_name="box_of_tissues__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_tissues/ntbrtz/usd/MJCF/ntbrtz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_tissues/ntbrtz/usd/MJCF/ntbrtz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -10987,7 +10985,7 @@ class BoxOfTissues_2(CustomObjects):
                  obj_name="box_of_tissues__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_tissues/uglbjc/usd/MJCF/uglbjc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_tissues/uglbjc/usd/MJCF/uglbjc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11008,7 +11006,7 @@ class BoxOfTissues_3(CustomObjects):
                  obj_name="box_of_tissues__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_tissues/xwstls/usd/MJCF/xwstls.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_tissues/xwstls/usd/MJCF/xwstls.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11029,7 +11027,7 @@ class BoxOfTissues_4(CustomObjects):
                  obj_name="box_of_tissues__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_tissues/zutrxn/usd/MJCF/zutrxn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_tissues/zutrxn/usd/MJCF/zutrxn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11050,7 +11048,7 @@ class BoxOfVegetableJuice_1(CustomObjects):
                  obj_name="box_of_vegetable_juice__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_vegetable_juice/jsnnlv/usd/MJCF/jsnnlv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_vegetable_juice/jsnnlv/usd/MJCF/jsnnlv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11071,7 +11069,7 @@ class BoxOfVegetableJuice_2(CustomObjects):
                  obj_name="box_of_vegetable_juice__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_vegetable_juice/qgjdbn/usd/MJCF/qgjdbn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_vegetable_juice/qgjdbn/usd/MJCF/qgjdbn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11092,7 +11090,7 @@ class BoxOfWagashi(CustomObjects):
                  obj_name="box_of_wagashi",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_wagashi/mlmrwy/usd/MJCF/mlmrwy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_wagashi/mlmrwy/usd/MJCF/mlmrwy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11113,7 +11111,7 @@ class BoxOfYogurt_1(CustomObjects):
                  obj_name="box_of_yogurt__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_yogurt/jkemqc/usd/MJCF/jkemqc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_yogurt/jkemqc/usd/MJCF/jkemqc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11134,7 +11132,7 @@ class BoxOfYogurt_2(CustomObjects):
                  obj_name="box_of_yogurt__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_yogurt/jtjcrx/usd/MJCF/jtjcrx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_yogurt/jtjcrx/usd/MJCF/jtjcrx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11155,7 +11153,7 @@ class BoxOfYogurt_3(CustomObjects):
                  obj_name="box_of_yogurt__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_yogurt/thxfjq/usd/MJCF/thxfjq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_yogurt/thxfjq/usd/MJCF/thxfjq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11176,7 +11174,7 @@ class BoxOfYogurt_4(CustomObjects):
                  obj_name="box_of_yogurt__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/box_of_yogurt/znhjgm/usd/MJCF/znhjgm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/box_of_yogurt/znhjgm/usd/MJCF/znhjgm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11197,7 +11195,7 @@ class BoxedCake(CustomObjects):
                  obj_name="boxed_cake",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/boxed_cake/yjazet/usd/MJCF/yjazet.xml"
+                get_libero_path(query_key="assets"), f"new_objects/boxed_cake/yjazet/usd/MJCF/yjazet.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11218,7 +11216,7 @@ class BoxedCpuBoard(CustomObjects):
                  obj_name="boxed_cpu_board",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/boxed_cpu_board/xlqvil/usd/MJCF/xlqvil.xml"
+                get_libero_path(query_key="assets"), f"new_objects/boxed_cpu_board/xlqvil/usd/MJCF/xlqvil.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11239,7 +11237,7 @@ class BoxedInkCartridge_1(CustomObjects):
                  obj_name="boxed_ink_cartridge__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/boxed_ink_cartridge/ltblou/usd/MJCF/ltblou.xml"
+                get_libero_path(query_key="assets"), f"new_objects/boxed_ink_cartridge/ltblou/usd/MJCF/ltblou.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11260,7 +11258,7 @@ class BoxedInkCartridge_2(CustomObjects):
                  obj_name="boxed_ink_cartridge__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/boxed_ink_cartridge/oepuip/usd/MJCF/oepuip.xml"
+                get_libero_path(query_key="assets"), f"new_objects/boxed_ink_cartridge/oepuip/usd/MJCF/oepuip.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11281,7 +11279,7 @@ class BoxedInkCartridge_3(CustomObjects):
                  obj_name="boxed_ink_cartridge__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/boxed_ink_cartridge/oinelo/usd/MJCF/oinelo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/boxed_ink_cartridge/oinelo/usd/MJCF/oinelo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11302,7 +11300,7 @@ class BoxedRouter(CustomObjects):
                  obj_name="boxed_router",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/boxed_router/dsgtpk/usd/MJCF/dsgtpk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/boxed_router/dsgtpk/usd/MJCF/dsgtpk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11323,7 +11321,7 @@ class Bratwurst_1(CustomObjects):
                  obj_name="bratwurst__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bratwurst/pqfrrn/usd/MJCF/pqfrrn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bratwurst/pqfrrn/usd/MJCF/pqfrrn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11344,7 +11342,7 @@ class Bratwurst_2(CustomObjects):
                  obj_name="bratwurst__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bratwurst/wuyflp/usd/MJCF/wuyflp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bratwurst/wuyflp/usd/MJCF/wuyflp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11365,7 +11363,7 @@ class BreadSlice_1(CustomObjects):
                  obj_name="bread_slice__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bread_slice/pfggnm/usd/MJCF/pfggnm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bread_slice/pfggnm/usd/MJCF/pfggnm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11386,7 +11384,7 @@ class BreadSlice_2(CustomObjects):
                  obj_name="bread_slice__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bread_slice/pgzsxe/usd/MJCF/pgzsxe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bread_slice/pgzsxe/usd/MJCF/pgzsxe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11407,7 +11405,7 @@ class BreadSlice_3(CustomObjects):
                  obj_name="bread_slice__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bread_slice/yedlgq/usd/MJCF/yedlgq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bread_slice/yedlgq/usd/MJCF/yedlgq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11428,7 +11426,7 @@ class BreadSlice_4(CustomObjects):
                  obj_name="bread_slice__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bread_slice/yremdf/usd/MJCF/yremdf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bread_slice/yremdf/usd/MJCF/yremdf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11449,7 +11447,7 @@ class Broccoli(CustomObjects):
                  obj_name="broccoli",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/broccoli/wsxavx/usd/MJCF/wsxavx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/broccoli/wsxavx/usd/MJCF/wsxavx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11470,7 +11468,7 @@ class BroccoliRabe(CustomObjects):
                  obj_name="broccoli_rabe",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/broccoli_rabe/ushqbz/usd/MJCF/ushqbz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/broccoli_rabe/ushqbz/usd/MJCF/ushqbz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11491,7 +11489,7 @@ class Broccolini(CustomObjects):
                  obj_name="broccolini",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/broccolini/rlsytp/usd/MJCF/rlsytp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/broccolini/rlsytp/usd/MJCF/rlsytp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11512,7 +11510,7 @@ class BrownSugarSack(CustomObjects):
                  obj_name="brown_sugar_sack",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/brown_sugar_sack/uftzyo/usd/MJCF/uftzyo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/brown_sugar_sack/uftzyo/usd/MJCF/uftzyo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11533,7 +11531,7 @@ class Brownie(CustomObjects):
                  obj_name="brownie",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/brownie/vqgqja/usd/MJCF/vqgqja.xml"
+                get_libero_path(query_key="assets"), f"new_objects/brownie/vqgqja/usd/MJCF/vqgqja.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11554,7 +11552,7 @@ class BrusselsSprouts_1(CustomObjects):
                  obj_name="brussels_sprouts__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/brussels_sprouts/hkwyzk/usd/MJCF/hkwyzk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/brussels_sprouts/hkwyzk/usd/MJCF/hkwyzk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11575,7 +11573,7 @@ class BrusselsSprouts_2(CustomObjects):
                  obj_name="brussels_sprouts__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/brussels_sprouts/mbkrxe/usd/MJCF/mbkrxe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/brussels_sprouts/mbkrxe/usd/MJCF/mbkrxe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11596,7 +11594,7 @@ class BrusselsSprouts_3(CustomObjects):
                  obj_name="brussels_sprouts__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/brussels_sprouts/siodbb/usd/MJCF/siodbb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/brussels_sprouts/siodbb/usd/MJCF/siodbb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11617,7 +11615,7 @@ class BrusselsSprouts_4(CustomObjects):
                  obj_name="brussels_sprouts__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/brussels_sprouts/vdamtq/usd/MJCF/vdamtq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/brussels_sprouts/vdamtq/usd/MJCF/vdamtq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11638,7 +11636,7 @@ class BulldogClip(CustomObjects):
                  obj_name="bulldog_clip",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bulldog_clip/cqxnkn/usd/MJCF/cqxnkn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bulldog_clip/cqxnkn/usd/MJCF/cqxnkn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11659,7 +11657,7 @@ class BunchOfBananas(CustomObjects):
                  obj_name="bunch_of_bananas",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/bunch_of_bananas/mxnwwk/usd/MJCF/mxnwwk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/bunch_of_bananas/mxnwwk/usd/MJCF/mxnwwk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11680,7 +11678,7 @@ class Buret(CustomObjects):
                  obj_name="buret",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/buret/naqnom/usd/MJCF/naqnom.xml"
+                get_libero_path(query_key="assets"), f"new_objects/buret/naqnom/usd/MJCF/naqnom.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11701,7 +11699,7 @@ class BuretClamp_1(CustomObjects):
                  obj_name="buret_clamp__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/buret_clamp/gknfxt/usd/MJCF/gknfxt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/buret_clamp/gknfxt/usd/MJCF/gknfxt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11722,7 +11720,7 @@ class BuretClamp_2(CustomObjects):
                  obj_name="buret_clamp__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/buret_clamp/jkzyfr/usd/MJCF/jkzyfr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/buret_clamp/jkzyfr/usd/MJCF/jkzyfr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11743,7 +11741,7 @@ class BuretClamp_3(CustomObjects):
                  obj_name="buret_clamp__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/buret_clamp/pflmbv/usd/MJCF/pflmbv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/buret_clamp/pflmbv/usd/MJCF/pflmbv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11764,7 +11762,7 @@ class ButterCookie(CustomObjects):
                  obj_name="butter_cookie",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/butter_cookie/kukrla/usd/MJCF/kukrla.xml"
+                get_libero_path(query_key="assets"), f"new_objects/butter_cookie/kukrla/usd/MJCF/kukrla.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11785,7 +11783,7 @@ class ButterPackage(CustomObjects):
                  obj_name="butter_package",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/butter_package/qixpto/usd/MJCF/qixpto.xml"
+                get_libero_path(query_key="assets"), f"new_objects/butter_package/qixpto/usd/MJCF/qixpto.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11806,7 +11804,7 @@ class Cactus(CustomObjects):
                  obj_name="cactus",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cactus/imitmg/usd/MJCF/imitmg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cactus/imitmg/usd/MJCF/imitmg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11827,7 +11825,7 @@ class Calendar(CustomObjects):
                  obj_name="calendar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/calendar/ydunsu/usd/MJCF/ydunsu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/calendar/ydunsu/usd/MJCF/ydunsu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11848,7 +11846,7 @@ class Caliper(CustomObjects):
                  obj_name="caliper",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/caliper/sngjmj/usd/MJCF/sngjmj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/caliper/sngjmj/usd/MJCF/sngjmj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11869,7 +11867,7 @@ class Can_1(CustomObjects):
                  obj_name="can__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can/damllm/usd/MJCF/damllm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can/damllm/usd/MJCF/damllm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11890,7 +11888,7 @@ class Can_2(CustomObjects):
                  obj_name="can__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can/dhqrwr/usd/MJCF/dhqrwr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can/dhqrwr/usd/MJCF/dhqrwr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11911,7 +11909,7 @@ class Can_3(CustomObjects):
                  obj_name="can__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can/moeqjz/usd/MJCF/moeqjz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can/moeqjz/usd/MJCF/moeqjz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11932,7 +11930,7 @@ class CanOfBakingMix_1(CustomObjects):
                  obj_name="can_of_baking_mix__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_baking_mix/blrqqz/usd/MJCF/blrqqz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_baking_mix/blrqqz/usd/MJCF/blrqqz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11953,7 +11951,7 @@ class CanOfBakingMix_2(CustomObjects):
                  obj_name="can_of_baking_mix__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_baking_mix/fpbxfp/usd/MJCF/fpbxfp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_baking_mix/fpbxfp/usd/MJCF/fpbxfp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11974,7 +11972,7 @@ class CanOfBakingMix_3(CustomObjects):
                  obj_name="can_of_baking_mix__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_baking_mix/ohtiap/usd/MJCF/ohtiap.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_baking_mix/ohtiap/usd/MJCF/ohtiap.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -11995,7 +11993,7 @@ class CanOfBakingMix_4(CustomObjects):
                  obj_name="can_of_baking_mix__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_baking_mix/orwvfx/usd/MJCF/orwvfx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_baking_mix/orwvfx/usd/MJCF/orwvfx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12016,7 +12014,7 @@ class CanOfBakingMix_5(CustomObjects):
                  obj_name="can_of_baking_mix__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_baking_mix/rxorlp/usd/MJCF/rxorlp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_baking_mix/rxorlp/usd/MJCF/rxorlp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12037,7 +12035,7 @@ class CanOfBakingMix_6(CustomObjects):
                  obj_name="can_of_baking_mix__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_baking_mix/xefopo/usd/MJCF/xefopo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_baking_mix/xefopo/usd/MJCF/xefopo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12058,7 +12056,7 @@ class CanOfBayLeaves(CustomObjects):
                  obj_name="can_of_bay_leaves",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_bay_leaves/ppwvjf/usd/MJCF/ppwvjf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_bay_leaves/ppwvjf/usd/MJCF/ppwvjf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12080,7 +12078,7 @@ class CanOfBeans_1(CustomObjects):
                  obj_name="can_of_beans__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_beans/kclbuu/usd/MJCF/kclbuu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_beans/kclbuu/usd/MJCF/kclbuu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12101,7 +12099,7 @@ class CanOfBeans_2(CustomObjects):
                  obj_name="can_of_beans__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_beans/ojqgjz/usd/MJCF/ojqgjz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_beans/ojqgjz/usd/MJCF/ojqgjz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12122,7 +12120,7 @@ class CanOfCatFood(CustomObjects):
                  obj_name="can_of_cat_food",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_cat_food/omiuox/usd/MJCF/omiuox.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_cat_food/omiuox/usd/MJCF/omiuox.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12143,7 +12141,7 @@ class CanOfCoffee_1(CustomObjects):
                  obj_name="can_of_coffee__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_coffee/poteji/usd/MJCF/poteji.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_coffee/poteji/usd/MJCF/poteji.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12164,7 +12162,7 @@ class CanOfCoffee_2(CustomObjects):
                  obj_name="can_of_coffee__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_coffee/zubwua/usd/MJCF/zubwua.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_coffee/zubwua/usd/MJCF/zubwua.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12185,7 +12183,7 @@ class CanOfCorn_1(CustomObjects):
                  obj_name="can_of_corn__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_corn/alphlq/usd/MJCF/alphlq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_corn/alphlq/usd/MJCF/alphlq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12206,7 +12204,7 @@ class CanOfCorn_2(CustomObjects):
                  obj_name="can_of_corn__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_corn/kwwlfn/usd/MJCF/kwwlfn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_corn/kwwlfn/usd/MJCF/kwwlfn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12227,7 +12225,7 @@ class CanOfCorn_3(CustomObjects):
                  obj_name="can_of_corn__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_corn/pddtfk/usd/MJCF/pddtfk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_corn/pddtfk/usd/MJCF/pddtfk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12248,7 +12246,7 @@ class CanOfDogFood(CustomObjects):
                  obj_name="can_of_dog_food",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_dog_food/rgwfxq/usd/MJCF/rgwfxq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_dog_food/rgwfxq/usd/MJCF/rgwfxq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12269,7 +12267,7 @@ class CanOfIcetea(CustomObjects):
                  obj_name="can_of_icetea",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_icetea/ifrjsc/usd/MJCF/ifrjsc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_icetea/ifrjsc/usd/MJCF/ifrjsc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12290,7 +12288,7 @@ class CanOfOatmeal(CustomObjects):
                  obj_name="can_of_oatmeal",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_oatmeal/qyukhm/usd/MJCF/qyukhm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_oatmeal/qyukhm/usd/MJCF/qyukhm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12311,7 +12309,7 @@ class CanOfSardines(CustomObjects):
                  obj_name="can_of_sardines",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_sardines/dpgmry/usd/MJCF/dpgmry.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_sardines/dpgmry/usd/MJCF/dpgmry.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12332,7 +12330,7 @@ class CanOfSoda_1(CustomObjects):
                  obj_name="can_of_soda__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/bfrzvk/usd/MJCF/bfrzvk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/bfrzvk/usd/MJCF/bfrzvk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12353,7 +12351,7 @@ class CanOfSoda_2(CustomObjects):
                  obj_name="can_of_soda__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/chwjfu/usd/MJCF/chwjfu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/chwjfu/usd/MJCF/chwjfu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12374,7 +12372,7 @@ class CanOfSoda_3(CustomObjects):
                  obj_name="can_of_soda__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/evcxlr/usd/MJCF/evcxlr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/evcxlr/usd/MJCF/evcxlr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12395,7 +12393,7 @@ class CanOfSoda_4(CustomObjects):
                  obj_name="can_of_soda__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/frewxk/usd/MJCF/frewxk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/frewxk/usd/MJCF/frewxk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12416,7 +12414,7 @@ class CanOfSoda_5(CustomObjects):
                  obj_name="can_of_soda__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/iloapr/usd/MJCF/iloapr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/iloapr/usd/MJCF/iloapr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12437,7 +12435,7 @@ class CanOfSoda_6(CustomObjects):
                  obj_name="can_of_soda__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/itolcg/usd/MJCF/itolcg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/itolcg/usd/MJCF/itolcg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12458,7 +12456,7 @@ class CanOfSoda_7(CustomObjects):
                  obj_name="can_of_soda__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/ixrfxv/usd/MJCF/ixrfxv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/ixrfxv/usd/MJCF/ixrfxv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12479,7 +12477,7 @@ class CanOfSoda_8(CustomObjects):
                  obj_name="can_of_soda__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/lugwcz/usd/MJCF/lugwcz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/lugwcz/usd/MJCF/lugwcz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12500,7 +12498,7 @@ class CanOfSoda_9(CustomObjects):
                  obj_name="can_of_soda__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/mrrozu/usd/MJCF/mrrozu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/mrrozu/usd/MJCF/mrrozu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12521,7 +12519,7 @@ class CanOfSoda_10(CustomObjects):
                  obj_name="can_of_soda__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/opivig/usd/MJCF/opivig.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/opivig/usd/MJCF/opivig.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12542,7 +12540,7 @@ class CanOfSoda_11(CustomObjects):
                  obj_name="can_of_soda__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/ttxyui/usd/MJCF/ttxyui.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/ttxyui/usd/MJCF/ttxyui.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12563,7 +12561,7 @@ class CanOfSoda_12(CustomObjects):
                  obj_name="can_of_soda__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/uzbpnw/usd/MJCF/uzbpnw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/uzbpnw/usd/MJCF/uzbpnw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12584,7 +12582,7 @@ class CanOfSoda_13(CustomObjects):
                  obj_name="can_of_soda__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/vszbvb/usd/MJCF/vszbvb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/vszbvb/usd/MJCF/vszbvb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12605,7 +12603,7 @@ class CanOfSoda_14(CustomObjects):
                  obj_name="can_of_soda__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/wbrrad/usd/MJCF/wbrrad.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/wbrrad/usd/MJCF/wbrrad.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12626,7 +12624,7 @@ class CanOfSoda_15(CustomObjects):
                  obj_name="can_of_soda__15",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/xlyult/usd/MJCF/xlyult.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/xlyult/usd/MJCF/xlyult.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12647,7 +12645,7 @@ class CanOfSoda_16(CustomObjects):
                  obj_name="can_of_soda__16",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_soda/xmjfcg/usd/MJCF/xmjfcg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_soda/xmjfcg/usd/MJCF/xmjfcg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12668,7 +12666,7 @@ class CanOfTomatoPaste(CustomObjects):
                  obj_name="can_of_tomato_paste",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_tomato_paste/sqqdzb/usd/MJCF/sqqdzb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_tomato_paste/sqqdzb/usd/MJCF/sqqdzb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12689,7 +12687,7 @@ class CanOfTomatoes(CustomObjects):
                  obj_name="can_of_tomatoes",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/can_of_tomatoes/ckdouu/usd/MJCF/ckdouu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/can_of_tomatoes/ckdouu/usd/MJCF/ckdouu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12710,7 +12708,7 @@ class CandleHolder_1(CustomObjects):
                  obj_name="candle_holder__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/candle_holder/nygnlp/usd/MJCF/nygnlp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/candle_holder/nygnlp/usd/MJCF/nygnlp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12731,7 +12729,7 @@ class CandleHolder_2(CustomObjects):
                  obj_name="candle_holder__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/candle_holder/svqdrl/usd/MJCF/svqdrl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/candle_holder/svqdrl/usd/MJCF/svqdrl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12752,7 +12750,7 @@ class CandleHolder_3(CustomObjects):
                  obj_name="candle_holder__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/candle_holder/szulaa/usd/MJCF/szulaa.xml"
+                get_libero_path(query_key="assets"), f"new_objects/candle_holder/szulaa/usd/MJCF/szulaa.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12773,7 +12771,7 @@ class CandleHolder_4(CustomObjects):
                  obj_name="candle_holder__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/candle_holder/tnlkzg/usd/MJCF/tnlkzg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/candle_holder/tnlkzg/usd/MJCF/tnlkzg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12794,7 +12792,7 @@ class CandleHolder_5(CustomObjects):
                  obj_name="candle_holder__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/candle_holder/wiufnv/usd/MJCF/wiufnv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/candle_holder/wiufnv/usd/MJCF/wiufnv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12815,7 +12813,7 @@ class Canister_1(CustomObjects):
                  obj_name="canister__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canister/gqwnfv/usd/MJCF/gqwnfv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canister/gqwnfv/usd/MJCF/gqwnfv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12836,7 +12834,7 @@ class Canister_2(CustomObjects):
                  obj_name="canister__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canister/xcppkc/usd/MJCF/xcppkc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canister/xcppkc/usd/MJCF/xcppkc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12857,7 +12855,7 @@ class CannedFood_1(CustomObjects):
                  obj_name="canned_food__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canned_food/acgdtc/usd/MJCF/acgdtc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canned_food/acgdtc/usd/MJCF/acgdtc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12878,7 +12876,7 @@ class CannedFood_2(CustomObjects):
                  obj_name="canned_food__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canned_food/byakrm/usd/MJCF/byakrm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canned_food/byakrm/usd/MJCF/byakrm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12899,7 +12897,7 @@ class CannedFood_3(CustomObjects):
                  obj_name="canned_food__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canned_food/cbmndg/usd/MJCF/cbmndg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canned_food/cbmndg/usd/MJCF/cbmndg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12920,7 +12918,7 @@ class CannedFood_4(CustomObjects):
                  obj_name="canned_food__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canned_food/foetdd/usd/MJCF/foetdd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canned_food/foetdd/usd/MJCF/foetdd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12941,7 +12939,7 @@ class CannedFood_5(CustomObjects):
                  obj_name="canned_food__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canned_food/pkopdw/usd/MJCF/pkopdw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canned_food/pkopdw/usd/MJCF/pkopdw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12962,7 +12960,7 @@ class CannedFood_6(CustomObjects):
                  obj_name="canned_food__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canned_food/qhgdys/usd/MJCF/qhgdys.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canned_food/qhgdys/usd/MJCF/qhgdys.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -12983,7 +12981,7 @@ class CannedFood_7(CustomObjects):
                  obj_name="canned_food__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canned_food/ycbspm/usd/MJCF/ycbspm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canned_food/ycbspm/usd/MJCF/ycbspm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13004,7 +13002,7 @@ class CannedFood_8(CustomObjects):
                  obj_name="canned_food__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canned_food/ycodks/usd/MJCF/ycodks.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canned_food/ycodks/usd/MJCF/ycodks.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13025,7 +13023,7 @@ class CannedFood_9(CustomObjects):
                  obj_name="canned_food__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canned_food/zfmfje/usd/MJCF/zfmfje.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canned_food/zfmfje/usd/MJCF/zfmfje.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13046,7 +13044,7 @@ class Canteen_1(CustomObjects):
                  obj_name="canteen__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canteen/ouhqnw/usd/MJCF/ouhqnw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canteen/ouhqnw/usd/MJCF/ouhqnw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13067,7 +13065,7 @@ class Canteen_2(CustomObjects):
                  obj_name="canteen__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/canteen/ttxunv/usd/MJCF/ttxunv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/canteen/ttxunv/usd/MJCF/ttxunv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13088,7 +13086,7 @@ class Cap_1(CustomObjects):
                  obj_name="cap__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/actmgl/usd/MJCF/actmgl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/actmgl/usd/MJCF/actmgl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13109,7 +13107,7 @@ class Cap_2(CustomObjects):
                  obj_name="cap__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/amryfj/usd/MJCF/amryfj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/amryfj/usd/MJCF/amryfj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13130,7 +13128,7 @@ class Cap_3(CustomObjects):
                  obj_name="cap__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/arskxc/usd/MJCF/arskxc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/arskxc/usd/MJCF/arskxc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13151,7 +13149,7 @@ class Cap_4(CustomObjects):
                  obj_name="cap__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/ceizxn/usd/MJCF/ceizxn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/ceizxn/usd/MJCF/ceizxn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13172,7 +13170,7 @@ class Cap_5(CustomObjects):
                  obj_name="cap__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/ciopwh/usd/MJCF/ciopwh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/ciopwh/usd/MJCF/ciopwh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13193,7 +13191,7 @@ class Cap_6(CustomObjects):
                  obj_name="cap__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/clhquh/usd/MJCF/clhquh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/clhquh/usd/MJCF/clhquh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13214,7 +13212,7 @@ class Cap_7(CustomObjects):
                  obj_name="cap__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/dduopd/usd/MJCF/dduopd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/dduopd/usd/MJCF/dduopd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13235,7 +13233,7 @@ class Cap_8(CustomObjects):
                  obj_name="cap__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/dmzavi/usd/MJCF/dmzavi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/dmzavi/usd/MJCF/dmzavi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13256,7 +13254,7 @@ class Cap_9(CustomObjects):
                  obj_name="cap__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/dwpcld/usd/MJCF/dwpcld.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/dwpcld/usd/MJCF/dwpcld.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13277,7 +13275,7 @@ class Cap_10(CustomObjects):
                  obj_name="cap__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/eukcfr/usd/MJCF/eukcfr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/eukcfr/usd/MJCF/eukcfr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13298,7 +13296,7 @@ class Cap_11(CustomObjects):
                  obj_name="cap__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/fomiem/usd/MJCF/fomiem.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/fomiem/usd/MJCF/fomiem.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13319,7 +13317,7 @@ class Cap_12(CustomObjects):
                  obj_name="cap__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/ghwjwe/usd/MJCF/ghwjwe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/ghwjwe/usd/MJCF/ghwjwe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13340,7 +13338,7 @@ class Cap_13(CustomObjects):
                  obj_name="cap__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/gmdwwe/usd/MJCF/gmdwwe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/gmdwwe/usd/MJCF/gmdwwe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13361,7 +13359,7 @@ class Cap_14(CustomObjects):
                  obj_name="cap__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/gxkbcd/usd/MJCF/gxkbcd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/gxkbcd/usd/MJCF/gxkbcd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13382,7 +13380,7 @@ class Cap_15(CustomObjects):
                  obj_name="cap__15",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/hbafeb/usd/MJCF/hbafeb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/hbafeb/usd/MJCF/hbafeb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13403,7 +13401,7 @@ class Cap_16(CustomObjects):
                  obj_name="cap__16",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/hkvuxj/usd/MJCF/hkvuxj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/hkvuxj/usd/MJCF/hkvuxj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13424,7 +13422,7 @@ class Cap_17(CustomObjects):
                  obj_name="cap__17",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/iizvmn/usd/MJCF/iizvmn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/iizvmn/usd/MJCF/iizvmn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13445,7 +13443,7 @@ class Cap_18(CustomObjects):
                  obj_name="cap__18",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/iqeyba/usd/MJCF/iqeyba.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/iqeyba/usd/MJCF/iqeyba.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13466,7 +13464,7 @@ class Cap_19(CustomObjects):
                  obj_name="cap__19",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/jybxvq/usd/MJCF/jybxvq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/jybxvq/usd/MJCF/jybxvq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13487,7 +13485,7 @@ class Cap_20(CustomObjects):
                  obj_name="cap__20",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/kaolpg/usd/MJCF/kaolpg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/kaolpg/usd/MJCF/kaolpg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13508,7 +13506,7 @@ class Cap_21(CustomObjects):
                  obj_name="cap__21",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/mgirzi/usd/MJCF/mgirzi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/mgirzi/usd/MJCF/mgirzi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13529,7 +13527,7 @@ class Cap_22(CustomObjects):
                  obj_name="cap__22",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/ngionj/usd/MJCF/ngionj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/ngionj/usd/MJCF/ngionj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13550,7 +13548,7 @@ class Cap_23(CustomObjects):
                  obj_name="cap__23",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/nkjxbc/usd/MJCF/nkjxbc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/nkjxbc/usd/MJCF/nkjxbc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13571,7 +13569,7 @@ class Cap_24(CustomObjects):
                  obj_name="cap__24",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/owcsun/usd/MJCF/owcsun.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/owcsun/usd/MJCF/owcsun.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13592,7 +13590,7 @@ class Cap_25(CustomObjects):
                  obj_name="cap__25",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/oyofsv/usd/MJCF/oyofsv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/oyofsv/usd/MJCF/oyofsv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13613,7 +13611,7 @@ class Cap_26(CustomObjects):
                  obj_name="cap__26",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/pwsngg/usd/MJCF/pwsngg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/pwsngg/usd/MJCF/pwsngg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13634,7 +13632,7 @@ class Cap_27(CustomObjects):
                  obj_name="cap__27",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/qcfsnv/usd/MJCF/qcfsnv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/qcfsnv/usd/MJCF/qcfsnv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13655,7 +13653,7 @@ class Cap_28(CustomObjects):
                  obj_name="cap__28",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/qscujv/usd/MJCF/qscujv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/qscujv/usd/MJCF/qscujv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13676,7 +13674,7 @@ class Cap_29(CustomObjects):
                  obj_name="cap__29",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/qwrndi/usd/MJCF/qwrndi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/qwrndi/usd/MJCF/qwrndi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13697,7 +13695,7 @@ class Cap_30(CustomObjects):
                  obj_name="cap__30",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/rgtedj/usd/MJCF/rgtedj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/rgtedj/usd/MJCF/rgtedj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13718,7 +13716,7 @@ class Cap_31(CustomObjects):
                  obj_name="cap__31",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/rhoycw/usd/MJCF/rhoycw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/rhoycw/usd/MJCF/rhoycw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13739,7 +13737,7 @@ class Cap_32(CustomObjects):
                  obj_name="cap__32",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/sjsles/usd/MJCF/sjsles.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/sjsles/usd/MJCF/sjsles.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13760,7 +13758,7 @@ class Cap_33(CustomObjects):
                  obj_name="cap__33",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/tkwpyr/usd/MJCF/tkwpyr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/tkwpyr/usd/MJCF/tkwpyr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13781,7 +13779,7 @@ class Cap_34(CustomObjects):
                  obj_name="cap__34",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/tpknvf/usd/MJCF/tpknvf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/tpknvf/usd/MJCF/tpknvf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13802,7 +13800,7 @@ class Cap_35(CustomObjects):
                  obj_name="cap__35",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/uxpeaz/usd/MJCF/uxpeaz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/uxpeaz/usd/MJCF/uxpeaz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13823,7 +13821,7 @@ class Cap_36(CustomObjects):
                  obj_name="cap__36",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/vnpjfn/usd/MJCF/vnpjfn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/vnpjfn/usd/MJCF/vnpjfn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13844,7 +13842,7 @@ class Cap_37(CustomObjects):
                  obj_name="cap__37",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/vsvwig/usd/MJCF/vsvwig.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/vsvwig/usd/MJCF/vsvwig.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13865,7 +13863,7 @@ class Cap_38(CustomObjects):
                  obj_name="cap__38",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/wwbayp/usd/MJCF/wwbayp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/wwbayp/usd/MJCF/wwbayp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13886,7 +13884,7 @@ class Cap_39(CustomObjects):
                  obj_name="cap__39",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/xeswtq/usd/MJCF/xeswtq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/xeswtq/usd/MJCF/xeswtq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13907,7 +13905,7 @@ class Cap_40(CustomObjects):
                  obj_name="cap__40",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/xsxeij/usd/MJCF/xsxeij.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/xsxeij/usd/MJCF/xsxeij.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13928,7 +13926,7 @@ class Cap_41(CustomObjects):
                  obj_name="cap__41",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/xxqyrt/usd/MJCF/xxqyrt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/xxqyrt/usd/MJCF/xxqyrt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13949,7 +13947,7 @@ class Cap_42(CustomObjects):
                  obj_name="cap__42",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/ygsmgm/usd/MJCF/ygsmgm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/ygsmgm/usd/MJCF/ygsmgm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13970,7 +13968,7 @@ class Cap_43(CustomObjects):
                  obj_name="cap__43",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/yivige/usd/MJCF/yivige.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/yivige/usd/MJCF/yivige.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -13991,7 +13989,7 @@ class Cap_44(CustomObjects):
                  obj_name="cap__44",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/yqvild/usd/MJCF/yqvild.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/yqvild/usd/MJCF/yqvild.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14012,7 +14010,7 @@ class Cap_45(CustomObjects):
                  obj_name="cap__45",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/ytjxqn/usd/MJCF/ytjxqn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/ytjxqn/usd/MJCF/ytjxqn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14033,7 +14031,7 @@ class Cap_46(CustomObjects):
                  obj_name="cap__46",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/zggjif/usd/MJCF/zggjif.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/zggjif/usd/MJCF/zggjif.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14054,7 +14052,7 @@ class Cap_47(CustomObjects):
                  obj_name="cap__47",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cap/zknitk/usd/MJCF/zknitk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cap/zknitk/usd/MJCF/zknitk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14075,7 +14073,7 @@ class Carafe_1(CustomObjects):
                  obj_name="carafe__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carafe/hdbsog/usd/MJCF/hdbsog.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carafe/hdbsog/usd/MJCF/hdbsog.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14096,7 +14094,7 @@ class Carafe_2(CustomObjects):
                  obj_name="carafe__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carafe/mdtkkv/usd/MJCF/mdtkkv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carafe/mdtkkv/usd/MJCF/mdtkkv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14117,7 +14115,7 @@ class Carafe_3(CustomObjects):
                  obj_name="carafe__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carafe/ocjcgp/usd/MJCF/ocjcgp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carafe/ocjcgp/usd/MJCF/ocjcgp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14138,7 +14136,7 @@ class Cardstock(CustomObjects):
                  obj_name="cardstock",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cardstock/bihwte/usd/MJCF/bihwte.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cardstock/bihwte/usd/MJCF/bihwte.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14159,7 +14157,7 @@ class Carrot_1(CustomObjects):
                  obj_name="carrot__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carrot/aucrah/usd/MJCF/aucrah.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carrot/aucrah/usd/MJCF/aucrah.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14180,7 +14178,7 @@ class Carrot_2(CustomObjects):
                  obj_name="carrot__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carrot/nktmff/usd/MJCF/nktmff.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carrot/nktmff/usd/MJCF/nktmff.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14201,7 +14199,7 @@ class Carrot_3(CustomObjects):
                  obj_name="carrot__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carrot/qhmmmx/usd/MJCF/qhmmmx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carrot/qhmmmx/usd/MJCF/qhmmmx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14222,7 +14220,7 @@ class Carton_1(CustomObjects):
                  obj_name="carton__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton/causya/usd/MJCF/causya.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton/causya/usd/MJCF/causya.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14243,7 +14241,7 @@ class Carton_2(CustomObjects):
                  obj_name="carton__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton/cdmmwy/usd/MJCF/cdmmwy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton/cdmmwy/usd/MJCF/cdmmwy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14264,7 +14262,7 @@ class Carton_3(CustomObjects):
                  obj_name="carton__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton/hhlmbi/usd/MJCF/hhlmbi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton/hhlmbi/usd/MJCF/hhlmbi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14285,7 +14283,7 @@ class Carton_4(CustomObjects):
                  obj_name="carton__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton/libote/usd/MJCF/libote.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton/libote/usd/MJCF/libote.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14306,7 +14304,7 @@ class Carton_5(CustomObjects):
                  obj_name="carton__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton/msfzpz/usd/MJCF/msfzpz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton/msfzpz/usd/MJCF/msfzpz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14327,7 +14325,7 @@ class Carton_6(CustomObjects):
                  obj_name="carton__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton/sxlklf/usd/MJCF/sxlklf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton/sxlklf/usd/MJCF/sxlklf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14348,7 +14346,7 @@ class Carton_7(CustomObjects):
                  obj_name="carton__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton/ylrxhe/usd/MJCF/ylrxhe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton/ylrxhe/usd/MJCF/ylrxhe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14369,7 +14367,7 @@ class CartonOfEggs_1(CustomObjects):
                  obj_name="carton_of_eggs__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_eggs/mimzbz/usd/MJCF/mimzbz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_eggs/mimzbz/usd/MJCF/mimzbz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14390,7 +14388,7 @@ class CartonOfEggs_2(CustomObjects):
                  obj_name="carton_of_eggs__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_eggs/rixhgu/usd/MJCF/rixhgu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_eggs/rixhgu/usd/MJCF/rixhgu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14411,7 +14409,7 @@ class CartonOfEggs_3(CustomObjects):
                  obj_name="carton_of_eggs__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_eggs/stxfxb/usd/MJCF/stxfxb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_eggs/stxfxb/usd/MJCF/stxfxb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14432,7 +14430,7 @@ class CartonOfEggs_4(CustomObjects):
                  obj_name="carton_of_eggs__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_eggs/tacdgl/usd/MJCF/tacdgl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_eggs/tacdgl/usd/MJCF/tacdgl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14453,7 +14451,7 @@ class CartonOfMilk_1(CustomObjects):
                  obj_name="carton_of_milk__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_milk/atyqub/usd/MJCF/atyqub.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_milk/atyqub/usd/MJCF/atyqub.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14474,7 +14472,7 @@ class CartonOfMilk_2(CustomObjects):
                  obj_name="carton_of_milk__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_milk/kklgxk/usd/MJCF/kklgxk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_milk/kklgxk/usd/MJCF/kklgxk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14495,7 +14493,7 @@ class CartonOfMilk_3(CustomObjects):
                  obj_name="carton_of_milk__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_milk/kszoro/usd/MJCF/kszoro.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_milk/kszoro/usd/MJCF/kszoro.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14516,7 +14514,7 @@ class CartonOfMilk_4(CustomObjects):
                  obj_name="carton_of_milk__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_milk/orikxq/usd/MJCF/orikxq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_milk/orikxq/usd/MJCF/orikxq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14537,7 +14535,7 @@ class CartonOfMilk_5(CustomObjects):
                  obj_name="carton_of_milk__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_milk/vkttfb/usd/MJCF/vkttfb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_milk/vkttfb/usd/MJCF/vkttfb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14558,7 +14556,7 @@ class CartonOfMilk_6(CustomObjects):
                  obj_name="carton_of_milk__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_milk/xmugpm/usd/MJCF/xmugpm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_milk/xmugpm/usd/MJCF/xmugpm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14579,7 +14577,7 @@ class CartonOfMilk_7(CustomObjects):
                  obj_name="carton_of_milk__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_milk/znqqft/usd/MJCF/znqqft.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_milk/znqqft/usd/MJCF/znqqft.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14600,7 +14598,7 @@ class CartonOfOrangeJuice_1(CustomObjects):
                  obj_name="carton_of_orange_juice__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_orange_juice/brryuo/usd/MJCF/brryuo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_orange_juice/brryuo/usd/MJCF/brryuo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14621,7 +14619,7 @@ class CartonOfOrangeJuice_2(CustomObjects):
                  obj_name="carton_of_orange_juice__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_orange_juice/gpbmnk/usd/MJCF/gpbmnk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_orange_juice/gpbmnk/usd/MJCF/gpbmnk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14642,7 +14640,7 @@ class CartonOfPineappleJuice(CustomObjects):
                  obj_name="carton_of_pineapple_juice",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_pineapple_juice/vzueyg/usd/MJCF/vzueyg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_pineapple_juice/vzueyg/usd/MJCF/vzueyg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14663,7 +14661,7 @@ class CartonOfSoyMilk(CustomObjects):
                  obj_name="carton_of_soy_milk",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/carton_of_soy_milk/orgyvw/usd/MJCF/orgyvw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/carton_of_soy_milk/orgyvw/usd/MJCF/orgyvw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14684,7 +14682,7 @@ class CaseOfEyeshadow(CustomObjects):
                  obj_name="case_of_eyeshadow",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/case_of_eyeshadow/zgervc/usd/MJCF/zgervc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/case_of_eyeshadow/zgervc/usd/MJCF/zgervc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14705,7 +14703,7 @@ class CatFoodTin(CustomObjects):
                  obj_name="cat_food_tin",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cat_food_tin/rclizj/usd/MJCF/rclizj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cat_food_tin/rclizj/usd/MJCF/rclizj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14726,7 +14724,7 @@ class Catalog_1(CustomObjects):
                  obj_name="catalog__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/catalog/aygcnt/usd/MJCF/aygcnt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/catalog/aygcnt/usd/MJCF/aygcnt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14747,7 +14745,7 @@ class Catalog_2(CustomObjects):
                  obj_name="catalog__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/catalog/deirql/usd/MJCF/deirql.xml"
+                get_libero_path(query_key="assets"), f"new_objects/catalog/deirql/usd/MJCF/deirql.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14768,7 +14766,7 @@ class Catalog_3(CustomObjects):
                  obj_name="catalog__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/catalog/uilzqm/usd/MJCF/uilzqm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/catalog/uilzqm/usd/MJCF/uilzqm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14789,7 +14787,7 @@ class Catalog_4(CustomObjects):
                  obj_name="catalog__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/catalog/zmidof/usd/MJCF/zmidof.xml"
+                get_libero_path(query_key="assets"), f"new_objects/catalog/zmidof/usd/MJCF/zmidof.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14810,7 +14808,7 @@ class Cd(CustomObjects):
                  obj_name="cd",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cd/xkfnrj/usd/MJCF/xkfnrj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cd/xkfnrj/usd/MJCF/xkfnrj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14831,7 +14829,7 @@ class CelluloseTape_1(CustomObjects):
                  obj_name="cellulose_tape__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cellulose_tape/gchdhk/usd/MJCF/gchdhk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cellulose_tape/gchdhk/usd/MJCF/gchdhk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14852,7 +14850,7 @@ class CelluloseTape_2(CustomObjects):
                  obj_name="cellulose_tape__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cellulose_tape/kavsnx/usd/MJCF/kavsnx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cellulose_tape/kavsnx/usd/MJCF/kavsnx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14873,7 +14871,7 @@ class CelluloseTape_3(CustomObjects):
                  obj_name="cellulose_tape__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cellulose_tape/sklkyc/usd/MJCF/sklkyc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cellulose_tape/sklkyc/usd/MJCF/sklkyc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14894,7 +14892,7 @@ class CelluloseTapeDispenser_1(CustomObjects):
                  obj_name="cellulose_tape_dispenser__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cellulose_tape_dispenser/budhaz/usd/MJCF/budhaz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cellulose_tape_dispenser/budhaz/usd/MJCF/budhaz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14915,7 +14913,7 @@ class CelluloseTapeDispenser_2(CustomObjects):
                  obj_name="cellulose_tape_dispenser__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cellulose_tape_dispenser/fetnry/usd/MJCF/fetnry.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cellulose_tape_dispenser/fetnry/usd/MJCF/fetnry.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14936,7 +14934,7 @@ class CelluloseTapeDispenser_3(CustomObjects):
                  obj_name="cellulose_tape_dispenser__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cellulose_tape_dispenser/yyekns/usd/MJCF/yyekns.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cellulose_tape_dispenser/yyekns/usd/MJCF/yyekns.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14957,7 +14955,7 @@ class Charger(CustomObjects):
                  obj_name="charger",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/charger/bapkyh/usd/MJCF/bapkyh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/charger/bapkyh/usd/MJCF/bapkyh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14978,7 +14976,7 @@ class CheeseDanish(CustomObjects):
                  obj_name="cheese_danish",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cheese_danish/hkdtwp/usd/MJCF/hkdtwp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cheese_danish/hkdtwp/usd/MJCF/hkdtwp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -14999,7 +14997,7 @@ class CheeseTart_1(CustomObjects):
                  obj_name="cheese_tart__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cheese_tart/dxluyi/usd/MJCF/dxluyi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cheese_tart/dxluyi/usd/MJCF/dxluyi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15020,7 +15018,7 @@ class CheeseTart_2(CustomObjects):
                  obj_name="cheese_tart__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cheese_tart/pyynjg/usd/MJCF/pyynjg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cheese_tart/pyynjg/usd/MJCF/pyynjg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15041,7 +15039,7 @@ class CheeseTart_3(CustomObjects):
                  obj_name="cheese_tart__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cheese_tart/rnsdha/usd/MJCF/rnsdha.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cheese_tart/rnsdha/usd/MJCF/rnsdha.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15062,7 +15060,7 @@ class Cheesecake(CustomObjects):
                  obj_name="cheesecake",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cheesecake/epmobi/usd/MJCF/epmobi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cheesecake/epmobi/usd/MJCF/epmobi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15083,7 +15081,7 @@ class Chestnut_1(CustomObjects):
                  obj_name="chestnut__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chestnut/fmomat/usd/MJCF/fmomat.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chestnut/fmomat/usd/MJCF/fmomat.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15104,7 +15102,7 @@ class Chestnut_2(CustomObjects):
                  obj_name="chestnut__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chestnut/gjbnba/usd/MJCF/gjbnba.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chestnut/gjbnba/usd/MJCF/gjbnba.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15125,7 +15123,7 @@ class Chestnut_3(CustomObjects):
                  obj_name="chestnut__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chestnut/tairrn/usd/MJCF/tairrn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chestnut/tairrn/usd/MJCF/tairrn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15146,7 +15144,7 @@ class Chestnut_4(CustomObjects):
                  obj_name="chestnut__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chestnut/tulvpb/usd/MJCF/tulvpb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chestnut/tulvpb/usd/MJCF/tulvpb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15167,7 +15165,7 @@ class ChiaSeedBag(CustomObjects):
                  obj_name="chia_seed_bag",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chia_seed_bag/xkixrg/usd/MJCF/xkixrg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chia_seed_bag/xkixrg/usd/MJCF/xkixrg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15188,7 +15186,7 @@ class ChickenBrothCarton(CustomObjects):
                  obj_name="chicken_broth_carton",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chicken_broth_carton/ztripg/usd/MJCF/ztripg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chicken_broth_carton/ztripg/usd/MJCF/ztripg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15209,7 +15207,7 @@ class ChickenSoupCarton(CustomObjects):
                  obj_name="chicken_soup_carton",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chicken_soup_carton/ooyqcr/usd/MJCF/ooyqcr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chicken_soup_carton/ooyqcr/usd/MJCF/ooyqcr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15230,7 +15228,7 @@ class ChickpeaCan(CustomObjects):
                  obj_name="chickpea_can",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chickpea_can/jeqtzg/usd/MJCF/jeqtzg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chickpea_can/jeqtzg/usd/MJCF/jeqtzg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15251,7 +15249,7 @@ class Chili_1(CustomObjects):
                  obj_name="chili__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chili/agecro/usd/MJCF/agecro.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chili/agecro/usd/MJCF/agecro.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15272,7 +15270,7 @@ class Chili_2(CustomObjects):
                  obj_name="chili__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chili/pbbkpz/usd/MJCF/pbbkpz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chili/pbbkpz/usd/MJCF/pbbkpz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15293,7 +15291,7 @@ class Chili_3(CustomObjects):
                  obj_name="chili__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chili/rafkbt/usd/MJCF/rafkbt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chili/rafkbt/usd/MJCF/rafkbt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15314,7 +15312,7 @@ class Chili_4(CustomObjects):
                  obj_name="chili__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chili/xhbpqh/usd/MJCF/xhbpqh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chili/xhbpqh/usd/MJCF/xhbpqh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15335,7 +15333,7 @@ class Chip(CustomObjects):
                  obj_name="chip",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chip/obgeiz/usd/MJCF/obgeiz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chip/obgeiz/usd/MJCF/obgeiz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15356,7 +15354,7 @@ class Chives_1(CustomObjects):
                  obj_name="chives__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chives/gboofh/usd/MJCF/gboofh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chives/gboofh/usd/MJCF/gboofh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15377,7 +15375,7 @@ class Chives_2(CustomObjects):
                  obj_name="chives__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chives/vvacxt/usd/MJCF/vvacxt.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chives/vvacxt/usd/MJCF/vvacxt.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15398,7 +15396,7 @@ class Chives_3(CustomObjects):
                  obj_name="chives__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chives/yifjct/usd/MJCF/yifjct.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chives/yifjct/usd/MJCF/yifjct.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15419,7 +15417,7 @@ class ChocolateBar_1(CustomObjects):
                  obj_name="chocolate_bar__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_bar/amutpr/usd/MJCF/amutpr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_bar/amutpr/usd/MJCF/amutpr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15440,7 +15438,7 @@ class ChocolateBar_2(CustomObjects):
                  obj_name="chocolate_bar__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_bar/bcfudr/usd/MJCF/bcfudr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_bar/bcfudr/usd/MJCF/bcfudr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15461,7 +15459,7 @@ class ChocolateBar_3(CustomObjects):
                  obj_name="chocolate_bar__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_bar/dxnisi/usd/MJCF/dxnisi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_bar/dxnisi/usd/MJCF/dxnisi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15482,7 +15480,7 @@ class ChocolateBar_4(CustomObjects):
                  obj_name="chocolate_bar__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_bar/eqfznz/usd/MJCF/eqfznz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_bar/eqfznz/usd/MJCF/eqfznz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15503,7 +15501,7 @@ class ChocolateBar_5(CustomObjects):
                  obj_name="chocolate_bar__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_bar/wkjiri/usd/MJCF/wkjiri.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_bar/wkjiri/usd/MJCF/wkjiri.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15524,7 +15522,7 @@ class ChocolateBiscuit_1(CustomObjects):
                  obj_name="chocolate_biscuit__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_biscuit/fwnyas/usd/MJCF/fwnyas.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_biscuit/fwnyas/usd/MJCF/fwnyas.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15545,7 +15543,7 @@ class ChocolateBiscuit_2(CustomObjects):
                  obj_name="chocolate_biscuit__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_biscuit/xhmpht/usd/MJCF/xhmpht.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_biscuit/xhmpht/usd/MJCF/xhmpht.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15566,7 +15564,7 @@ class ChocolateChipCookie_1(CustomObjects):
                  obj_name="chocolate_chip_cookie__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_chip_cookie/ggpang/usd/MJCF/ggpang.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_chip_cookie/ggpang/usd/MJCF/ggpang.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15587,7 +15585,7 @@ class ChocolateChipCookie_2(CustomObjects):
                  obj_name="chocolate_chip_cookie__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_chip_cookie/oyhoth/usd/MJCF/oyhoth.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_chip_cookie/oyhoth/usd/MJCF/oyhoth.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15608,7 +15606,7 @@ class ChocolateChipCookie_3(CustomObjects):
                  obj_name="chocolate_chip_cookie__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chocolate_chip_cookie/xprsse/usd/MJCF/xprsse.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chocolate_chip_cookie/xprsse/usd/MJCF/xprsse.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15629,7 +15627,7 @@ class ChoppedLettuce_1(CustomObjects):
                  obj_name="chopped_lettuce__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopped_lettuce/amarhu/usd/MJCF/amarhu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopped_lettuce/amarhu/usd/MJCF/amarhu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15650,7 +15648,7 @@ class ChoppedLettuce_2(CustomObjects):
                  obj_name="chopped_lettuce__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopped_lettuce/bbyzry/usd/MJCF/bbyzry.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopped_lettuce/bbyzry/usd/MJCF/bbyzry.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15671,7 +15669,7 @@ class ChoppedLettuce_3(CustomObjects):
                  obj_name="chopped_lettuce__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopped_lettuce/bcxcij/usd/MJCF/bcxcij.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopped_lettuce/bcxcij/usd/MJCF/bcxcij.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15692,7 +15690,7 @@ class ChoppedLettuce_4(CustomObjects):
                  obj_name="chopped_lettuce__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopped_lettuce/bqqmxy/usd/MJCF/bqqmxy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopped_lettuce/bqqmxy/usd/MJCF/bqqmxy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15713,7 +15711,7 @@ class ChoppedLettuce_5(CustomObjects):
                  obj_name="chopped_lettuce__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopped_lettuce/caybcx/usd/MJCF/caybcx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopped_lettuce/caybcx/usd/MJCF/caybcx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15734,7 +15732,7 @@ class ChoppingBoard_1(CustomObjects):
                  obj_name="chopping_board__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/afwefw/usd/MJCF/afwefw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/afwefw/usd/MJCF/afwefw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15755,7 +15753,7 @@ class ChoppingBoard_2(CustomObjects):
                  obj_name="chopping_board__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/akgegh/usd/MJCF/akgegh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/akgegh/usd/MJCF/akgegh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15776,7 +15774,7 @@ class ChoppingBoard_3(CustomObjects):
                  obj_name="chopping_board__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/ayegwd/usd/MJCF/ayegwd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/ayegwd/usd/MJCF/ayegwd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15797,7 +15795,7 @@ class ChoppingBoard_4(CustomObjects):
                  obj_name="chopping_board__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/bzauwp/usd/MJCF/bzauwp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/bzauwp/usd/MJCF/bzauwp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15818,7 +15816,7 @@ class ChoppingBoard_5(CustomObjects):
                  obj_name="chopping_board__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/cptayn/usd/MJCF/cptayn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/cptayn/usd/MJCF/cptayn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15839,7 +15837,7 @@ class ChoppingBoard_6(CustomObjects):
                  obj_name="chopping_board__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/drjnag/usd/MJCF/drjnag.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/drjnag/usd/MJCF/drjnag.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15860,7 +15858,7 @@ class ChoppingBoard_7(CustomObjects):
                  obj_name="chopping_board__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/gaxhrw/usd/MJCF/gaxhrw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/gaxhrw/usd/MJCF/gaxhrw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15881,7 +15879,7 @@ class ChoppingBoard_8(CustomObjects):
                  obj_name="chopping_board__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/iocgzv/usd/MJCF/iocgzv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/iocgzv/usd/MJCF/iocgzv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15902,7 +15900,7 @@ class ChoppingBoard_9(CustomObjects):
                  obj_name="chopping_board__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/ktxcvz/usd/MJCF/ktxcvz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/ktxcvz/usd/MJCF/ktxcvz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15923,7 +15921,7 @@ class ChoppingBoard_10(CustomObjects):
                  obj_name="chopping_board__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/mqsqhl/usd/MJCF/mqsqhl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/mqsqhl/usd/MJCF/mqsqhl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15944,7 +15942,7 @@ class ChoppingBoard_11(CustomObjects):
                  obj_name="chopping_board__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/mwmzzv/usd/MJCF/mwmzzv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/mwmzzv/usd/MJCF/mwmzzv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15965,7 +15963,7 @@ class ChoppingBoard_12(CustomObjects):
                  obj_name="chopping_board__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/ozrzrr/usd/MJCF/ozrzrr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/ozrzrr/usd/MJCF/ozrzrr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -15986,7 +15984,7 @@ class ChoppingBoard_13(CustomObjects):
                  obj_name="chopping_board__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/psabiv/usd/MJCF/psabiv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/psabiv/usd/MJCF/psabiv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16007,7 +16005,7 @@ class ChoppingBoard_14(CustomObjects):
                  obj_name="chopping_board__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/sygezm/usd/MJCF/sygezm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/sygezm/usd/MJCF/sygezm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16028,7 +16026,7 @@ class ChoppingBoard_15(CustomObjects):
                  obj_name="chopping_board__15",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/chopping_board/uzeftd/usd/MJCF/uzeftd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/chopping_board/uzeftd/usd/MJCF/uzeftd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16049,7 +16047,7 @@ class CinnamonStick_1(CustomObjects):
                  obj_name="cinnamon_stick__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cinnamon_stick/bmbjdf/usd/MJCF/bmbjdf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cinnamon_stick/bmbjdf/usd/MJCF/bmbjdf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16070,7 +16068,7 @@ class CinnamonStick_2(CustomObjects):
                  obj_name="cinnamon_stick__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cinnamon_stick/cdkjfo/usd/MJCF/cdkjfo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cinnamon_stick/cdkjfo/usd/MJCF/cdkjfo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16091,7 +16089,7 @@ class CinnamonStick_3(CustomObjects):
                  obj_name="cinnamon_stick__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cinnamon_stick/hjhcpm/usd/MJCF/hjhcpm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cinnamon_stick/hjhcpm/usd/MJCF/hjhcpm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16112,7 +16110,7 @@ class CinnamonStick_4(CustomObjects):
                  obj_name="cinnamon_stick__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cinnamon_stick/kdaxdy/usd/MJCF/kdaxdy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cinnamon_stick/kdaxdy/usd/MJCF/kdaxdy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16133,7 +16131,7 @@ class CinnamonStick_5(CustomObjects):
                  obj_name="cinnamon_stick__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cinnamon_stick/qmlyim/usd/MJCF/qmlyim.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cinnamon_stick/qmlyim/usd/MJCF/qmlyim.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16154,7 +16152,7 @@ class CinnamonStick_6(CustomObjects):
                  obj_name="cinnamon_stick__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cinnamon_stick/qsqvgk/usd/MJCF/qsqvgk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cinnamon_stick/qsqvgk/usd/MJCF/qsqvgk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16175,7 +16173,7 @@ class CinnamonStick_7(CustomObjects):
                  obj_name="cinnamon_stick__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cinnamon_stick/qxpzdm/usd/MJCF/qxpzdm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cinnamon_stick/qxpzdm/usd/MJCF/qxpzdm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16196,7 +16194,7 @@ class CinnamonStick_8(CustomObjects):
                  obj_name="cinnamon_stick__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cinnamon_stick/smfuqz/usd/MJCF/smfuqz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cinnamon_stick/smfuqz/usd/MJCF/smfuqz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16217,7 +16215,7 @@ class Clamp(CustomObjects):
                  obj_name="clamp",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/clamp/feswhy/usd/MJCF/feswhy.xml"
+                get_libero_path(query_key="assets"), f"new_objects/clamp/feswhy/usd/MJCF/feswhy.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16238,7 +16236,7 @@ class CleansingBottle(CustomObjects):
                  obj_name="cleansing_bottle",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cleansing_bottle/ovjhuf/usd/MJCF/ovjhuf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cleansing_bottle/ovjhuf/usd/MJCF/ovjhuf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16259,7 +16257,7 @@ class Clipboard_1(CustomObjects):
                  obj_name="clipboard__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/clipboard/envjqe/usd/MJCF/envjqe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/clipboard/envjqe/usd/MJCF/envjqe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16280,7 +16278,7 @@ class Clipboard_2(CustomObjects):
                  obj_name="clipboard__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/clipboard/gmxyfo/usd/MJCF/gmxyfo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/clipboard/gmxyfo/usd/MJCF/gmxyfo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16301,7 +16299,7 @@ class Clipper(CustomObjects):
                  obj_name="clipper",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/clipper/befwbq/usd/MJCF/befwbq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/clipper/befwbq/usd/MJCF/befwbq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16322,7 +16320,7 @@ class CloveJar(CustomObjects):
                  obj_name="clove_jar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/clove_jar/cqdioi/usd/MJCF/cqdioi.xml"
+                get_libero_path(query_key="assets"), f"new_objects/clove_jar/cqdioi/usd/MJCF/cqdioi.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16343,7 +16341,7 @@ class Coaster_1(CustomObjects):
                  obj_name="coaster__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coaster/arjpcz/usd/MJCF/arjpcz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coaster/arjpcz/usd/MJCF/arjpcz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16364,7 +16362,7 @@ class Coaster_2(CustomObjects):
                  obj_name="coaster__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coaster/httqaj/usd/MJCF/httqaj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coaster/httqaj/usd/MJCF/httqaj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16385,7 +16383,7 @@ class CocoaPowderJar(CustomObjects):
                  obj_name="cocoa_powder_jar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cocoa_powder_jar/cjmtvq/usd/MJCF/cjmtvq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cocoa_powder_jar/cjmtvq/usd/MJCF/cjmtvq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16406,7 +16404,7 @@ class CoconutOilJar(CustomObjects):
                  obj_name="coconut_oil_jar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coconut_oil_jar/phimqa/usd/MJCF/phimqa.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coconut_oil_jar/phimqa/usd/MJCF/phimqa.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16427,7 +16425,7 @@ class CoffeeBeanJar(CustomObjects):
                  obj_name="coffee_bean_jar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_bean_jar/loduxu/usd/MJCF/loduxu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_bean_jar/loduxu/usd/MJCF/loduxu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16448,7 +16446,7 @@ class CoffeeCup_1(CustomObjects):
                  obj_name="coffee_cup__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/ckkwmj/usd/MJCF/ckkwmj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/ckkwmj/usd/MJCF/ckkwmj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16469,7 +16467,7 @@ class CoffeeCup_2(CustomObjects):
                  obj_name="coffee_cup__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/dkxddg/usd/MJCF/dkxddg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/dkxddg/usd/MJCF/dkxddg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16490,7 +16488,7 @@ class CoffeeCup_3(CustomObjects):
                  obj_name="coffee_cup__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/fgizgn/usd/MJCF/fgizgn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/fgizgn/usd/MJCF/fgizgn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16511,7 +16509,7 @@ class CoffeeCup_4(CustomObjects):
                  obj_name="coffee_cup__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/ibhhfj/usd/MJCF/ibhhfj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/ibhhfj/usd/MJCF/ibhhfj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16532,7 +16530,7 @@ class CoffeeCup_5(CustomObjects):
                  obj_name="coffee_cup__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/nbhcgu/usd/MJCF/nbhcgu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/nbhcgu/usd/MJCF/nbhcgu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16553,7 +16551,7 @@ class CoffeeCup_6(CustomObjects):
                  obj_name="coffee_cup__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/nhzrei/usd/MJCF/nhzrei.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/nhzrei/usd/MJCF/nhzrei.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16574,7 +16572,7 @@ class CoffeeCup_7(CustomObjects):
                  obj_name="coffee_cup__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/rixzrk/usd/MJCF/rixzrk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/rixzrk/usd/MJCF/rixzrk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16595,7 +16593,7 @@ class CoffeeCup_8(CustomObjects):
                  obj_name="coffee_cup__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/rypdvd/usd/MJCF/rypdvd.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/rypdvd/usd/MJCF/rypdvd.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16616,7 +16614,7 @@ class CoffeeCup_9(CustomObjects):
                  obj_name="coffee_cup__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/siksnl/usd/MJCF/siksnl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/siksnl/usd/MJCF/siksnl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16637,7 +16635,7 @@ class CoffeeCup_10(CustomObjects):
                  obj_name="coffee_cup__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/skamgp/usd/MJCF/skamgp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/skamgp/usd/MJCF/skamgp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16658,7 +16656,7 @@ class CoffeeCup_11(CustomObjects):
                  obj_name="coffee_cup__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/xjdyon/usd/MJCF/xjdyon.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/xjdyon/usd/MJCF/xjdyon.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16679,7 +16677,7 @@ class CoffeeCup_12(CustomObjects):
                  obj_name="coffee_cup__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_cup/ykuftq/usd/MJCF/ykuftq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_cup/ykuftq/usd/MJCF/ykuftq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16700,7 +16698,7 @@ class CoffeeGrinder(CustomObjects):
                  obj_name="coffee_grinder",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/coffee_grinder/bubzvn/usd/MJCF/bubzvn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/coffee_grinder/bubzvn/usd/MJCF/bubzvn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16721,7 +16719,7 @@ class ColaBottle(CustomObjects):
                  obj_name="cola_bottle",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cola_bottle/oyqdtz/usd/MJCF/oyqdtz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cola_bottle/oyqdtz/usd/MJCF/oyqdtz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16742,7 +16740,7 @@ class ColoredPencil_1(CustomObjects):
                  obj_name="colored_pencil__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/acumgp/usd/MJCF/acumgp.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/acumgp/usd/MJCF/acumgp.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16763,7 +16761,7 @@ class ColoredPencil_2(CustomObjects):
                  obj_name="colored_pencil__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/bkdqwb/usd/MJCF/bkdqwb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/bkdqwb/usd/MJCF/bkdqwb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16784,7 +16782,7 @@ class ColoredPencil_3(CustomObjects):
                  obj_name="colored_pencil__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/bnsqcn/usd/MJCF/bnsqcn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/bnsqcn/usd/MJCF/bnsqcn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16805,7 +16803,7 @@ class ColoredPencil_4(CustomObjects):
                  obj_name="colored_pencil__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/deuvcx/usd/MJCF/deuvcx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/deuvcx/usd/MJCF/deuvcx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16826,7 +16824,7 @@ class ColoredPencil_5(CustomObjects):
                  obj_name="colored_pencil__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/egvqng/usd/MJCF/egvqng.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/egvqng/usd/MJCF/egvqng.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16847,7 +16845,7 @@ class ColoredPencil_6(CustomObjects):
                  obj_name="colored_pencil__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/jdqvdl/usd/MJCF/jdqvdl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/jdqvdl/usd/MJCF/jdqvdl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16868,7 +16866,7 @@ class ColoredPencil_7(CustomObjects):
                  obj_name="colored_pencil__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/jnccuz/usd/MJCF/jnccuz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/jnccuz/usd/MJCF/jnccuz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16889,7 +16887,7 @@ class ColoredPencil_8(CustomObjects):
                  obj_name="colored_pencil__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/kadvlg/usd/MJCF/kadvlg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/kadvlg/usd/MJCF/kadvlg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16910,7 +16908,7 @@ class ColoredPencil_9(CustomObjects):
                  obj_name="colored_pencil__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/kgmapz/usd/MJCF/kgmapz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/kgmapz/usd/MJCF/kgmapz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16931,7 +16929,7 @@ class ColoredPencil_10(CustomObjects):
                  obj_name="colored_pencil__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/kjwoqm/usd/MJCF/kjwoqm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/kjwoqm/usd/MJCF/kjwoqm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16952,7 +16950,7 @@ class ColoredPencil_11(CustomObjects):
                  obj_name="colored_pencil__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/nssris/usd/MJCF/nssris.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/nssris/usd/MJCF/nssris.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16973,7 +16971,7 @@ class ColoredPencil_12(CustomObjects):
                  obj_name="colored_pencil__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/qrxemk/usd/MJCF/qrxemk.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/qrxemk/usd/MJCF/qrxemk.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -16994,7 +16992,7 @@ class ColoredPencil_13(CustomObjects):
                  obj_name="colored_pencil__13",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/qwficr/usd/MJCF/qwficr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/qwficr/usd/MJCF/qwficr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17015,7 +17013,7 @@ class ColoredPencil_14(CustomObjects):
                  obj_name="colored_pencil__14",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/qxeydw/usd/MJCF/qxeydw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/qxeydw/usd/MJCF/qxeydw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17036,7 +17034,7 @@ class ColoredPencil_15(CustomObjects):
                  obj_name="colored_pencil__15",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/tzadtj/usd/MJCF/tzadtj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/tzadtj/usd/MJCF/tzadtj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17057,7 +17055,7 @@ class ColoredPencil_16(CustomObjects):
                  obj_name="colored_pencil__16",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/vdpmhz/usd/MJCF/vdpmhz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/vdpmhz/usd/MJCF/vdpmhz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17078,7 +17076,7 @@ class ColoredPencil_17(CustomObjects):
                  obj_name="colored_pencil__17",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/vtbwvo/usd/MJCF/vtbwvo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/vtbwvo/usd/MJCF/vtbwvo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17099,7 +17097,7 @@ class ColoredPencil_18(CustomObjects):
                  obj_name="colored_pencil__18",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/wifbfs/usd/MJCF/wifbfs.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/wifbfs/usd/MJCF/wifbfs.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17120,7 +17118,7 @@ class ColoredPencil_19(CustomObjects):
                  obj_name="colored_pencil__19",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/wmjjvo/usd/MJCF/wmjjvo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/wmjjvo/usd/MJCF/wmjjvo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17141,7 +17139,7 @@ class ColoredPencil_20(CustomObjects):
                  obj_name="colored_pencil__20",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/colored_pencil/zisrpq/usd/MJCF/zisrpq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/colored_pencil/zisrpq/usd/MJCF/zisrpq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17162,7 +17160,7 @@ class Comb_1(CustomObjects):
                  obj_name="comb__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/comb/lqnwhb/usd/MJCF/lqnwhb.xml"
+                get_libero_path(query_key="assets"), f"new_objects/comb/lqnwhb/usd/MJCF/lqnwhb.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17183,7 +17181,7 @@ class Comb_2(CustomObjects):
                  obj_name="comb__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/comb/nybyjz/usd/MJCF/nybyjz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/comb/nybyjz/usd/MJCF/nybyjz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17204,7 +17202,7 @@ class Comb_3(CustomObjects):
                  obj_name="comb__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/comb/yopqrq/usd/MJCF/yopqrq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/comb/yopqrq/usd/MJCF/yopqrq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17225,7 +17223,7 @@ class ComicBook_1(CustomObjects):
                  obj_name="comic_book__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/comic_book/nekxsh/usd/MJCF/nekxsh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/comic_book/nekxsh/usd/MJCF/nekxsh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17246,7 +17244,7 @@ class ComicBook_2(CustomObjects):
                  obj_name="comic_book__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/comic_book/qkczyc/usd/MJCF/qkczyc.xml"
+                get_libero_path(query_key="assets"), f"new_objects/comic_book/qkczyc/usd/MJCF/qkczyc.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17267,7 +17265,7 @@ class ComicBook_3(CustomObjects):
                  obj_name="comic_book__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/comic_book/scycof/usd/MJCF/scycof.xml"
+                get_libero_path(query_key="assets"), f"new_objects/comic_book/scycof/usd/MJCF/scycof.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17288,7 +17286,7 @@ class ComicBook_4(CustomObjects):
                  obj_name="comic_book__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/comic_book/vzejnl/usd/MJCF/vzejnl.xml"
+                get_libero_path(query_key="assets"), f"new_objects/comic_book/vzejnl/usd/MJCF/vzejnl.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17309,7 +17307,7 @@ class ComicBook_5(CustomObjects):
                  obj_name="comic_book__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/comic_book/xmbxfm/usd/MJCF/xmbxfm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/comic_book/xmbxfm/usd/MJCF/xmbxfm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17330,7 +17328,7 @@ class CookieCutter_1(CustomObjects):
                  obj_name="cookie_cutter__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cookie_cutter/fvxiun/usd/MJCF/fvxiun.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cookie_cutter/fvxiun/usd/MJCF/fvxiun.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17351,7 +17349,7 @@ class CookieCutter_2(CustomObjects):
                  obj_name="cookie_cutter__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cookie_cutter/jpscvj/usd/MJCF/jpscvj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cookie_cutter/jpscvj/usd/MJCF/jpscvj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17372,7 +17370,7 @@ class CookieCutter_3(CustomObjects):
                  obj_name="cookie_cutter__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cookie_cutter/lqrfzo/usd/MJCF/lqrfzo.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cookie_cutter/lqrfzo/usd/MJCF/lqrfzo.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17393,7 +17391,7 @@ class CookieStick(CustomObjects):
                  obj_name="cookie_stick",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cookie_stick/zlhayf/usd/MJCF/zlhayf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cookie_stick/zlhayf/usd/MJCF/zlhayf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17414,7 +17412,7 @@ class CookingOilBottle(CustomObjects):
                  obj_name="cooking_oil_bottle",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cooking_oil_bottle/cfdond/usd/MJCF/cfdond.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cooking_oil_bottle/cfdond/usd/MJCF/cfdond.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17435,7 +17433,7 @@ class CopperPot(CustomObjects):
                  obj_name="copper_pot",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/copper_pot/gqemcq/usd/MJCF/gqemcq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/copper_pot/gqemcq/usd/MJCF/gqemcq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17456,7 +17454,7 @@ class CopperWire(CustomObjects):
                  obj_name="copper_wire",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/copper_wire/nzafel/usd/MJCF/nzafel.xml"
+                get_libero_path(query_key="assets"), f"new_objects/copper_wire/nzafel/usd/MJCF/nzafel.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17477,7 +17475,7 @@ class Cork_1(CustomObjects):
                  obj_name="cork__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cork/lseuwf/usd/MJCF/lseuwf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cork/lseuwf/usd/MJCF/lseuwf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17498,7 +17496,7 @@ class Cork_2(CustomObjects):
                  obj_name="cork__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cork/ncxgpe/usd/MJCF/ncxgpe.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cork/ncxgpe/usd/MJCF/ncxgpe.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17519,7 +17517,7 @@ class Cork_3(CustomObjects):
                  obj_name="cork__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cork/uyceta/usd/MJCF/uyceta.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cork/uyceta/usd/MJCF/uyceta.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17540,7 +17538,7 @@ class Corkscrew(CustomObjects):
                  obj_name="corkscrew",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/corkscrew/gqocna/usd/MJCF/gqocna.xml"
+                get_libero_path(query_key="assets"), f"new_objects/corkscrew/gqocna/usd/MJCF/gqocna.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17561,7 +17559,7 @@ class CornstarchJar(CustomObjects):
                  obj_name="cornstarch_jar",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cornstarch_jar/dhseui/usd/MJCF/dhseui.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cornstarch_jar/dhseui/usd/MJCF/dhseui.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17582,7 +17580,7 @@ class Crayon_1(CustomObjects):
                  obj_name="crayon__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/coapeh/usd/MJCF/coapeh.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/coapeh/usd/MJCF/coapeh.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17603,7 +17601,7 @@ class Crayon_2(CustomObjects):
                  obj_name="crayon__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/csglmn/usd/MJCF/csglmn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/csglmn/usd/MJCF/csglmn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17624,7 +17622,7 @@ class Crayon_3(CustomObjects):
                  obj_name="crayon__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/cvebde/usd/MJCF/cvebde.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/cvebde/usd/MJCF/cvebde.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17645,7 +17643,7 @@ class Crayon_4(CustomObjects):
                  obj_name="crayon__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/diiinz/usd/MJCF/diiinz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/diiinz/usd/MJCF/diiinz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17666,7 +17664,7 @@ class Crayon_5(CustomObjects):
                  obj_name="crayon__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/gfgsev/usd/MJCF/gfgsev.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/gfgsev/usd/MJCF/gfgsev.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17687,7 +17685,7 @@ class Crayon_6(CustomObjects):
                  obj_name="crayon__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/jfqetz/usd/MJCF/jfqetz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/jfqetz/usd/MJCF/jfqetz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17708,7 +17706,7 @@ class Crayon_7(CustomObjects):
                  obj_name="crayon__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/jqodxx/usd/MJCF/jqodxx.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/jqodxx/usd/MJCF/jqodxx.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17729,7 +17727,7 @@ class Crayon_8(CustomObjects):
                  obj_name="crayon__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/uqlfwf/usd/MJCF/uqlfwf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/uqlfwf/usd/MJCF/uqlfwf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17750,7 +17748,7 @@ class Crayon_9(CustomObjects):
                  obj_name="crayon__9",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/uwmrwr/usd/MJCF/uwmrwr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/uwmrwr/usd/MJCF/uwmrwr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17771,7 +17769,7 @@ class Crayon_10(CustomObjects):
                  obj_name="crayon__10",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/vdkdur/usd/MJCF/vdkdur.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/vdkdur/usd/MJCF/vdkdur.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17792,7 +17790,7 @@ class Crayon_11(CustomObjects):
                  obj_name="crayon__11",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/xmysum/usd/MJCF/xmysum.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/xmysum/usd/MJCF/xmysum.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17813,7 +17811,7 @@ class Crayon_12(CustomObjects):
                  obj_name="crayon__12",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/crayon/zajomr/usd/MJCF/zajomr.xml"
+                get_libero_path(query_key="assets"), f"new_objects/crayon/zajomr/usd/MJCF/zajomr.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17834,7 +17832,7 @@ class CreamCarton(CustomObjects):
                  obj_name="cream_carton",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cream_carton/lfjmos/usd/MJCF/lfjmos.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cream_carton/lfjmos/usd/MJCF/lfjmos.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17855,7 +17853,7 @@ class CreamCheeseBox(CustomObjects):
                  obj_name="cream_cheese_box",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cream_cheese_box/hfclfn/usd/MJCF/hfclfn.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cream_cheese_box/hfclfn/usd/MJCF/hfclfn.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17876,7 +17874,7 @@ class CreamPitcher_1(CustomObjects):
                  obj_name="cream_pitcher__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cream_pitcher/ompiss/usd/MJCF/ompiss.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cream_pitcher/ompiss/usd/MJCF/ompiss.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17897,7 +17895,7 @@ class CreamPitcher_2(CustomObjects):
                  obj_name="cream_pitcher__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cream_pitcher/wmkwhg/usd/MJCF/wmkwhg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cream_pitcher/wmkwhg/usd/MJCF/wmkwhg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17918,7 +17916,7 @@ class CreditCardTerminal(CustomObjects):
                  obj_name="credit_card_terminal",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/credit_card_terminal/bqpanz/usd/MJCF/bqpanz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/credit_card_terminal/bqpanz/usd/MJCF/bqpanz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17939,7 +17937,7 @@ class Croissant_1(CustomObjects):
                  obj_name="croissant__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/croissant/hnbnap/usd/MJCF/hnbnap.xml"
+                get_libero_path(query_key="assets"), f"new_objects/croissant/hnbnap/usd/MJCF/hnbnap.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17960,7 +17958,7 @@ class Croissant_2(CustomObjects):
                  obj_name="croissant__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/croissant/xxsanu/usd/MJCF/xxsanu.xml"
+                get_libero_path(query_key="assets"), f"new_objects/croissant/xxsanu/usd/MJCF/xxsanu.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -17981,7 +17979,7 @@ class Cruet(CustomObjects):
                  obj_name="cruet",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cruet/njqmqv/usd/MJCF/njqmqv.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cruet/njqmqv/usd/MJCF/njqmqv.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18002,7 +18000,7 @@ class Cucumber(CustomObjects):
                  obj_name="cucumber",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cucumber/wcvwye/usd/MJCF/wcvwye.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cucumber/wcvwye/usd/MJCF/wcvwye.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18023,7 +18021,7 @@ class CupHolder(CustomObjects):
                  obj_name="cup_holder",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cup_holder/wstfid/usd/MJCF/wstfid.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cup_holder/wstfid/usd/MJCF/wstfid.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18044,7 +18042,7 @@ class CupOfYogurt(CustomObjects):
                  obj_name="cup_of_yogurt",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cup_of_yogurt/kihdsj/usd/MJCF/kihdsj.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cup_of_yogurt/kihdsj/usd/MJCF/kihdsj.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18065,7 +18063,7 @@ class Cupcake_1(CustomObjects):
                  obj_name="cupcake__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cupcake/fabdnw/usd/MJCF/fabdnw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cupcake/fabdnw/usd/MJCF/fabdnw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18086,7 +18084,7 @@ class Cupcake_2(CustomObjects):
                  obj_name="cupcake__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cupcake/hvyxpw/usd/MJCF/hvyxpw.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cupcake/hvyxpw/usd/MJCF/hvyxpw.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18107,7 +18105,7 @@ class Cupcake_3(CustomObjects):
                  obj_name="cupcake__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cupcake/mbhweg/usd/MJCF/mbhweg.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cupcake/mbhweg/usd/MJCF/mbhweg.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18128,7 +18126,7 @@ class Cupcake_4(CustomObjects):
                  obj_name="cupcake__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cupcake/outske/usd/MJCF/outske.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cupcake/outske/usd/MJCF/outske.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18149,7 +18147,7 @@ class Cupcake_5(CustomObjects):
                  obj_name="cupcake__5",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cupcake/pfwrlq/usd/MJCF/pfwrlq.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cupcake/pfwrlq/usd/MJCF/pfwrlq.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18170,7 +18168,7 @@ class Cupcake_6(CustomObjects):
                  obj_name="cupcake__6",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cupcake/rpadye/usd/MJCF/rpadye.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cupcake/rpadye/usd/MJCF/rpadye.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18191,7 +18189,7 @@ class Cupcake_7(CustomObjects):
                  obj_name="cupcake__7",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cupcake/sutaow/usd/MJCF/sutaow.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cupcake/sutaow/usd/MJCF/sutaow.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18212,7 +18210,7 @@ class Cupcake_8(CustomObjects):
                  obj_name="cupcake__8",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cupcake/wdiezm/usd/MJCF/wdiezm.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cupcake/wdiezm/usd/MJCF/wdiezm.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18233,7 +18231,7 @@ class CuttingBoard_1(CustomObjects):
                  obj_name="cutting_board__1",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cutting_board/aibvew/usd/MJCF/aibvew.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cutting_board/aibvew/usd/MJCF/aibvew.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18254,7 +18252,7 @@ class CuttingBoard_2(CustomObjects):
                  obj_name="cutting_board__2",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cutting_board/idmcgf/usd/MJCF/idmcgf.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cutting_board/idmcgf/usd/MJCF/idmcgf.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18275,7 +18273,7 @@ class CuttingBoard_3(CustomObjects):
                  obj_name="cutting_board__3",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cutting_board/jfrbuz/usd/MJCF/jfrbuz.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cutting_board/jfrbuz/usd/MJCF/jfrbuz.xml"
             )
         super().__init__(
             custom_path=custom_path,
@@ -18296,7 +18294,7 @@ class CuttingBoard_4(CustomObjects):
                  obj_name="cutting_board__4",
                  ):
         custom_path = os.path.join(
-                str(absolute_path), f"assets/new_objects/cutting_board/nsvnai/usd/MJCF/nsvnai.xml"
+                get_libero_path(query_key="assets"), f"new_objects/cutting_board/nsvnai/usd/MJCF/nsvnai.xml"
             )
         super().__init__(
             custom_path=custom_path,
