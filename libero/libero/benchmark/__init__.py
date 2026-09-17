@@ -79,25 +79,6 @@ libero_suites = [
     "libero_90",
     "libero_10",
 ]
-task_maps = {}
-max_len = 0
-for libero_suite in libero_suites:
-    task_maps[libero_suite] = {}
-
-    for task in libero_task_map[libero_suite]:
-        language = grab_language_from_filename(libero_suite, task + ".bddl")
-        task_maps[libero_suite][task] = Task(
-            name=task,
-            language=language,
-            problem="Libero",
-            problem_folder=libero_suite,
-            bddl_file=f"{task}.bddl",
-            init_states_file=f"{task}.pruned_init",
-        )
-
-        # print(language, "\n", f"{task}.bddl", "\n")
-        # print("")
-
 suite_order = ["libero_spatial", "libero_object", "libero_goal", "libero_10", "libero_90"]
 task_num = [2402, 2518, 2591, 2519, 90]
 task_order_dict = dict()
@@ -110,6 +91,24 @@ for idx in range(5):
         task_orders.append(order)
     task_order_dict[suite_order[idx]] = task_orders
 
+def get_task_init_states_path(task_name: str, suite_name: str) -> str:
+    """Resolve the saved state file shared by a task's perturbation variants.
+
+    Args:
+        task_name: Task name, including its perturbation suffix.
+        suite_name: Directory containing the suite's initial states.
+
+    Returns:
+        Absolute path to the initial state file.
+    """
+    root = get_libero_path(query_key="init_states")
+    if "_add_" in task_name or "_level" in task_name:
+        return os.path.join(root, "libero_newobj", suite_name, task_name + ".pruned_init")
+    name = re.split(r"_language_|_view_|_light_", task_name, maxsplit=1)[0]
+    name = re.sub(r"_(?:table|tb)_\d+", "", name)
+    return os.path.join(root, suite_name, name + ".pruned_init")
+
+
 class Benchmark(abc.ABC):
     """A Benchmark."""
 
@@ -118,7 +117,17 @@ class Benchmark(abc.ABC):
         self.task_order_index = task_order_index
 
     def _make_benchmark(self):
-        tasks = list(task_maps[self.name].values())
+        tasks = [
+            Task(
+                name=task,
+                language=grab_language_from_filename(self.name, task + ".bddl"),
+                problem="Libero",
+                problem_folder=self.name,
+                bddl_file=f"{task}.bddl",
+                init_states_file=f"{task}.pruned_init",
+            )
+            for task in libero_task_map[self.name]
+        ]
         print(f"[info] using task orders {task_order_dict[self.name][self.task_order_index]}")
         self.tasks = [tasks[i] for i in task_order_dict[self.name][self.task_order_index]]
         self.n_tasks = len(self.tasks)
@@ -187,58 +196,10 @@ class Benchmark(abc.ABC):
         return init_states
     
     def get_task_init_states(self, i):
-        # print("======", re.sub(r'_table_\d+$', '', self.tasks[i].init_states_file))
-        # print("====init_states_path=====", self.tasks[i].init_states_file)
-        if "_language_" in self.tasks[i].init_states_file:
-            init_states_path = os.path.join(
-                get_libero_path("init_states"),
-                self.tasks[i].problem_folder,
-                self.tasks[i].init_states_file.split("_language_")[0] + "." + self.tasks[i].init_states_file.split(".")[-1],
-            )
-        else:
-            if "_view_" in self.tasks[i].init_states_file:
-                init_states_path = os.path.join(
-                    get_libero_path("init_states"),
-                    self.tasks[i].problem_folder,
-                    self.tasks[i].init_states_file.split("_view_")[0] + "." + self.tasks[i].init_states_file.split(".")[-1],
-                )
-            else:
-                if "_table_" in self.tasks[i].init_states_file:
-                    init_states_path = os.path.join(
-                        get_libero_path("init_states"),
-                        self.tasks[i].problem_folder,
-                        re.sub(r'_table_\d+', '', self.tasks[i].init_states_file),
-                    )
-                if "_tb_" in self.tasks[i].init_states_file:
-                    init_states_path = os.path.join(
-                        get_libero_path("init_states"),
-                        self.tasks[i].problem_folder,
-                        re.sub(r'_tb_\d+', '', self.tasks[i].init_states_file),
-                    )
-                
-                if "_light_" in self.tasks[i].init_states_file:
-                    init_states_path = os.path.join(
-                        get_libero_path("init_states"),
-                        self.tasks[i].problem_folder,
-                        self.tasks[i].init_states_file.split("_light_")[0] + "." + self.tasks[i].init_states_file.split(".")[-1],
-                    )
-                
-                if "_add_" in self.tasks[i].init_states_file or "_level" in self.tasks[i].init_states_file:
-                    init_states_path = os.path.join(
-                        get_libero_path("init_states"),
-                        "libero_newobj",
-                        self.tasks[i].problem_folder,
-                        self.tasks[i].init_states_file,
-                    )
-        # else:
-        #     init_states_path = os.path.join(
-        #         get_libero_path("init_states"),
-        #         self.tasks[i].problem_folder,
-        #         self.tasks[i].init_states_file,
-        #     )
-        
-        # print("====init_states_path=====", init_states_path)
-
+        init_states_path = get_task_init_states_path(
+            task_name=self.tasks[i].name,
+            suite_name=self.tasks[i].problem_folder,
+        )
         init_states = torch.load(init_states_path, weights_only=False)
         if "_add_" in self.tasks[i].init_states_file or "_level" in self.tasks[i].init_states_file:
             init_states = init_states.reshape(1, -1)

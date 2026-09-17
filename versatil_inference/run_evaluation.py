@@ -30,6 +30,7 @@ import wandb
 from tso_robotics_sockets import ServerStatus, TransportKey
 
 from versatil_inference.server import LiberoServer
+from versatil_inference.check_assets import check_assets  # noqa: E402
 from versatil_inference.constants import TaskSuiteName
 
 DATE_TIME = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -72,6 +73,7 @@ def run_evaluation(config: EvalConfig) -> None:
     Args:
         config: Evaluation configuration.
     """
+    check_assets(task_suite_name=config.task_suite_name)
     task_suite_name = config.task_suite_name
     run_id = f"EVAL-{task_suite_name}-{DATE_TIME}"
     if config.run_id_note:
