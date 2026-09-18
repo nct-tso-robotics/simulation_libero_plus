@@ -258,7 +258,4 @@ def eval_libero(config: EvalConfig) -> None:
 
 
 if __name__ == "__main__":
-    import multiprocessing
-    if multiprocessing.get_start_method(allow_none=True) != "spawn":
-        multiprocessing.set_start_method("spawn", force=True)
     eval_libero()
